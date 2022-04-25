@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Item;
+
+class HomeController extends Controller
+{
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function myHome()
+    {
+        return view('myHome');
+    }
+
+    /**
+    * Show the my users page.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function myUsers()
+    {
+        return view('myUsers');
+    }
+}

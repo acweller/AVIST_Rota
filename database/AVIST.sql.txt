@@ -282,6 +282,7 @@ USE `avistdb`;
 INSERT INTO `avistdb`.`TipoImagem` (`codTipoImagem`, `nomeTipoImagem`) VALUES (DEFAULT, 'Logomarca');
 INSERT INTO `avistdb`.`TipoImagem` (`codTipoImagem`, `nomeTipoImagem`) VALUES (DEFAULT, 'Carrossel');
 INSERT INTO `avistdb`.`TipoImagem` (`codTipoImagem`, `nomeTipoImagem`) VALUES (DEFAULT, 'Fotos');
+INSERT INTO `avistdb`.`TipoImagem` (`codTipoImagem`, `nomeTipoImagem`) VALUES (DEFAULT, 'QR-Code');
 
 COMMIT;
 

@@ -1,11 +1,15 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContatoTiposController;
+use App\Http\Controllers\EmpresaTiposController;
 use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SeriesController;
-use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\TemporadasController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ImagemTiposController;
+use App\Http\Controllers\InformacaoTiposController;
+use App\Http\Controllers\PhotoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +23,19 @@ use App\Http\Controllers\TemporadasController;
 */
 
 Route::get('/', [IndexController::class, 'index'])->name('index_site');
+
+// Rota para os tipos de dados básicos (Sem CRUD)
+Route::get('/empresa_tipos', [EmpresaTiposController::class, 'index'])
+    ->name('rota_index_empresa_tipos');
+Route::get('/contato_tipos', [ContatoTiposController::class, 'index'])
+    ->name('rota_index_contato_tipos');
+Route::get('/imagem_tipos', [ImagemTiposController::class, 'index'])
+    ->name('rota_index_imagem_tipos');
+Route::get('/informacao_tipos', [InformacaoTiposController::class, 'index'])
+    ->name('rota_index_informacao_tipos');
+
+// Rota para CRUD de Empresa
+
 
 Route::get('/series', [SeriesController::class, 'index'])
     ->name('rota_listar_series');

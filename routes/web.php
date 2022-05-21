@@ -39,6 +39,8 @@ Route::get('/informacao_tipos', [InformacaoTiposController::class, 'index'])
 //Route::get('/empresas', [EmpresasController::class, 'index'])->name('rota_index_empresas');
 Route::controller(EmpresasController::class)->group(function(){
     Route::get('/empresas', 'index')->name('rota_index_empresas');
+    Route::get('/empresas/{empresaId}', 'profile')->name('rota_profile_empresa');
+
 });
 
 

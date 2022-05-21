@@ -16,4 +16,20 @@ class EmpresasController extends Controller
 
         return view ('empresas.index', compact('empresas', 'mensagem'));
     }
+
+    public function profile (int $empresaId) {
+
+        // Obtém a lista de temporadas da Série
+        //$temporadas = Serie::find($serieId)->temporadas;
+
+        $empresa = Empresa::find($empresaId);
+        //$temporadas = $serie->temporadas;
+        return view ('empresas.profile', compact('empresa'));//, 'contatos'));
+
+        // Usando a query
+        //$temporadas =  Temporada::query()->where('serie_id', $serieId)->orderBy('numero')->get();
+
+        //var_dump($temporadas);
+    }
+
 }

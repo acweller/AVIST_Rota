@@ -1,7 +1,7 @@
 @extends('layout.mainlayout')
 
 @section('cabecalho')
-    Empresas
+    {{ $empresa->nomeEmpresa }}
 @endsection
 
 @section('conteudo')
@@ -12,11 +12,10 @@
     @endif
     <!--a href="{ { route('rota_form_criar_empresa') }}" class="btn btn-dark mb-2">Adicionar</a-->
     <ul class="list-group">
-        @foreach ($empresas as $empresa)
             <li class="list-group-item d-flex justify-content-between align-items-center">
 
-                <a href="{{route('rota_profile_empresa', $empresa->id)}}">
-                    {{ $empresa->nomeEmpresa }}
+                <a href="{{route('rota_index_empresas')}}">
+                    Voltar
                 </a>
 
                 <span class="d-flex">
@@ -48,6 +47,5 @@
                     </form>
                 </span-->
             </li>
-        @endforeach
     </ul>
 @endsection

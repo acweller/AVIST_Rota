@@ -15,20 +15,20 @@
                         Vinícolas
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Todas as Vinícolas e Cantinas</a></li>
+                        <!--li><a class="dropdown-item" href="#">Todas as Vinícolas e Cantinas</a></li>
+                        <li><hr class="dropdown-divider"></li-->
+                        <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 1)}}">Galeria de Artesanato</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Galeria de Artesanato</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Vinícola Rassele</a></li>
-                        <li><a class="dropdown-item" href="#">Vinícola Labiata</a></li>
-                        <li><a class="dropdown-item" href="#">Cantina Mattiello</a></li>
-                        <li><a class="dropdown-item" href="#">Cantina Romanha</a></li>
-                        <li><a class="dropdown-item" href="#">Casa dos Espumantes</a></li>
-                        <li><a class="dropdown-item" href="#">Vinícola Tomazelli</a></li>
-                        <li><a class="dropdown-item" href="#">Cantina Braun</a></li>
-                        <li><a class="dropdown-item" href="#">Cantina Grotteschi</a></li>
-                        <li><a class="dropdown-item" href="#">Tabocas Vin de Garage</a></li>
-                        <li><a class="dropdown-item" href="#">Vinicola Ziviani</a></li>
+                        <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 2)}}">Vinícola Rassele</a></li>
+                        <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 3)}}">Vinícola Labiata</a></li>
+                        <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 4)}}">Cantina Mattiello</a></li>
+                        <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 5)}}">Cantina Romanha</a></li>
+                        <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 6)}}">Casa dos Espumantes</a></li>
+                        <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 7)}}">Vinícola Tomazelli</a></li>
+                        <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 8)}}">Cantina Braun</a></li>
+                        <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 9)}}">Cantina Grotteschi</a></li>
+                        <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 10)}}">Tabocas Vin de Garage</a></li>
+                        <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 11)}}">Vinícola Ziviani</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -38,10 +38,10 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <!--li><a class="dropdown-item" href="#">Todos os Parceiros</a></li>
                         <li><hr class="dropdown-divider"></li-->
-                        <li><a class="dropdown-item" href="https://santateresa.ifes.edu.br/">Ifes - Campus Santa Teresa</a></li>
-                        <li><a class="dropdown-item" href="https://incaper.es.gov.br/">Incaper</a></li>
-                        <li><a class="dropdown-item" href="https://www.embrapa.br/">Embrapa</a></li>
-                        <li><a class="dropdown-item" href="https://www.gov.br/agricultura/pt-br/">Ministério da Agricultura, Pecuária e Abastecimento</a></li>
+                        <li><a class="dropdown-item" href="https://santateresa.ifes.edu.br/" target="_blank">Ifes - Campus Santa Teresa</a></li>
+                        <li><a class="dropdown-item" href="https://incaper.es.gov.br/" target="_blank">Incaper</a></li>
+                        <li><a class="dropdown-item" href="https://www.embrapa.br/" target="_blank">Embrapa</a></li>
+                        <li><a class="dropdown-item" href="https://www.gov.br/agricultura/pt-br/" target="_blank">Ministério da Agricultura, Pecuária e Abastecimento</a></li>
                     </ul>
                 </li>
                 <!--li class="nav-item dropdown">

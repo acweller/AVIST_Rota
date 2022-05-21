@@ -27,6 +27,8 @@ class EmpresasSeeder extends Seeder
                 'longitude'         => -40.5990548,
                 'created_at' => $data,
                 'updated_at' => $data,
+                // Site de Documentação do Google
+                // https://developers.google.com/maps/documentation/urls/get-started?hl=pt-br
                 // Padrão do Google Maps
                 // http://www.google.com/maps/place/-19.9300019,-40.5990548
                 // http://www.google.com/maps/place/lat,lng
@@ -126,7 +128,7 @@ class EmpresasSeeder extends Seeder
             [
                 'id' => 11,
                 'empresa_tipo_id'   => 2, // Vinícola/Cantina
-                'nomeEmpresa'       => 'Vinicola Ziviani',
+                'nomeEmpresa'       => 'Vinícola Ziviani',
                 'linkGoogleMaps'    => 'https://goo.gl/maps/2uGZRTdkzKuB8MnF7',
                 'latitude'          => -19.887331,
                 'longitude'         => -40.702003,

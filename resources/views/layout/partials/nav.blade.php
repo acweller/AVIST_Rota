@@ -17,6 +17,8 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Todas as Vinícolas e Cantinas</a></li>
                         <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Galeria de Artesanato</a></li>
+                        <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Vinícola Rassele</a></li>
                         <li><a class="dropdown-item" href="#">Vinícola Labiata</a></li>
                         <li><a class="dropdown-item" href="#">Cantina Mattiello</a></li>
@@ -24,10 +26,9 @@
                         <li><a class="dropdown-item" href="#">Casa dos Espumantes</a></li>
                         <li><a class="dropdown-item" href="#">Vinícola Tomazelli</a></li>
                         <li><a class="dropdown-item" href="#">Cantina Braun</a></li>
+                        <li><a class="dropdown-item" href="#">Cantina Grotteschi</a></li>
                         <li><a class="dropdown-item" href="#">Tabocas Vin de Garage</a></li>
                         <li><a class="dropdown-item" href="#">Vinicola Ziviani</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Galeria de Artesanato</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -35,12 +36,12 @@
                         Parceiros
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Todos os Parceiros</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Ifes - Campus Santa Teresa</a></li>
-                        <li><a class="dropdown-item" href="#">Incaper</a></li>
-                        <li><a class="dropdown-item" href="#">Embrapa</a></li>
-                        <li><a class="dropdown-item" href="#">Ministério da Agricultura, Pecuária e Abastecimento</a></li>
+                        <!--li><a class="dropdown-item" href="#">Todos os Parceiros</a></li>
+                        <li><hr class="dropdown-divider"></li-->
+                        <li><a class="dropdown-item" href="https://santateresa.ifes.edu.br/">Ifes - Campus Santa Teresa</a></li>
+                        <li><a class="dropdown-item" href="https://incaper.es.gov.br/">Incaper</a></li>
+                        <li><a class="dropdown-item" href="https://www.embrapa.br/">Embrapa</a></li>
+                        <li><a class="dropdown-item" href="https://www.gov.br/agricultura/pt-br/">Ministério da Agricultura, Pecuária e Abastecimento</a></li>
                     </ul>
                 </li>
                 <!--li class="nav-item dropdown">
@@ -54,7 +55,23 @@
                         <li><a class="dropdown-item" href="#">Colaborador 02</a></li>
                     </ul>
                 </li-->
-
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Listagens
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/empresas">Empresas</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/empresa_tipos">Tipos de Empresa</a></li>
+                        <li><a class="dropdown-item" href="/contato_tipos">Tipos de Contato</a></li>
+                        <li><a class="dropdown-item" href="/imagem_tipos">Tipos de Imagem</a></li>
+                        <li><a class="dropdown-item" href="/informacao_tipos">Tipos de Informação</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/series">Séries</a></li>
+                        <li><a class="dropdown-item" href="#">Temporadas</a></li>
+                        <li><a class="dropdown-item" href="#">Episódios</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item">
                 <a class="nav-link" href="/#sobre_avist">Sobre</a>
                 </li>
@@ -70,10 +87,10 @@
                 </li-->
             </ul>
 
-            <form class="d-inline-flex">
+            <!--form class="d-inline-flex">
                 <input class="form-control me-2" type="search" placeholder="O que você procura?" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
+            </form-->
 
         </div>
     </div>

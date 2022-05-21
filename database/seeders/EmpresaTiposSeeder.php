@@ -15,10 +15,26 @@ class EmpresaTiposSeeder extends Seeder
     public function run()
     {
         DB::table('empresa_tipos')->insert([
-            ['nomeEmpresaTipo' => 'Associação'],
-            ['nomeEmpresaTipo' => 'Vinícola / Cantina'],
-            ['nomeEmpresaTipo' => 'Parceiro'],
-            ['nomeEmpresaTipo' => 'Colaborador'],
+            [
+                'id' => 1,
+                'nomeEmpresaTipo' => 'Associação'
+            ],
+            [
+                'id' => 2,
+                'nomeEmpresaTipo' => 'Vinícola / Cantina'
+            ],
+            [
+                'id' => 3,
+                'nomeEmpresaTipo' => 'Galeria de Artesanato'
+            ],
+            [
+                'id' => 4,
+                'nomeEmpresaTipo' => 'Parceiro'
+            ],
+            [
+                'id' => 5,
+                'nomeEmpresaTipo' => 'Colaborador'
+            ],
         ]);
     }
 }

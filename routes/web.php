@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContatoTiposController;
+use App\Http\Controllers\EmpresasController;
 use App\Http\Controllers\EmpresaTiposController;
 use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
@@ -35,20 +36,27 @@ Route::get('/informacao_tipos', [InformacaoTiposController::class, 'index'])
     ->name('rota_index_informacao_tipos');
 
 // Rota para CRUD de Empresa
+//Route::get('/empresas', [EmpresasController::class, 'index'])->name('rota_index_empresas');
+Route::controller(EmpresasController::class)->group(function(){
+    Route::get('/empresas', 'index')->name('rota_index_empresas');
+});
 
 
-Route::get('/series', [SeriesController::class, 'index'])
-    ->name('rota_listar_series');
-Route::get('/series/criar', [SeriesController::class, 'create'])
-    ->name('rota_form_criar_serie');
-Route::post('/series/criar', [SeriesController::class, 'store'])
-    ->name('rota_salvar_serie');
-//Route::post('/series/remover/{id}', [SeriesController::class, 'destroy']);
-Route::delete('/series/{id}', [SeriesController::class, 'destroy'])
-    ->name('rota_remover_serie');
+// Agrupamento de Rotas da Séria (do Curso sobre Laravel)
+Route::controller(SeriesController::class)->group(function(){
+    Route::get('/series', 'index')->name('rota_listar_series');
+    Route::get('/series/criar', 'create')->name('rota_form_criar_serie');
+    Route::post('/series/criar', 'store')->name('rota_salvar_serie');
+    //Route::post('/series/remover/{id}', [SeriesController::class, 'destroy']);
+    Route::delete('/series/{id}', 'destroy')->whereNumber('id')->name('rota_remover_serie');
+});
+//Route::resource('/series', SeriesController::class)->except(['store']);
+//Route::resource('/series', SeriesController::class)->only(['index', 'create', 'store']);
+
 
 Route::get('/series/{serieId}/temporadas', [TemporadasController::class, 'index'])
     ->name('rota_index_temporada');
+
 
 //Route::resource('photos', PhotoController::class);
 

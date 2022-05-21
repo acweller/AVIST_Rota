@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 class EmpresaTiposController extends Controller
 {
     public function index (Request $request) {
-
         // Obtém a lista de itens da Tabela
         $tipos = EmpresaTipo::query()->orderBy('nomeEmpresaTipo')->get();
 

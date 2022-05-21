@@ -22,6 +22,8 @@ class CreateEmpresasTable extends Migration
             $table->double('longitude'); // X
             $table->timestamps();
         });
+        // Dicas de utilização de Timestamps no Laravel
+        // https://laraveldaily.com/8-tricks-with-laravel-timestamps/
     }
 
     /**

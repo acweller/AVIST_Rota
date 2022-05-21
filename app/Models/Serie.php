@@ -9,6 +9,7 @@ class Serie extends Model
 {
     use HasFactory;
 
+    // Indica os campos a serem preenchidos através de uma requisição em massa (no controller)
     protected $fillable = ['nome'];
 
     public function temporadas() {

@@ -28,6 +28,7 @@ class EmpresasSeeder extends Seeder
                 'created_at' => $data,
                 'updated_at' => $data,
                 // Site de Documentação do Google
+                // https://developers.google.com/maps/documentation?hl=pt-BR
                 // https://developers.google.com/maps/documentation/urls/get-started?hl=pt-br
                 // Padrão do Google Maps
                 // http://www.google.com/maps/place/-19.9300019,-40.5990548

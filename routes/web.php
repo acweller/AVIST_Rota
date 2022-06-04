@@ -43,8 +43,14 @@ Route::controller(EmpresasController::class)->group(function(){
 
 });
 
+// Rota para CRUD de Informações da Empresa
+Route::controller(EmpresaInformacoesController::class)->group(function(){
+    Route::get('/empresa_informacoes', 'index')->name('rota_index_empresa_informacao');
+    Route::get('/empresa_informacoes/{empresaId}', 'profile')->name('rota_profile_empresa_informacao');
+});
 
-// Agrupamento de Rotas da Séria (do Curso sobre Laravel)
+
+// Agrupamento de Rotas da Série (do Curso sobre Laravel)
 Route::controller(SeriesController::class)->group(function(){
     Route::get('/series', 'index')->name('rota_listar_series');
     Route::get('/series/criar', 'create')->name('rota_form_criar_serie');

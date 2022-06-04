@@ -21,28 +21,28 @@ CREATE SCHEMA IF NOT EXISTS `avistdb` DEFAULT CHARACTER SET utf8 ;
 USE `avistdb` ;
 
 -- -----------------------------------------------------
--- Table `avistdb`.`TipoEmpresa`
+-- Table `avistdb`.`TipoEmpresa` (Empresa_Tipos)
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avistdb`.`TipoEmpresa` (
-  `codTipoEmpresa` INT NOT NULL AUTO_INCREMENT,
-  `nomeTipoEmpresa` TINYTEXT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nomeEmpresaTipo` TINYTEXT NULL,
   PRIMARY KEY (`codTipoEmpresa`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `avistdb`.`Empresa`
+-- Table `avistdb`.`Empresa` (Empresas)
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avistdb`.`Empresa` (
-  `codEmpresa` INT NOT NULL AUTO_INCREMENT,
-  `TipoEmpresa_codTipoEmpresa` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `empresa_tipo_id` INT NOT NULL,
   `nomeEmpresa` TINYTEXT NULL,
-  `infos` TINYTEXT NULL,
-  `biografia` TINYTEXT NULL,
-  `email` TINYTEXT NULL,
   `linkGoogleMaps` TINYTEXT NULL,
   `latitude` FLOAT NULL,
   `longitude` FLOAT NULL,
+-- //  `infos` TINYTEXT NULL,
+-- //  `biografia` TINYTEXT NULL,
+-- //  `email` TINYTEXT NULL,
   PRIMARY KEY (`codEmpresa`),
   INDEX `fk_Empresa_TipoEmpresa1_idx` (`TipoEmpresa_codTipoEmpresa` ASC),
   CONSTRAINT `fk_Empresa_TipoEmpresa1`
@@ -54,11 +54,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `avistdb`.`Pessoa`
+-- Table `avistdb`.`Pessoa` (Empresa_Pessoas)
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avistdb`.`Pessoa` (
-  `codPessoa` INT NOT NULL AUTO_INCREMENT,
-  `Empresa_codEmpresa` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `empresa_id` INT NOT NULL,
   `nome` TINYTEXT NULL COMMENT '	',
   `email` TINYTEXT NULL,
   PRIMARY KEY (`codPessoa`),
@@ -72,24 +72,24 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `avistdb`.`TipoContato`
+-- Table `avistdb`.`TipoContato` (Contato_Tipos)
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avistdb`.`TipoContato` (
-  `codTipoContato` INT NOT NULL AUTO_INCREMENT,
-  `nomeTipoContato` TINYTEXT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nomeContatoTipo` TINYTEXT NULL,
   PRIMARY KEY (`codTipoContato`))
 ENGINE = InnoDB
 COMMENT = 'Identifica os tipos de formas de contato com a empresa (Telefones / Redes sociais).';
 
 
 -- -----------------------------------------------------
--- Table `avistdb`.`Contato`
+-- Table `avistdb`.`Contato` (Empresa_Contatos)
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avistdb`.`Contato` (
-  `codContato` INT NOT NULL AUTO_INCREMENT,
-  `Empresa_codEmpresa` INT NOT NULL,
-  `TipoContato_TipoContato` INT NOT NULL,
-  `descContato` TINYTEXT NULL COMMENT 'Informar o número do telefone ou o perfil da empresa nas redes sociais.',
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `empresa_id` INT NOT NULL,
+  `contato_tipo_id` INT NOT NULL,
+  `descricao` TINYTEXT NULL COMMENT 'Informar o número do telefone ou o perfil da empresa nas redes sociais.',
   PRIMARY KEY (`codContato`),
   INDEX `fk_TelefoneEmpresa_Empresa1_idx` (`Empresa_codEmpresa` ASC),
   INDEX `fk_Contato_TipoContato1_idx` (`TipoContato_TipoContato` ASC),
@@ -108,17 +108,18 @@ COMMENT = 'Informação sobre os telefones e as redes sociais da empresa.';
 
 
 -- -----------------------------------------------------
--- Table `avistdb`.`Endereco`
+-- Table `avistdb`.`Endereco` (Empresa_Enderecos)
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avistdb`.`Endereco` (
-  `codEndereco` INT NOT NULL AUTO_INCREMENT,
-  `Empresa_codEmpresa` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `empresa_id` INT NOT NULL,
   `rua` TINYTEXT NULL,
-  `cidade` TINYTEXT NULL,
-  `bairro` TINYTEXT NULL,
   `numero` TINYTEXT NULL,
-  `referencia` TINYTEXT NULL,
-  `logradouro` TINYTEXT NULL,
+  `complemento` TINYTEXT NULL,
+  `bairro` TINYTEXT NULL,
+  `cidade` TINYTEXT NULL,
+  `estado` TINYTEXT NULL,
+  `cep` TINYTEXT NULL,
   PRIMARY KEY (`codEndereco`),
   INDEX `fk_Endereco_Empresa1_idx` (`Empresa_codEmpresa` ASC),
   CONSTRAINT `fk_Endereco_Empresa1`
@@ -130,25 +131,25 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `avistdb`.`TipoImagem`
+-- Table `avistdb`.`TipoImagem` (Imagem_Tipos)
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avistdb`.`TipoImagem` (
-  `codTipoImagem` INT NOT NULL AUTO_INCREMENT,
-  `nomeTipoImagem` TINYTEXT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nomeImagemTipo` TINYTEXT NULL,
   PRIMARY KEY (`codTipoImagem`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `avistdb`.`Imagem`
+-- Table `avistdb`.`Imagem` (Empresa_Imagens)
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avistdb`.`Imagem` (
-  `codImagem` INT NOT NULL AUTO_INCREMENT,
-  `Empresa_codEmpresa` INT NOT NULL,
-  `TipoImagem_codTipoImagem` INT NOT NULL,
-  `pathImagem` TINYTEXT NULL,
-  `descImagem` TINYTEXT NULL,
-  `ordemApresentacao` VARCHAR(45) NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `empresa_id` INT NOT NULL,
+  `imagem_tipo_id` INT NOT NULL,
+  `caminho` TINYTEXT NULL,
+  `descricao` TINYTEXT NULL,
+  `ordem` VARCHAR(45) NULL,
   PRIMARY KEY (`codImagem`),
   INDEX `fk_Imagem_Empresa1_idx` (`Empresa_codEmpresa` ASC),
   INDEX `fk_Imagem_TipoImagem1_idx` (`TipoImagem_codTipoImagem` ASC),
@@ -166,24 +167,24 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `avistdb`.`TipoInformacao`
+-- Table `avistdb`.`TipoInformacao` (Informacao_Tipos)
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avistdb`.`TipoInformacao` (
-  `codTipoInformacao` INT NOT NULL AUTO_INCREMENT,
-  `descTipoInformacao` TINYTEXT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nomeInformacaoTipo` TINYTEXT NULL,
   PRIMARY KEY (`codTipoInformacao`))
 ENGINE = InnoDB
 COMMENT = 'Identifica os tipos de informações da empresa (Ex.: Histórico, Descrição da Empresa, Missão, Valores)';
 
 
 -- -----------------------------------------------------
--- Table `avistdb`.`Informacao`
+-- Table `avistdb`.`Informacao` (Empresa_Informacoes)
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avistdb`.`Informacao` (
-  `codInformacao` INT NOT NULL AUTO_INCREMENT,
-  `TipoInformacao_codTipoInformacao` INT NOT NULL,
-  `Empresa_codEmpresa` INT NOT NULL,
-  `descInformacao` TEXT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `empresa_id` INT NOT NULL,
+  `informacao_tipo_id` INT NOT NULL,
+  `descricao` TEXT NULL,
   PRIMARY KEY (`codInformacao`),
   INDEX `fk_Informacao_Empresa1_idx` (`Empresa_codEmpresa` ASC),
   INDEX `fk_Informacao_TipoInformacao1_idx` (`TipoInformacao_codTipoInformacao` ASC),
@@ -202,14 +203,14 @@ COMMENT = 'Armazena as descrições sobre a empresa.';
 
 
 -- -----------------------------------------------------
--- Table `avistdb`.`Produto`
+-- Table `avistdb`.`Produto` (Empresa_Produtos)
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avistdb`.`Produto` (
-  `codProduto` INT NOT NULL AUTO_INCREMENT,
-  `Empresa_codEmpresa` INT NOT NULL,
-  `nomeProduto` TINYTEXT NULL,
-  `descProduto` TINYTEXT NULL,
-  `ativo` TINYINT(1) NOT NULL DEFAULT 1,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `empresa_id` INT NOT NULL,
+  `nome` TINYTEXT NULL,
+  `descricao` TINYTEXT NULL,
+  `ativo` BOOLEAN NOT NULL DEFAULT TRUE, --// BOOLEAN ??? CONFERIR SE TEM ESSE TIPO
   PRIMARY KEY (`codProduto`),
   INDEX `fk_Produto_Empresa1_idx` (`Empresa_codEmpresa` ASC),
   CONSTRAINT `fk_Produto_Empresa1`
@@ -222,13 +223,14 @@ COMMENT = 'Identifica os produtos disponibilizados pela empresa. A coluna Ativo 
 
 
 -- -----------------------------------------------------
--- Table `avistdb`.`Servico`
+-- Table `avistdb`.`Servico` (Empresa_Servicos)
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avistdb`.`Servico` (
-  `codServico` INT NOT NULL AUTO_INCREMENT,
-  `Empresa_codEmpresa` INT NOT NULL,
-  `descServico` TINYTEXT NULL,
-  `descHorario` TINYTEXT NULL,
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `empresa_id` INT NOT NULL,
+  `nome` TINYTEXT NULL,
+  `descricao` TINYTEXT NULL,
+  `horario` TINYTEXT NULL,
   `ativo` TINYINT(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`codServico`),
   INDEX `fk_Servico_Empresa1_idx` (`Empresa_codEmpresa` ASC),
@@ -246,7 +248,7 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- -----------------------------------------------------
--- Data for table `avistdb`.`TipoEmpresa`
+-- Data for table `avistdb`.`TipoEmpresa` (Empresa_Tipos)
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `avistdb`;
@@ -259,7 +261,7 @@ COMMIT;
 
 
 -- -----------------------------------------------------
--- Data for table `avistdb`.`TipoContato`
+-- Data for table `avistdb`.`TipoContato` (Contato_Tipos)
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `avistdb`;
@@ -275,7 +277,7 @@ COMMIT;
 
 
 -- -----------------------------------------------------
--- Data for table `avistdb`.`TipoImagem`
+-- Data for table `avistdb`.`TipoImagem` (Imagem_Tipos)
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `avistdb`;
@@ -288,7 +290,7 @@ COMMIT;
 
 
 -- -----------------------------------------------------
--- Data for table `avistdb`.`TipoInformacao`
+-- Data for table `avistdb`.`TipoInformacao` (Informacao_Tipos)
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `avistdb`;

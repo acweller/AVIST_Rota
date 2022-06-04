@@ -18,7 +18,8 @@ class CreateEmpresaServicosTable extends Migration
             $table->foreignId('empresa_id')->constrained(); // Poderia informar o nome da tabela se estiver fora do padrão
             $table->string('nome'); // Nome do serviço
             $table->text('descricao'); // Descrição do serviço
-            $table->boolean('ativo'); // A coluna Ativo indica se o serviço deve ou não aparecer nas listagens.
+            $table->string('horario');   // Descrição do horário de atendimento do serviço
+            $table->boolean('ativo');  // A coluna Ativo indica se o serviço deve ou não aparecer nas listagens.
             $table->timestamps();
         });
     }

@@ -9,8 +9,11 @@ class EmpresaInformacao extends Model
 {
     use HasFactory;
 
-    public function Empresa() {
-        // Uma"Informacao" pertence a uma "Empresa"
+    protected $fillable = ['descricao'];
+
+    public function empresas() {
+        // Vários registros pertencem a uma "Empresa".
         return $this->belongsTo(Empresa::class);
     }
+
 }

@@ -28,31 +28,30 @@ class EmpresasController extends Controller
         // Obtém a empresa pelo ID
         $empresa = Empresa::find($empresaId);
 
-        /*
         // Busca os Contatos
-        $contatos = EmpresaContato::find($empresaId);
+        $contatos = $empresa->empresaContatos;
+        ////$contatos = $empresa->empresaContatos()->get();
+        
         // Busca os Endereços
-        $enderecos = EmpresaEndereco::find($empresaId);
+        $enderecos = $empresa->empresaEnderecos;
         // Busca as Imagems
-        $imagems = EmpresaImagem::find($empresaId);
-        */
+        $imagems = $empresa->empresaImagems;
         // Busca as Informações
-        $informacaos = EmpresaInformacao::find($empresaId);
-        /*
+        $informacaos = $empresa->empresaInformacaos;
         // Busca as Pessoas
-        $pessoas = EmpresaPessoa::find($empresaId);
+        $pessoas = $empresa->empresaPessoas;
         // Busca os Produtos
-        $produtos = EmpresaProduto::find($empresaId);
+        $produtos = $empresa->empresaProdutos;
         // Busca os Serviçoes
-        $servicos = EmpresaServico::find($empresaId);
-        */
+        $servicos = $empresa->empresaServicos;
 
-        var_dump($informacaos);
-        //return view ('empresas.profile', compact('empresa'));//, 'contatos'));
+        //var_dump($servicos);
+        
+
+        return view ('empresas.profile', compact('empresa'));//, 'contatos'));
 
         // Usando a query
         //$temporadas =  Temporada::query()->where('serie_id', $serieId)->orderBy('numero')->get();
-
         //var_dump($temporadas);
     }
 

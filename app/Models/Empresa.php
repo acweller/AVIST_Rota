@@ -23,43 +23,43 @@ class Empresa extends Model
     ];
 
     // Busca os Contatos
-    public function EmpresaContatos() {
+    public function empresaContatos() {
         // Uma empres tem muitos Contatos
         return $this->hasMany(EmpresaContato::class);
     }
 
     // Busca os Endereços
-    public function EmpresaEnderecos() {
+    public function empresaEnderecos() {
         // Uma empres tem muitos Endereços
         return $this->hasMany(EmpresaEndereco::class);
     }
 
     // Busca as Imagems
-    public function EmpresaImagems() {
+    public function empresaImagems() {
         // Uma empres tem muitas Imagems
         return $this->hasMany(EmpresaImagem::class);
     }
 
     // Busca as Informações
-    public function EmpresaInformacaos() {
+    public function empresaInformacaos() {
         // Uma empres tem muitas Informações
         return $this->hasMany(EmpresaInformacao::class);
     }
 
     // Busca as Pessoas
-    public function EmpresaPessoas() {
+    public function empresaPessoas() {
         // Uma empres tem muitas Pessoas
         return $this->hasMany(EmpresaPessoa::class);
     }
 
     // Busca os Produtos
-    public function EmpresaProdutos() {
+    public function empresaProdutos() {
         // Uma empres tem muitos Produtos
         return $this->hasMany(EmpresaProduto::class);
     }
 
     // Busca os Serviçoes
-    public function EmpresaServicos() {
+    public function empresaServicos() {
         // Uma empres tem muitos Serviços
         return $this->hasMany(EmpresaServico::class);
     }

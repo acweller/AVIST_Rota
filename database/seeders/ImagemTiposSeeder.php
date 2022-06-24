@@ -16,9 +16,9 @@ class ImagemTiposSeeder extends Seeder
     {
         DB::table('imagem_tipos')->insert([
             ['nomeImagemTipo' => 'Logomarca'],
+            ['nomeImagemTipo' => 'Mapa'],
             ['nomeImagemTipo' => 'Carrossel'],
             ['nomeImagemTipo' => 'Foto'],
-            ['nomeImagemTipo' => 'QR-Code'],
         ]);
     }
 }

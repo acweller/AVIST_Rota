@@ -11,7 +11,7 @@ class EmpresaInformacao extends Model
 
     protected $fillable = ['descricao'];
 
-    public function empresas() {
+    public function empresa() {
         // Vários registros pertencem a uma "Empresa".
         return $this->belongsTo(Empresa::class);
     }

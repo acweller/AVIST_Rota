@@ -18,17 +18,17 @@ class EmpresaImagemsSeeder extends Seeder
         $data = Carbon::now()->toDateTimeString();
 
         // 1 - Logomarca
-        // 2 - Carrossel
-        // 3 - Foto
-        // 4 - QR-Code
+        // 2 - Mapa
+        // 3 - Carrossel
+        // 4 - Foto
 
+        // Galeria de Artesanato
+        $caminho = '/images/01galeriaartesanato/'; // Caminho Padrão
         DB::table('empresa_imagems')->insert([
-
-            // Galeria de Artesanato
             [
                 'empresa_id'     => 1,
                 'imagem_tipo_id' => 1, // Logomarca
-                'caminho'        => '/logomarca0001.jpg',
+                'caminho'        => $caminho . 'logomarca.png',
                 'descricao'      => 'Logomarca da Galeria de Artesanato',
                 'ordem'          => 10001,
                 'created_at' => $data,
@@ -36,72 +36,266 @@ class EmpresaImagemsSeeder extends Seeder
             ],
             [
                 'empresa_id'     => 1,
-                'imagem_tipo_id' => 2, // Carrossel
-                'caminho'        => '/principal0001.jpg',
-                'descricao'      => 'Foto principal da Galeria de Artesanato',
+                'imagem_tipo_id' => 2, // Mapa
+                'caminho'        => $caminho . 'mapa.png',
+                'descricao'      => 'QR-Code da Galeria de Artesanato',
                 'ordem'          => 10002,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
                 'empresa_id'     => 1,
-                'imagem_tipo_id' => 3, // Foto
-                'caminho'        => '/principal0002.jpg',
-                'descricao'      => 'Foto da Galeria de Artesanato',
+                'imagem_tipo_id' => 3, // Carrossel
+                'caminho'        => $caminho . 'principal0001.jpg',
+                'descricao'      => 'Foto principal da Galeria de Artesanato',
                 'ordem'          => 10003,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
                 'empresa_id'     => 1,
-                'imagem_tipo_id' => 4, // QR-Code
-                'caminho'        => '/qrcode0001.jpg',
-                'descricao'      => 'QR-Code da Galeria de Artesanato',
+                'imagem_tipo_id' => 4, // Foto
+                'caminho'        => $caminho . 'principal0002.jpg',
+                'descricao'      => 'Foto da Galeria de Artesanato',
                 'ordem'          => 10004,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
-
-            /*
-            // MODELO
-            [
-                'empresa_id'     => ,
-                'imagem_tipo_id' => 1, // Logomarca
-                'caminho'        => '/logomarca000x.jpg',
-                'descricao'      => 'Logomarca da ',
-                'ordem'          => x0001,
-                'created_at' => $data,
-                'updated_at' => $data,
-            ],
-            [
-                'empresa_id'     => ,
-                'imagem_tipo_id' => 2, // Carrossel
-                'caminho'        => '/principal000x.jpg',
-                'descricao'      => '',
-                'ordem'          => x0002,
-                'created_at' => $data,
-                'updated_at' => $data,
-            ],
-            [
-                'empresa_id'     => ,
-                'imagem_tipo_id' => 3, // Foto
-                'caminho'        => '/principal000x.jpg',
-                'descricao'      => '',
-                'ordem'          => x0003,
-                'created_at' => $data,
-                'updated_at' => $data,
-            ],
-            [
-                'empresa_id'     => ,
-                'imagem_tipo_id' => 4, // QR-Code
-                'caminho'        => '/qrcode000x.jpg',
-                'descricao'      => '',
-                'ordem'          => x0004,
-                'created_at' => $data,
-                'updated_at' => $data,
-            ],
-            */
-
         ]);
+
+        // Rassele
+        $caminho = '/images/02rassele/'; // Caminho Padrão
+        DB::table('empresa_imagems')->insert([
+            [
+                'empresa_id'     => 2,
+                'imagem_tipo_id' => 1, // Logomarca
+                'caminho'        => $caminho . 'logomarca.png',
+                'descricao'      => 'Logomarca',
+                'ordem'          => 20001,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'     => 2,
+                'imagem_tipo_id' => 2, // Mapa
+                'caminho'        => $caminho . 'mapa.png',
+                'descricao'      => 'Mapa',
+                'ordem'          => 20002,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+
+        // Labiata
+        $caminho = '/images/03labiata/'; // Caminho Padrão
+        DB::table('empresa_imagems')->insert([
+            [
+                'empresa_id'     => 3,
+                'imagem_tipo_id' => 1, // Logomarca
+                'caminho'        => $caminho . 'logomarca.png',
+                'descricao'      => 'Logomarca',
+                'ordem'          => 30001,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'     => 3,
+                'imagem_tipo_id' => 2, // Mapa
+                'caminho'        => $caminho . 'mapa.png',
+                'descricao'      => 'Mapa',
+                'ordem'          => 30002,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        // Mattiello
+        $caminho = '/images/04mattiello/'; // Caminho Padrão
+        DB::table('empresa_imagems')->insert([
+            [
+                'empresa_id'     => 4,
+                'imagem_tipo_id' => 1, // Logomarca
+                'caminho'        => $caminho . 'logomarca.png',
+                'descricao'      => 'Logomarca',
+                'ordem'          => 40001,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'     => 4,
+                'imagem_tipo_id' => 2, // Mapa
+                'caminho'        => $caminho . 'mapa.png',
+                'descricao'      => 'Mapa',
+                'ordem'          => 40002,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        // Romanha
+        $caminho = '/images/05romanha/'; // Caminho Padrão
+        DB::table('empresa_imagems')->insert([
+            [
+                'empresa_id'     => 5,
+                'imagem_tipo_id' => 1, // Logomarca
+                'caminho'        => $caminho . 'logomarca.png',
+                'descricao'      => 'Logomarca',
+                'ordem'          => 50001,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'     => 5,
+                'imagem_tipo_id' => 2, // Mapa
+                'caminho'        => $caminho . 'mapa.png',
+                'descricao'      => 'Mapa',
+                'ordem'          => 50002,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        // Casa Espumante
+        $caminho = '/images/06casaespumante/'; // Caminho Padrão
+        DB::table('empresa_imagems')->insert([
+            [
+                'empresa_id'     => 6,
+                'imagem_tipo_id' => 1, // Logomarca
+                'caminho'        => $caminho . 'logomarca.png',
+                'descricao'      => 'Logomarca',
+                'ordem'          => 60001,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'     => 6,
+                'imagem_tipo_id' => 2, // Mapa
+                'caminho'        => $caminho . 'mapa.png',
+                'descricao'      => 'Mapa',
+                'ordem'          => 60002,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        // Tomazelli
+        $caminho = '/images/07tomazelli/'; // Caminho Padrão
+        DB::table('empresa_imagems')->insert([
+            [
+                'empresa_id'     => 7,
+                'imagem_tipo_id' => 1, // Logomarca
+                'caminho'        => $caminho . 'logomarca.png',
+                'descricao'      => 'Logomarca',
+                'ordem'          => 70001,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'     => 7,
+                'imagem_tipo_id' => 2, // Mapa
+                'caminho'        => $caminho . 'mapa.png',
+                'descricao'      => 'Mapa',
+                'ordem'          => 70002,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        // Braun
+        $caminho = '/images/08braun/'; // Caminho Padrão
+        DB::table('empresa_imagems')->insert([
+            [
+                'empresa_id'     => 8,
+                'imagem_tipo_id' => 1, // Logomarca
+                'caminho'        => $caminho . 'logomarca.png',
+                'descricao'      => 'Logomarca',
+                'ordem'          => 80001,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'     => 8,
+                'imagem_tipo_id' => 2, // Mapa
+                'caminho'        => $caminho . 'mapa.png',
+                'descricao'      => 'Mapa',
+                'ordem'          => 80002,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        // Grotteschi
+        $caminho = '/images/09grotteschi/'; // Caminho Padrão
+        DB::table('empresa_imagems')->insert([
+            [
+                'empresa_id'     => 9,
+                'imagem_tipo_id' => 1, // Logomarca
+                'caminho'        => $caminho . 'logomarca.png',
+                'descricao'      => 'Logomarca',
+                'ordem'          => 90001,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'     => 9,
+                'imagem_tipo_id' => 2, // Mapa
+                'caminho'        => $caminho . 'mapa.png',
+                'descricao'      => 'Mapa',
+                'ordem'          => 90002,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        // Tabocas
+        $caminho = '/images/10tabocas/'; // Caminho Padrão
+        DB::table('empresa_imagems')->insert([
+            [
+                'empresa_id'     => 10,
+                'imagem_tipo_id' => 1, // Logomarca
+                'caminho'        => $caminho . 'logomarca.png',
+                'descricao'      => 'Logomarca',
+                'ordem'          => 100001,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'     => 10,
+                'imagem_tipo_id' => 2, // Mapa
+                'caminho'        => $caminho . 'mapa.png',
+                'descricao'      => 'Mapa',
+                'ordem'          => 100002,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        // Ziviani
+        $caminho = '/images/11ziviani/'; // Caminho Padrão
+        DB::table('empresa_imagems')->insert([
+            [
+                'empresa_id'     => 11,
+                'imagem_tipo_id' => 1, // Logomarca
+                'caminho'        => $caminho . 'logomarca.png',
+                'descricao'      => 'Logomarca',
+                'ordem'          => 110001,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'     => 11,
+                'imagem_tipo_id' => 2, // Mapa
+                'caminho'        => $caminho . 'mapa.png',
+                'descricao'      => 'Mapa',
+                'ordem'          => 110002,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+
+
+
     }
 }

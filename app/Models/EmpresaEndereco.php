@@ -9,7 +9,9 @@ class EmpresaEndereco extends Model
 {
     use HasFactory;
 
-    public function Empresa() {
+    protected $fillable = [''];
+
+    public function empresa() {
         // Um "Endereço" pertence a uma "Empresa"
         return $this->belongsTo(Empresa::class);
     }

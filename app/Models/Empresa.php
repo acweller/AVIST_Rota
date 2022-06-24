@@ -22,6 +22,11 @@ class Empresa extends Model
         'longitude',
     ];
 
+    public function empresaTipo() {
+        // Busca o tipo de empresa
+        return $this->belongsTo(EmpresaTipo::class);
+    }
+
     // Busca os Contatos
     public function empresaContatos() {
         // Uma empres tem muitos Contatos

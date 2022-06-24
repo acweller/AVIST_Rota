@@ -9,7 +9,9 @@ class EmpresaPessoa extends Model
 {
     use HasFactory;
 
-    public function Empresa() {
+    protected $fillable = [''];
+
+    public function empresa() {
         // Uma "Pessoa" pertence a uma "Empresa"
         return $this->belongsTo(Empresa::class);
     }

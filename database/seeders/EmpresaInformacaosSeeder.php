@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class EmpresaInformacoesSeeder extends Seeder
+class EmpresaInformacaosSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -28,7 +28,7 @@ class EmpresaInformacoesSeeder extends Seeder
         // 'informacao_tipo_id'
         // 'descricao'
 
-        DB::table('empresa_informacoes')->insert([
+        DB::table('empresa_informacaos')->insert([
 
             // Galeria de Artesanato
             [

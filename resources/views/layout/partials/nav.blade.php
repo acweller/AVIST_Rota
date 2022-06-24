@@ -68,8 +68,8 @@
                         <li><a class="dropdown-item" href="/informacao_tipos">Tipos de Informação</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="/series">Séries</a></li>
-                        <li><a class="dropdown-item" href="#">Temporadas</a></li>
-                        <li><a class="dropdown-item" href="#">Episódios</a></li>
+                        <li><a class="dropdown-item" href="#">xxx Temporadas</a></li>
+                        <li><a class="dropdown-item" href="#">xxx Episódios</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

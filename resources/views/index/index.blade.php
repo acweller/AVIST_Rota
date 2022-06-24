@@ -110,7 +110,7 @@
         </button>
     </div>
 
-    <!-- incluir aqui o include das informacoes_empresa AVIST - PENDENTE -->
+    <!-- incluir aqui o include das informacaos_empresa AVIST - PENDENTE -->
     <div class="container-fluid" id="sobre_avist">
         ... Sobre a AVIST ...
     </div>

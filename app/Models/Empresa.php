@@ -22,8 +22,46 @@ class Empresa extends Model
         'longitude',
     ];
 
-//public function temporadas() {
-    //    // Uma Série Tem muitas "Temporadas"
-    //    return $this->hasMany(Temporada::class);
-    //}
+    // Busca os Contatos
+    public function EmpresaContatos() {
+        // Uma empres tem muitos Contatos
+        return $this->hasMany(EmpresaContato::class);
+    }
+
+    // Busca os Endereços
+    public function EmpresaEnderecos() {
+        // Uma empres tem muitos Endereços
+        return $this->hasMany(EmpresaEndereco::class);
+    }
+
+    // Busca as Imagems
+    public function EmpresaImagems() {
+        // Uma empres tem muitas Imagems
+        return $this->hasMany(EmpresaImagem::class);
+    }
+
+    // Busca as Informações
+    public function EmpresaInformacaos() {
+        // Uma empres tem muitas Informações
+        return $this->hasMany(EmpresaInformacao::class);
+    }
+
+    // Busca as Pessoas
+    public function EmpresaPessoas() {
+        // Uma empres tem muitas Pessoas
+        return $this->hasMany(EmpresaPessoa::class);
+    }
+
+    // Busca os Produtos
+    public function EmpresaProdutos() {
+        // Uma empres tem muitos Produtos
+        return $this->hasMany(EmpresaProduto::class);
+    }
+
+    // Busca os Serviçoes
+    public function EmpresaServicos() {
+        // Uma empres tem muitos Serviços
+        return $this->hasMany(EmpresaServico::class);
+    }
+
 }

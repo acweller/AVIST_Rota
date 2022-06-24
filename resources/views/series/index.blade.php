@@ -5,11 +5,16 @@
 @endsection
 
 @section('conteudo')
-    @if (!empty($mensagem))
+
+    @isset($mensagemSucesso)
+    <!-- Outra forma de verificar se há algo na variável
+        @ if (!empty($mensagemSucesso))
+        @ endif  -->
         <div class="alert alert-success" role="alert">
-            {{ $mensagem }}
+            {{ $mensagemSucesso }}
         </div>
-    @endif
+    @endisset
+
     <a href="{{ route('rota_form_criar_serie') }}" class="btn btn-dark mb-2">Adicionar</a>
     <ul class="list-group">
         @foreach ($series as $serie)

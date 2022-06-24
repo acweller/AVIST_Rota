@@ -141,7 +141,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `avistdb`.`Imagem` (Empresa_Imagens)
+-- Table `avistdb`.`Imagem` (Empresa_Imagems)
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avistdb`.`Imagem` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -178,7 +178,7 @@ COMMENT = 'Identifica os tipos de informações da empresa (Ex.: Histórico, Des
 
 
 -- -----------------------------------------------------
--- Table `avistdb`.`Informacao` (Empresa_Informacoes)
+-- Table `avistdb`.`Informacao` (Empresa_Informacaos)
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `avistdb`.`Informacao` (
   `id` INT NOT NULL AUTO_INCREMENT,

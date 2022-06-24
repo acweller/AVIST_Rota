@@ -44,9 +44,9 @@ Route::controller(EmpresasController::class)->group(function(){
 });
 
 // Rota para CRUD de Informações da Empresa
-Route::controller(EmpresaInformacoesController::class)->group(function(){
-    Route::get('/empresa_informacoes', 'index')->name('rota_index_empresa_informacao');
-    Route::get('/empresa_informacoes/{empresaId}', 'profile')->name('rota_profile_empresa_informacao');
+Route::controller(EmpresaInformacaosController::class)->group(function(){
+    Route::get('/empresa_informacaos', 'index')->name('rota_index_empresa_informacao');
+    Route::get('/empresa_informacaos/{empresaId}', 'profile')->name('rota_profile_empresa_informacao');
 });
 
 

@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class EmpresaImagensSeeder extends Seeder
+class EmpresaImagemsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -22,7 +22,7 @@ class EmpresaImagensSeeder extends Seeder
         // 3 - Foto
         // 4 - QR-Code
 
-        DB::table('empresa_imagens')->insert([
+        DB::table('empresa_imagems')->insert([
 
             // Galeria de Artesanato
             [

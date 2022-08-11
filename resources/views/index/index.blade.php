@@ -64,9 +64,9 @@
     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-current="" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-current="" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-current="" aria-label="Slide 4"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active bg-image"
@@ -85,7 +85,6 @@
           </div>
           <div class="carousel-item bg-image"
                 style="background-image: url('./images/vinho01.jpg');">
-            <!--img src="/images/parreira02.JPG" class="mx-auto d-block img-fluid" alt="Vazio"-->
             <div class="carousel-caption d-none d-md-block">
               <h5>XXXXX Terceiro slide label</h5>
               <p>YYYYY Some representative placeholder content for the third slide.</p>
@@ -93,7 +92,6 @@
           </div>
           <div class="carousel-item bg-image"
                 style="background-image: url('./images/parreira03.JPG');">
-            <!--img src="/images/parreira02.JPG" class="mx-auto d-block img-fluid" alt="Vazio"-->
             <div class="carousel-caption d-none d-md-block">
               <h5>XXXXX Quarto slide label</h5>
               <p>YYYYY Some representative placeholder content for the third slide.</p>

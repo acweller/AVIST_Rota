@@ -42,7 +42,7 @@ class Empresa extends Model
     // Busca as Imagems
     public function empresaImagems() {
         // Uma empres tem muitas Imagems
-        return $this->hasMany(EmpresaImagem::class);
+        return $this->hasMany(EmpresaImagem::class)->orderBy('ordem', 'asc');
     }
 
     // Busca as Informações

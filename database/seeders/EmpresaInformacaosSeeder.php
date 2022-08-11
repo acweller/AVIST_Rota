@@ -39,9 +39,9 @@ class EmpresaInformacaosSeeder extends Seeder
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'         => 1,
+                'empresa_id'         => 1, // https://www.santateresa.es.gov.br/turismo/view/7/servico/view/27
                 'informacao_tipo_id' => 2, // Descrição da Empresa
-                'descricao'          => 'Descrição da Galeria de Artesanato',
+                'descricao'          => 'Localizada no centro de Santa Teresa, recebeu este nome em homenagem à escritora teresense. É composto por três pavimentos ondem encontram-se: no primeiro pavimento a Galeria do Artesanato e da Agroindústria, administrada pela Associação de Produtores de Artesanato e da Agroindústria de Santa Teresa – APROAAST; no segundo pavimento o Museu da Cultura e Imigração Italiana em Santa Teresa; e no terceiro pavimento o Centro de Convivência do Idoso.',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],

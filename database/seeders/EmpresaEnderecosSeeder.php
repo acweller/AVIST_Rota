@@ -22,10 +22,10 @@ class EmpresaEnderecosSeeder extends Seeder
             // Galeria de Artesanato
             [
                 'empresa_id'   => 1,
-                'rua'          => 'Rua xxx',
-                'numero'       => 'Número 0123',
-                'complemento'  => 'Complemento xxx',
-                'bairro'       => 'Bairro xxx',
+                'rua'          => 'Rua Ricardo Pasolini',
+                'numero'       => '246',
+                'complemento'  => '',
+                'bairro'       => 'Centro',
                 'cidade'       => 'Santa Teresa',
                 'estado'       => 'ES',
                 'cep'          => '29650-000',

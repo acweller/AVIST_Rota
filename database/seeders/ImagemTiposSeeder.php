@@ -15,8 +15,8 @@ class ImagemTiposSeeder extends Seeder
     public function run()
     {
         DB::table('imagem_tipos')->insert([
-            ['nomeImagemTipo' => 'Logomarca'],
             ['nomeImagemTipo' => 'Mapa'],
+            ['nomeImagemTipo' => 'Logomarca'],
             ['nomeImagemTipo' => 'Carrossel'],
             ['nomeImagemTipo' => 'Foto'],
         ]);

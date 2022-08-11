@@ -9,11 +9,15 @@
 </head>
 <body>
     @include('layout.partials.nav')
-    @include('layout.partials.header')
-    @yield('conteudo')
-    @include('layout.partials.footer')
-    <div class="container">
-    </div>
-    @include('layout.partials.footer-scripts')
+    <main role="main" class="container">
+        <div class="row">
+            @include('layout.partials.header')
+            @yield('conteudo')
+            @include('layout.partials.footer')
+            <div class="container">
+            </div>
+            @include('layout.partials.footer-scripts')
+        </div><!-- /.row -->
+    </main>
 </body>
 </html>

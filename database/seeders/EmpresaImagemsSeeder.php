@@ -16,6 +16,7 @@ class EmpresaImagemsSeeder extends Seeder
     public function run()
     {
         $data = Carbon::now()->toDateTimeString();
+        $foto = '';
 
         // 1 - Logomarca
         // 2 - Mapa
@@ -57,34 +58,23 @@ class EmpresaImagemsSeeder extends Seeder
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
-            [
-                'empresa_id'     => 1,
-                'imagem_tipo_id' => 4, // Foto
-                'caminho'        => $caminho . 'principal0002.jpg',
-                'descricao'      => 'Foto da Galeria de Artesanato',
-                'ordem'          => 10004,
-                'created_at' => $data,
-                'updated_at' => $data,
-            ],
-            [
-                'empresa_id'     => 1,
-                'imagem_tipo_id' => 4, // Foto
-                'caminho'        => $caminho . 'principal0003.jpg',
-                'descricao'      => 'Foto da Galeria de Artesanato',
-                'ordem'          => 10005,
-                'created_at' => $data,
-                'updated_at' => $data,
-            ],
-            [
-                'empresa_id'     => 1,
-                'imagem_tipo_id' => 4, // Foto
-                'caminho'        => $caminho . 'principal0004.jpg',
-                'descricao'      => 'Foto da Galeria de Artesanato',
-                'ordem'          => 10006,
-                'created_at' => $data,
-                'updated_at' => $data,
-            ],
         ]);
+
+        $ordem = 10002; // Para iniciar no '4'
+        for ($i=2; $i <= 10; $i++) { 
+            $foto = sprintf("%'.04d", $i);
+            DB::table('empresa_imagems')->insert([
+                [
+                    'empresa_id'     => 1,
+                    'imagem_tipo_id' => 4, // Foto
+                    'caminho'        => $caminho . 'principal' . $foto . '.jpg',
+                    'descricao'      => 'Foto da Galeria de Artesanato',
+                    'ordem'          => $ordem + $i,
+                    'created_at' => $data,
+                    'updated_at' => $data,
+                ],
+            ]);
+        }
 
         // Rassele
         $caminho = '/images/02rassele/'; // Caminho Padrão

@@ -31,13 +31,13 @@ class EmpresaInformacaosSeeder extends Seeder
         DB::table('empresa_informacaos')->insert([
 
             // Galeria de Artesanato
-            [
+            /*[
                 'empresa_id'         => 1,
                 'informacao_tipo_id' => 1, // Histórico
                 'descricao'          => 'Descrição do Histórico da Galeria de Artesanato',
                 'created_at' => $data,
                 'updated_at' => $data,
-            ],
+            ],*/
             [
                 'empresa_id'         => 1, // https://www.santateresa.es.gov.br/turismo/view/7/servico/view/27
                 'informacao_tipo_id' => 2, // Descrição da Empresa
@@ -45,7 +45,7 @@ class EmpresaInformacaosSeeder extends Seeder
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
-            [
+            /*[
                 'empresa_id'         => 1,
                 'informacao_tipo_id' => 3, // Missão
                 'descricao'          => 'Descrição da Missão da Galeria de Artesanato',
@@ -72,7 +72,7 @@ class EmpresaInformacaosSeeder extends Seeder
                 'descricao'          => 'Outras descrições da Galeria de Artesanato',
                 'created_at' => $data,
                 'updated_at' => $data,
-            ],
+            ],*/
 
             /*
             // VINÍCOLA xxx MODELO

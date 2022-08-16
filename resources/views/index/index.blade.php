@@ -110,8 +110,10 @@
 
     <!-- incluir aqui o include das informacaos_empresa AVIST - PENDENTE -->
     <div class="container-fluid" id="sobre_avist">
-        ... Sobre a AVIST ...
+      <h2>
+        Sobre a AVIST
+      </h2>
+      A Associação dos Vitivinicultores de Santa Teresa (AVIST) foi fundada em 16 de Abril de 2002.
     </div>
 
 @endsection
-

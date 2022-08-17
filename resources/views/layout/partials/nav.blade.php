@@ -15,8 +15,6 @@
                         Vinícolas
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <!--li><a class="dropdown-item" href="#">Todas as Vinícolas e Cantinas</a></li>
-                        <li><hr class="dropdown-divider"></li-->
                         <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 1)}}">Galeria de Artesanato</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 2)}}">Vinícola Rassele</a></li>
@@ -36,25 +34,12 @@
                         Parceiros
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <!--li><a class="dropdown-item" href="#">Todos os Parceiros</a></li>
-                        <li><hr class="dropdown-divider"></li-->
                         <li><a class="dropdown-item" href="https://santateresa.ifes.edu.br/" target="_blank">Ifes - Campus Santa Teresa</a></li>
                         <li><a class="dropdown-item" href="https://incaper.es.gov.br/" target="_blank">Incaper</a></li>
                         <li><a class="dropdown-item" href="https://www.embrapa.br/" target="_blank">Embrapa</a></li>
                         <li><a class="dropdown-item" href="https://www.gov.br/agricultura/pt-br/" target="_blank">Ministério da Agricultura, Pecuária e Abastecimento</a></li>
                     </ul>
                 </li>
-                <!--li class="nav-item dropdown">
-                    <a class="nav-link disabled dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Colaboradores
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Todos os Colaboradores</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Colaborador 01</a></li>
-                        <li><a class="dropdown-item" href="#">Colaborador 02</a></li>
-                    </ul>
-                </li-->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Listagens
@@ -66,32 +51,16 @@
                         <li><a class="dropdown-item" href="/contato_tipos">Tipos de Contato</a></li>
                         <li><a class="dropdown-item" href="/imagem_tipos">Tipos de Imagem</a></li>
                         <li><a class="dropdown-item" href="/informacao_tipos">Tipos de Informação</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="/series">Séries</a></li>
-                        <li><a class="dropdown-item" href="#">xxx Temporadas</a></li>
-                        <li><a class="dropdown-item" href="#">xxx Episódios</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="/#sobre_avist">Sobre</a>
                 </li>
-
-                <!--li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-                </li-->
             </ul>
-
             <!--form class="d-inline-flex">
                 <input class="form-control me-2" type="search" placeholder="O que você procura?" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form-->
-
         </div>
     </div>
 </nav>

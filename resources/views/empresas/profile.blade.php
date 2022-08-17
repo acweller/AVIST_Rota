@@ -1,42 +1,18 @@
 @extends('layout.mainlayout')
 
-<style>
-    .carousel-item{
-        background-repeat: no-repeat;
-        background-position: 50% center;
-        background-size: 100vw;
-        width: auto;
-        height: 50vw;
-    }
-    .carousel-item:before{
-        content: "";
-        background-image:
-            linear-gradient(
-                to bottom,
-                transparent, rgba(0,0,0,0.5)
-            );
-        display: block;
-        position: relative;
-        top: 0;
-        width: auto;
-        height: 50vw;
-    }
-    .fa-facebook, .fa-twitter, .fa-instagram, .fa-youtube {
-        padding: 8px;
-        font-size: 22px;
-        width: 40px;
-        text-align: center;
-        text-decoration: none;
-        margin: 5px 2px;
-        border-radius: 50%;
-    }
-    .fa:hover {
-        opacity: 0.7;
-    }
-    .list-group {
-        list-group-border-color: $red;
-    }
-</style>
+@section('estilo')
+    <style>
+        .fa-facebook, .fa-twitter, .fa-instagram, .fa-youtube {
+            padding: 8px;
+            font-size: 22px;
+            width: 40px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+    </style>
+@endsection
 
 @section('cabecalho')
     {{ $empresa->nomeEmpresa }}

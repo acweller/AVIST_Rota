@@ -1,54 +1,7 @@
 @extends('layout.mainlayout')
 
-<style>
-    .carousel-item{
-        background-repeat: no-repeat;
-        background-position: 50% center;
-        background-size: 100vw;
-        width: auto;
-        height: 50vw;
-    }
-    .carousel-item:before{
-        content: "";
-        background-image:
-            linear-gradient(
-                to bottom,
-                transparent, rgba(0,0,0,0.5)
-            );
-        display: block;
-        position: relative;
-        top: 0;
-        width: auto;
-        height: 50vw;
-    }
-</style>
-
-<!--
-    https://www.youtube.com/watch?v=KHF6nysy0-c
-    https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
-
-    .carousel-item img {
-        object-fit: cover;
-        object-position: center;
-        overflow: hidden;
-        height: 40vh;
-    }
-
-        .carousel-item:before{
-        content: "";
-        background-image:
-            linear-gradient(
-                to bottom,
-                transparent, rgba(0,0,0,0.5)
-            );
-        display: block;
-        position: relative;
-        top: 0;
-        width: auto;
-        height: 50%;
-    }
-
--->
+@section('estilo')
+@endsection
 
 @section('cabecalho')
     Rota das Vinícolas

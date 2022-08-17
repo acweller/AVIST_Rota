@@ -12,11 +12,15 @@ use App\Models\EmpresaProduto;
 use App\Models\EmpresaServico;
 use Illuminate\Http\Request;
 
+// Ordenação Sort OrderBy
+// https://www.itsolutionstuff.com/post/laravel-eloquent-order-by-query-exampleexample.html
+
 class EmpresasController extends Controller
 {
     public function index (Request $request) {
         // Obtém a lista de itens da Tabela
-        $empresas = Empresa::query()->orderBy('nomeEmpresa')->get();
+        $empresas = Empresa::query()->orderBy('nomeEmpresa', 'asc')->get();
+        //$empresas = Empresa::query()->inRandomOrder()->get();
 
         // Obtém a mensagem retornada via Session de Request
         $mensagem = $request->session()->get('mensagem');

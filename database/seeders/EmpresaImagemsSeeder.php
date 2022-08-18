@@ -38,7 +38,7 @@ class EmpresaImagemsSeeder extends Seeder
                 'imagem_tipo_id' => 1, // Mapa
                 'caminho'        => $caminho . 'mapa.png',
                 'descricao'      => 'Mapa da ' . $nomeEmpresa,
-                'ordem'          => 10001,
+                'ordem'          => $empresa * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -47,7 +47,7 @@ class EmpresaImagemsSeeder extends Seeder
                 'imagem_tipo_id' => 2, // Logomarca
                 'caminho'        => $caminho . 'logomarca.png',
                 'descricao'      => 'Logomarca da ' . $nomeEmpresa,
-                'ordem'          => 10002,
+                'ordem'          => $empresa * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -56,13 +56,13 @@ class EmpresaImagemsSeeder extends Seeder
                 'imagem_tipo_id' => 3, // Carrossel
                 'caminho'        => $caminho . 'principal0001.jpg',
                 'descricao'      => 'Foto principal da ' . $nomeEmpresa,
-                'ordem'          => 10003,
+                'ordem'          => $empresa * 10000 + 3,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
 
-        $ordem = 10002; // Para iniciar no '4'
+        $ordem = $empresa * 10000 + 2; // Para iniciar no '4'
         for ($i=2; $i <= 10; $i++) { 
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
@@ -88,7 +88,7 @@ class EmpresaImagemsSeeder extends Seeder
                 'imagem_tipo_id' => 1, // Mapa
                 'caminho'        => $caminho . 'mapa.png',
                 'descricao'      => 'Mapa da ' . $nomeEmpresa,
-                'ordem'          => 20001,
+                'ordem'          => $empresa * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -97,7 +97,7 @@ class EmpresaImagemsSeeder extends Seeder
                 'imagem_tipo_id' => 2, // Logomarca
                 'caminho'        => $caminho . 'logomarca.png',
                 'descricao'      => 'Logomarca da ' . $nomeEmpresa,
-                'ordem'          => 20002,
+                'ordem'          => $empresa * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -106,13 +106,13 @@ class EmpresaImagemsSeeder extends Seeder
                 'imagem_tipo_id' => 3, // Carrossel
                 'caminho'        => $caminho . 'principal0001.jpg',
                 'descricao'      => 'Foto principal da ' . $nomeEmpresa,
-                'ordem'          => 20003,
+                'ordem'          => $empresa * 10000 + 3,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
 
-        $ordem = 20002; // Para iniciar no '4'
+        $ordem = $empresa * 10000 + 2; // Para iniciar no '4'
         for ($i=2; $i <= 15; $i++) { 
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
@@ -131,45 +131,73 @@ class EmpresaImagemsSeeder extends Seeder
 
         // Labiata
         $caminho = '/images/03labiata/'; // Caminho Padrão
+        $empresa = 3;
+        $nomeEmpresa = 'Vinícola Labiata';
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => 3,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 1, // Mapa
                 'caminho'        => $caminho . 'mapa.png',
-                'descricao'      => 'Mapa',
-                'ordem'          => 30001,
+                'descricao'      => 'Mapa da ' . $nomeEmpresa,
+                'ordem'          => $empresa * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => 3,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 2, // Logomarca
                 'caminho'        => $caminho . 'logomarca.png',
-                'descricao'      => 'Logomarca',
-                'ordem'          => 30002,
+                'descricao'      => 'Logomarca da ' . $nomeEmpresa,
+                'ordem'          => $empresa * 10000 + 2,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'     => $empresa,
+                'imagem_tipo_id' => 3, // Carrossel
+                'caminho'        => $caminho . 'principal0001.jpg',
+                'descricao'      => 'Foto principal da ' . $nomeEmpresa,
+                'ordem'          => $empresa * 10000 + 3,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
+        $ordem = $empresa * 10000 + 2; // Para iniciar no '4'
+        for ($i=2; $i <= 20; $i++) { 
+            $foto = sprintf("%'.04d", $i);
+            DB::table('empresa_imagems')->insert([
+                [
+                    'empresa_id'     => $empresa,
+                    'imagem_tipo_id' => 4, // Foto
+                    'caminho'        => $caminho . 'principal' . $foto . '.jpg',
+                    'descricao'      => 'Foto da ' . $nomeEmpresa,
+                    'ordem'          => $ordem + $i,
+                    'created_at' => $data,
+                    'updated_at' => $data,
+                ],
+            ]);
+        }
 
         // Mattiello
         $caminho = '/images/04mattiello/'; // Caminho Padrão
+        $empresa = 4;
+        $nomeEmpresa = 'Cantina Mattielo';
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => 4,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 1, // Mapa
                 'caminho'        => $caminho . 'mapa.png',
                 'descricao'      => 'Mapa',
-                'ordem'          => 40001,
+                'ordem'          => $empresa * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => 4,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 2, // Logomarca
                 'caminho'        => $caminho . 'logomarca.png',
                 'descricao'      => 'Logomarca',
-                'ordem'          => 40002,
+                'ordem'          => $empresa * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -177,22 +205,24 @@ class EmpresaImagemsSeeder extends Seeder
 
         // Romanha
         $caminho = '/images/05romanha/'; // Caminho Padrão
+        $empresa = 5;
+        $nomeEmpresa = 'Cantina Romanha';
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => 5,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 1, // Mapa
                 'caminho'        => $caminho . 'mapa.png',
                 'descricao'      => 'Mapa',
-                'ordem'          => 50001,
+                'ordem'          => $empresa * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => 5,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 2, // Logomarca
                 'caminho'        => $caminho . 'logomarca.png',
                 'descricao'      => 'Logomarca',
-                'ordem'          => 50002,
+                'ordem'          => $empresa * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -200,22 +230,24 @@ class EmpresaImagemsSeeder extends Seeder
 
         // Casa Espumante
         $caminho = '/images/06casaespumante/'; // Caminho Padrão
+        $empresa = 6;
+        $nomeEmpresa = 'Casa dos Espumantes';
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => 6,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 1, // Mapa
                 'caminho'        => $caminho . 'mapa.png',
                 'descricao'      => 'Mapa',
-                'ordem'          => 60001,
+                'ordem'          => $empresa * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => 6,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 2, // Logomarca
                 'caminho'        => $caminho . 'logomarca.png',
                 'descricao'      => 'Logomarca',
-                'ordem'          => 60002,
+                'ordem'          => $empresa * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -223,22 +255,24 @@ class EmpresaImagemsSeeder extends Seeder
 
         // Tomazelli
         $caminho = '/images/07tomazelli/'; // Caminho Padrão
+        $empresa = 7;
+        $nomeEmpresa = 'Vinícola Tomazelli';
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => 7,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 1, // Mapa
                 'caminho'        => $caminho . 'mapa.png',
                 'descricao'      => 'Mapa',
-                'ordem'          => 70001,
+                'ordem'          => $empresa * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => 7,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 2, // Logomarca
                 'caminho'        => $caminho . 'logomarca.png',
                 'descricao'      => 'Logomarca',
-                'ordem'          => 70002,
+                'ordem'          => $empresa * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -246,22 +280,24 @@ class EmpresaImagemsSeeder extends Seeder
 
         // Braun
         $caminho = '/images/08braun/'; // Caminho Padrão
+        $empresa = 8;
+        $nomeEmpresa = 'Cantina Braun';
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => 8,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 1, // Mapa
                 'caminho'        => $caminho . 'mapa.png',
                 'descricao'      => 'Mapa',
-                'ordem'          => 80001,
+                'ordem'          => $empresa * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => 8,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 2, // Logomarca
                 'caminho'        => $caminho . 'logomarca.png',
                 'descricao'      => 'Logomarca',
-                'ordem'          => 80002,
+                'ordem'          => $empresa * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -269,22 +305,24 @@ class EmpresaImagemsSeeder extends Seeder
 
         // Grotteschi
         $caminho = '/images/09grotteschi/'; // Caminho Padrão
+        $empresa = 9;
+        $nomeEmpresa = 'Cantina Grotteschi';
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => 9,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 1, // Mapa
                 'caminho'        => $caminho . 'mapa.png',
                 'descricao'      => 'Mapa',
-                'ordem'          => 90001,
+                'ordem'          => $empresa * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => 9,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 2, // Logomarca
                 'caminho'        => $caminho . 'logomarca.png',
                 'descricao'      => 'Logomarca',
-                'ordem'          => 90002,
+                'ordem'          => $empresa * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -292,22 +330,24 @@ class EmpresaImagemsSeeder extends Seeder
 
         // Tabocas
         $caminho = '/images/10tabocas/'; // Caminho Padrão
+        $empresa = 10;
+        $nomeEmpresa = 'Tabocas Vin De Garage';
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => 10,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 1, // Mapa
                 'caminho'        => $caminho . 'mapa.png',
                 'descricao'      => 'Mapa',
-                'ordem'          => 100001,
+                'ordem'          => $empresa * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => 10,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 2, // Logomarca
                 'caminho'        => $caminho . 'logomarca.png',
                 'descricao'      => 'Logomarca',
-                'ordem'          => 100002,
+                'ordem'          => $empresa * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -315,29 +355,28 @@ class EmpresaImagemsSeeder extends Seeder
 
         // Ziviani
         $caminho = '/images/11ziviani/'; // Caminho Padrão
+        $empresa = 11;
+        $nomeEmpresa = 'Vinícola Ziviani';
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => 11,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 1, // Mapa
                 'caminho'        => $caminho . 'mapa.png',
                 'descricao'      => 'Mapa',
-                'ordem'          => 110001,
+                'ordem'          => $empresa * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => 11,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 2, // Logomarca
                 'caminho'        => $caminho . 'logomarca.png',
                 'descricao'      => 'Logomarca',
-                'ordem'          => 110002,
+                'ordem'          => $empresa * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
-
-
-
 
     }
 }

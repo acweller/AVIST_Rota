@@ -82,25 +82,41 @@
                         @case(4)
                             <div class="col">
                                 <!-- Facebook -->
-                                <a href="https://www.facebook.com/{{ addslashes($contato->descricao) }}" class="fa-brands fa-facebook" target="_blank"></a>
+                                <a href="https://www.facebook.com/{{ addslashes($contato->descricao) }}"
+                                    class="fa-brands fa-facebook" 
+                                    target="_blank"
+                                    data-bs-title="Facebook da {{ $empresa->nomeEmpresa }}" data-bs-toggle="tooltip">
+                                </a>
                             </div>
                             @break
                         @case(5)
                             <div class="col">
                                 <!-- Instagram -->
-                                <a href="https://instagram.com/{{ addslashes($contato->descricao) }}" class="fa-brands fa-instagram" target="_blank"></a>
+                                <a href="https://instagram.com/{{ addslashes($contato->descricao) }}"
+                                    class="fa-brands fa-instagram"
+                                    target="_blank"
+                                    data-bs-toggle="tooltip" data-bs-title="Instagram da {{ $empresa->nomeEmpresa }}">
+                                </a>
                             </div>
                             @break
                         @case(6)
                             <div class="col">
                                 <!-- Twitter -->
-                                <a href="https://twitter.com/{{ addslashes($contato->descricao) }}" class="fa-brands fa-twitter" target="_blank"></a>
+                                <a href="https://twitter.com/{{ addslashes($contato->descricao) }}"
+                                    class="fa-brands fa-twitter"
+                                    target="_blank"
+                                    data-bs-title="Twitter da {{ $empresa->nomeEmpresa }}" data-bs-toggle="tooltip">
+                                </a>
                             </div>
                             @break
                         @case(7)
                             <div class="col">
                                 <!-- YouTube -->
-                                <a href="https://www.youtube.com/{{ addslashes($contato->descricao) }}" class="fa-brands fa-youtube" target="_blank"></a>
+                                <a href="https://www.youtube.com/{{ addslashes($contato->descricao) }}"
+                                    class="fa-brands fa-youtube"
+                                    target="_blank"
+                                    data-bs-title="YouTube da {{ $empresa->nomeEmpresa }}" data-bs-toggle="tooltip">
+                                </a>
                             </div>
                             @break
                         @endswitch
@@ -173,10 +189,9 @@
         <h2 id="empresa-contato">Contato<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-contato" style="padding-left: 0.375em;"></a></h2>
         @foreach ($pessoas as $pessoa)
             <div class="btn-group btn-group-sm">
-                <div class="container">{{ $pessoa->nome }}</div>
+                <div class="btn fa-solid fa-user"></div>
+                <div class="spam"><b>{{ $pessoa->nome }}</b></div>
                 @if (!empty($pessoa->email))
-                    <!--a href="mailto:{{ addslashes($pessoa->email) }}" class="btn btn-outline-primary fa-solid fa-envelope"></a>
-                    <a href="mailto:{{ addslashes($pessoa->email) }}" class="btn btn-outline-primary">{{ addslashes($pessoa->email) }}</a-->
                 @endif
             </div>
         @endforeach
@@ -188,14 +203,14 @@
                     <div class="btn-group btn-group-sm">
                         <!--TEL FIXO-->
                         <a href="tel:0{{ addslashes($contato->descricao) }}" class="btn fa-solid fa-phone" target="_blank"></a>
-                        <a href="tel:0{{ addslashes($contato->descricao) }}" class="link-dark" target="_blank">({{ substr($contato->descricao,0,2) }}) {{ substr($contato->descricao,2,5) }}-{{ substr($contato->descricao,7) }}</a>
+                        <a href="tel:0{{ addslashes($contato->descricao) }}" class="link-dark" target="_blank">({{ substr($contato->descricao,0,2) }}) {{ substr($contato->descricao,2, strlen($contato->descricao)-6) }}-{{ substr($contato->descricao, strlen($contato->descricao)-4) }}</a>
                     </div>
                     @break
                 @case(2)
                     <div class="btn-group btn-group-sm">
                         <!--WHATSAPP-->
                         <a href="https://api.whatsapp.com/send?phone=55{{ addslashes($contato->descricao) }}" class="btn fa-brands fa-whatsapp" target="_blank"></a>
-                        <a href="https://api.whatsapp.com/send?phone=55{{ addslashes($contato->descricao) }}" class="link-dark" target="_blank">({{ substr($contato->descricao,0,2) }}) {{ substr($contato->descricao,2,5) }}-{{ substr($contato->descricao,7) }}</a>
+                        <a href="https://api.whatsapp.com/send?phone=55{{ addslashes($contato->descricao) }}" class="link-dark" target="_blank">({{ substr($contato->descricao,0,2) }}) {{ substr($contato->descricao,2, strlen($contato->descricao)-6) }}-{{ substr($contato->descricao, strlen($contato->descricao)-4) }}</a>
                     </div>
                     @break
                 @case(3)

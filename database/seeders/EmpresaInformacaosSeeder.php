@@ -129,8 +129,62 @@ class EmpresaInformacaosSeeder extends Seeder
             ],
         ]);
 
+        // Labiata
+        $empresa = 3;
+        DB::table('empresa_informacaos')->insert([
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Nas décadas de 60 e 70, os avós do proprietário, Firmino Doerl, produziam vinho caseiro para a complementação de renda da família, o que despertou interesse em se dedicar e aprimorar as produções ao longo dos anos. A Vinícola Labiata está no mercado desde 1998, criando produtos especiais para serem apreciados em diversas ocasiões. Uma vinícola familiar que prioriza a qualidade de seus produtos.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 2, // Descrição da Empresa
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 3, // Missão
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 4, // Valores
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 5, // Biografia
+                'descricao'          => 'O nome Labiata, foi inspirado na nomenclatura científica da exuberante orquídea Cattleya labiata. O querido e saudoso amigo Augusto Ruschi, sugeriu e incentivou a pesquisa de nomes científicos nos livros disponíveis no Museu de Biologia Professor Mello Leitão, localizado na cidade de Santa Teresa. O encontro do nome Labiata, foi identificação à primeira vista, e assim, deu origem a marca.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => 'Os produtos são de fabricação própria. Vinhos secos, demi-secos e suaves, Fermentado de Jabuticaba, Cachaça Giramundo, Coquetel de Gengibre e Coquetel de Bananinha, Licores naturais e cremosos. Os produtos são elaborados a partir de frutos e especiarias naturais das montanhas capixabas.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => 'A Cantina Labiata, ponto referencial de venda, está localizada na Cidade de Santa Teresa, rua São Lourenço, nº 635. Espírito Santo. Venda varejo e atacado por encomenda.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
-        // VINÍCOLA xxx MODELO
+        // MODELO
         $empresa = ;
         DB::table('empresa_informacaos')->insert([
             [

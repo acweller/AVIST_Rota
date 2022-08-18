@@ -50,9 +50,25 @@ class EmpresaEnderecosSeeder extends Seeder
                 'updated_at' => $data,
             ],
         ]);
+        // Labiata
+        $empresa = 3;
+        DB::table('empresa_enderecos')->insert([
+            [
+                'empresa_id'   => $empresa,
+                'rua'          => 'Rua São Lourenço',
+                'numero'       => '635',
+                'complemento'  => '',
+                'bairro'       => 'São Lourenço',
+                'cidade'       => 'Santa Teresa',
+                'estado'       => 'ES',
+                'cep'          => '29650-000',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
         /*
         // MODELO
-        $empresa = 1;
+        $empresa = ;
         DB::table('empresa_enderecos')->insert([
             [
                 'empresa_id'   => $empresa,

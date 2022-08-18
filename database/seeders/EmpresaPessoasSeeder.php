@@ -43,6 +43,18 @@ class EmpresaPessoasSeeder extends Seeder
             ],
         ]);
 
+        // Labiata
+        $empresa = 3;
+        DB::table('empresa_pessoas')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Firmino Doerl',
+                'email'      => 'vinicolalabiata@hotmail.com',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

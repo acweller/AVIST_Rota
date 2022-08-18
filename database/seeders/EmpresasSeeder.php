@@ -59,7 +59,7 @@ class EmpresasSeeder extends Seeder
             [
                 'id' => 4,
                 'empresa_tipo_id'   => 2, // Vinícola/Cantina
-                'nomeEmpresa'       => 'Cantina Mattiello ',
+                'nomeEmpresa'       => 'Cantina Mattiello',
                 'linkGoogleMaps'    => 'https://g.page/CantinaMattiello?share',
                 'latitude'          => -19.931491,
                 'longitude'         => -40.615283,

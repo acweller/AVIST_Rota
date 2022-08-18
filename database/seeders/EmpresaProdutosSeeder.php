@@ -59,7 +59,7 @@ class EmpresaProdutosSeeder extends Seeder
             ],
             [
                 'empresa_id' => $empresa,
-                'nome'       => 'Fermentado Alcoólico',
+                'nome'       => 'Fermentado alcoólico',
                 'descricao'  => 'Jabuticaba (Suave).',
                 'ativo'      => true,
                 'created_at' => $data,
@@ -69,6 +69,59 @@ class EmpresaProdutosSeeder extends Seeder
                 'empresa_id' => $empresa,
                 'nome'       => 'Licores',
                 'descricao'  => 'Finos e Cremosos (de frutas e ingredientes locais).',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        // Labiata
+        $empresa = 3;
+        DB::table('empresa_produtos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Fermentado alcoólico',
+                'descricao'  => 'Jabuticaba.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho tinto de mesa',
+                'descricao'  => 'Seco, demi seco e suave.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Suco',
+                'descricao'  => 'Uva Integral.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Coquetel alcóolico',
+                'descricao'  => 'Gengibre Giramundo e Bananinha Giramundo.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Cachaça Giramundo',
+                'descricao'  => '',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Licores artesanais',
+                'descricao'  => 'Naturais e cremosos.',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,

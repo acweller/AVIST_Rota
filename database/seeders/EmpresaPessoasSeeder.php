@@ -17,35 +17,45 @@ class EmpresaPessoasSeeder extends Seeder
     {
         $data = Carbon::now()->toDateTimeString();
 
+        /*
+        // Galeria de Artesanato
+        $empresa = 1;
         DB::table('empresa_pessoas')->insert([
-
-            // Galeria de Artesanato
             [
-                'empresa_id' => 1,
+                'empresa_id' => $empresa,
                 'nome'       => 'Nome Pessoa xxx',
                 'email'      => 'emailPessoa1@TESTE.br',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
+        ]);
+        */
+
+        // Rassele
+        $empresa = 2;
+        DB::table('empresa_pessoas')->insert([
             [
-                'empresa_id' => 1,
-                'nome'       => 'Nome Pessoa yyy',
-                'email'      => 'emailPessoa2@TESTE.br',
+                'empresa_id' => $empresa,
+                'nome'       => 'Wagner Rassele',
+                'email'      => '',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
+        ]);
 
-            /*
-            // MODELO
+        /*
+        // MODELO
+        $empresa = ;
+        DB::table('empresa_pessoas')->insert([
             [
-                'empresa_id' => ,
+                'empresa_id' => $empresa,
                 'nome'       => '',
                 'email'      => '',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
-            */
-
         ]);
+        */
+
     }
 }

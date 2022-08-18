@@ -30,30 +30,32 @@ class EmpresaImagemsSeeder extends Seeder
 
         // Galeria de Artesanato
         $caminho = '/images/01galeriaartesanato/'; // Caminho Padrão
+        $empresa = 1;
+        $nomeEmpresa = 'Galeria de Artesanato';
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => 1,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 1, // Mapa
                 'caminho'        => $caminho . 'mapa.png',
-                'descricao'      => 'Mapa da Galeria de Artesanato',
+                'descricao'      => 'Mapa da ' . $nomeEmpresa,
                 'ordem'          => 10001,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => 1,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 2, // Logomarca
                 'caminho'        => $caminho . 'logomarca.png',
-                'descricao'      => 'Logomarca da Galeria de Artesanato',
+                'descricao'      => 'Logomarca da ' . $nomeEmpresa,
                 'ordem'          => 10002,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => 1,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 3, // Carrossel
                 'caminho'        => $caminho . 'principal0001.jpg',
-                'descricao'      => 'Foto principal da Galeria de Artesanato',
+                'descricao'      => 'Foto principal da ' . $nomeEmpresa,
                 'ordem'          => 10003,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -65,10 +67,10 @@ class EmpresaImagemsSeeder extends Seeder
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
-                    'empresa_id'     => 1,
+                    'empresa_id'     => $empresa,
                     'imagem_tipo_id' => 4, // Foto
                     'caminho'        => $caminho . 'principal' . $foto . '.jpg',
-                    'descricao'      => 'Foto da Galeria de Artesanato',
+                    'descricao'      => 'Foto da ' . $nomeEmpresa,
                     'ordem'          => $ordem + $i,
                     'created_at' => $data,
                     'updated_at' => $data,
@@ -78,26 +80,53 @@ class EmpresaImagemsSeeder extends Seeder
 
         // Rassele
         $caminho = '/images/02rassele/'; // Caminho Padrão
+        $empresa = 2;
+        $nomeEmpresa = 'Vinícola Rassele';
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => 2,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 1, // Mapa
                 'caminho'        => $caminho . 'mapa.png',
-                'descricao'      => 'Mapa',
+                'descricao'      => 'Mapa da ' . $nomeEmpresa,
                 'ordem'          => 20001,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => 2,
+                'empresa_id'     => $empresa,
                 'imagem_tipo_id' => 2, // Logomarca
                 'caminho'        => $caminho . 'logomarca.png',
-                'descricao'      => 'Logomarca',
+                'descricao'      => 'Logomarca da ' . $nomeEmpresa,
                 'ordem'          => 20002,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
+            [
+                'empresa_id'     => $empresa,
+                'imagem_tipo_id' => 3, // Carrossel
+                'caminho'        => $caminho . 'principal0001.jpg',
+                'descricao'      => 'Foto principal da ' . $nomeEmpresa,
+                'ordem'          => 20003,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
         ]);
+
+        $ordem = 20002; // Para iniciar no '4'
+        for ($i=2; $i <= 15; $i++) { 
+            $foto = sprintf("%'.04d", $i);
+            DB::table('empresa_imagems')->insert([
+                [
+                    'empresa_id'     => $empresa,
+                    'imagem_tipo_id' => 4, // Foto
+                    'caminho'        => $caminho . 'principal' . $foto . '.jpg',
+                    'descricao'      => 'Foto da ' . $nomeEmpresa,
+                    'ordem'          => $ordem + $i,
+                    'created_at' => $data,
+                    'updated_at' => $data,
+                ],
+            ]);
+        }
 
 
         // Labiata

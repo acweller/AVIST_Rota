@@ -20,6 +20,7 @@ class EmpresasController extends Controller
     public function index (Request $request) {
         // Obtém a lista de itens da Tabela
         $empresas = Empresa::query()->orderBy('nomeEmpresa', 'asc')->get();
+        // In Random Order - Aleatório
         //$empresas = Empresa::query()->inRandomOrder()->get();
 
         // Obtém a mensagem retornada via Session de Request

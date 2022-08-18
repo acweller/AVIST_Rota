@@ -112,8 +112,14 @@
         <h2 id="empresa-produto">Produtos<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-produto" style="padding-left: 0.375em;"></a></h2>
         <ol class="list-unstyled list-group-numbered">
             @foreach ($produtos as $produto)
-            @if ($produto->ativo != 11)
-                <li class="list-group-item"><b>{{ $produto->nome }}</b>: {{ addslashes($produto->descricao) }}</li>
+            @if ($produto->ativo == 1)
+                <li class="list-group-item">
+                    @if(strlen($produto->descricao) > 0)
+                        <b>{{ $produto->nome }}</b>: {{ addslashes($produto->descricao) }}
+                    @else
+                        <b>{{ $produto->nome }}</b>
+                    @endif
+                </li>
             @endif
             @endforeach
         </ol>
@@ -123,9 +129,12 @@
             @foreach ($servicos as $servico)
             @if ($servico->ativo == 1)
                 <li class="list-group-item">
-                    <b>{{ $servico->nome }}</b>:
-                    {{ addslashes($servico->descricao) }}<br>
-                    Horário: {{ addslashes($servico->horario) }}
+                    @if(strlen($servico->descricao) > 0)
+                        <b>{{ $servico->nome }}</b>: {{ addslashes($servico->descricao) }}
+                    @else
+                        <b>{{ $servico->nome }}</b>
+                    @endif
+                    <br>Horário: {{ addslashes($servico->horario) }}
                 </li>
             @endif
             @endforeach
@@ -177,67 +186,35 @@
             @switch($contato->contato_tipo_id)
                 @case(1)
                     <div class="btn-group btn-group-sm">
-                        <a href="tel:{{ addslashes($contato->descricao) }}" class="btn fa-solid fa-phone"></a>
-                        <a href="tel:{{ addslashes($contato->descricao) }}" class="link-dark">{{ addslashes($contato->descricao) }}</a>
+                        <!--TEL FIXO-->
+                        <a href="tel:0{{ addslashes($contato->descricao) }}" class="btn fa-solid fa-phone" target="_blank"></a>
+                        <a href="tel:0{{ addslashes($contato->descricao) }}" class="link-dark" target="_blank">({{ substr($contato->descricao,0,2) }}) {{ substr($contato->descricao,2,5) }}-{{ substr($contato->descricao,7) }}</a>
                     </div>
                     @break
                 @case(2)
                     <div class="btn-group btn-group-sm">
-                        <a href="https://api.whatsapp.com/send?phone=55{{ addslashes($contato->descricao) }}" class="btn fa-brands fa-whatsapp"></a>
-                        <a href="https://api.whatsapp.com/send?phone=55{{ addslashes($contato->descricao) }}" class="link-dark">{{ addslashes($contato->descricao) }}</a>
+                        <!--WHATSAPP-->
+                        <a href="https://api.whatsapp.com/send?phone=55{{ addslashes($contato->descricao) }}" class="btn fa-brands fa-whatsapp" target="_blank"></a>
+                        <a href="https://api.whatsapp.com/send?phone=55{{ addslashes($contato->descricao) }}" class="link-dark" target="_blank">({{ substr($contato->descricao,0,2) }}) {{ substr($contato->descricao,2,5) }}-{{ substr($contato->descricao,7) }}</a>
                     </div>
                     @break
                 @case(3)
                     <div class="btn-group btn-group-sm"
                         style="--bs-btn-padding-y: .9rem; --bs-btn-padding-x: .9rem; --bs-btn-font-size: .75rem;">
-                        <a href="mailto:{{ addslashes($contato->descricao) }}" class="btn fa-solid fa-envelope"></a>
-                        <a href="mailto:{{ addslashes($contato->descricao) }}" class="link-dark">{{ addslashes($contato->descricao) }}</a>
+                        <!--EMAIL-->
+                        <a href="mailto:{{ addslashes($contato->descricao) }}" class="btn fa-solid fa-envelope" target="_blank"></a>
+                        <a href="mailto:{{ addslashes($contato->descricao) }}" class="link-dark" target="_blank">{{ addslashes($contato->descricao) }}</a>
+                    </div>
+                    @break
+                @case(8)
+                    <div class="btn-group btn-group-sm">
+                        <!--SITE-->
+                        <a href="{{ addslashes($contato->descricao) }}" class="btn fa-solid fa-earth-americas" target="_blank"></a>
+                        <a href="{{ addslashes($contato->descricao) }}" class="link-dark" target="_blank">{{ $contato->descricao }}</a>
                     </div>
                     @break
             @endswitch
             </div>
-        @endforeach
-
-        
-        <!--a href="{ { route('rota_form_criar_empresa') }}" class="btn btn-dark mb-2">Adicionar</a-->
-        <!--ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-
-                <a href="{{route('rota_index_empresas')}}">
-                    Voltar
-                </a>
-
-                <span class="d-flex">
-                    <span class="d-flex">
-                        {{ addslashes($empresaTipo->nomeEmpresaTipo) }}
-                    </span>
-                    <a href="{{ $empresa->linkGoogleMaps }}" class="btn btn-outline-primary btn-sm mr-0" data-toggle="tooltip" data-placement="bottom" title="Link Google Maps" target="_blank">
-                        <i class="fa-solid fa-map-location"></i>
-                    </a>
-                    <a href="http://www.google.com/maps/place/{{$empresa->latitude}},{{$empresa->longitude}}" class="btn btn-outline-primary btn-sm ml-0"  data-toggle="tooltip" data-placement="bottom" title="Mapa via Coordenadas" target="_blank">
-                        <i class="fa-solid fa-earth-americas"></i>
-                    </a>
-                </span>
-
-                <span class="d-flex">
-
-                    <a href="{ { route('rota_index_XXX', $empresa->id) }}" class="btn btn-outline-danger btn-sm mr-1">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-
-                    <form action="{ { route('rota_remover_empresa', $empresa->id) }}"
-                        method="post"
-                        onsubmit="return confirm('Tem certeza que deseja remover {{ addslashes($empresa->nomeEmpresa) }}')">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn btn-outline-danger btn-sm ml-1">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </form>
-                </span>
-            </li>
-        </ul-->
+        @endforeach        
     </div>
-
-
 @endsection

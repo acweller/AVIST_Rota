@@ -17,11 +17,11 @@ class EmpresaServicosSeeder extends Seeder
     {
         $data = Carbon::now()->toDateTimeString();
 
+        // Galeria de Artesanato
+        $empresa = 1;
         DB::table('empresa_servicos')->insert([
-
-            // Galeria de Artesanato
             [
-                'empresa_id' => 1,
+                'empresa_id' => $empresa,
                 'nome'       => 'Expediente',
                 'descricao'  => '',
                 'horario'    => 'Diariamente, de 8h às 17h.',
@@ -29,20 +29,37 @@ class EmpresaServicosSeeder extends Seeder
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
+        ]);
 
-            /*
-            // MODELO
+        // Rassele
+        $empresa = 2;
+        DB::table('empresa_servicos')->insert([
             [
-                'empresa_id' => ,
-                'nome'       => '',
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente',
                 'descricao'  => '',
-                'horario'    => 'De 8:00 às 12:00 e de 13:00 às 17:00',
+                'horario'    => 'Todos os dias de 07:30 às 17:30 horas.',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
-            */
-
         ]);
+
+        /*
+        // MODELO
+        $empresa = ;
+        DB::table('empresa_servicos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente',
+                'descricao'  => '',
+                'horario'    => 'De ',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+        */
+
     }
 }

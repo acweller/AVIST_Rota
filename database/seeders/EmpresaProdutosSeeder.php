@@ -17,38 +17,77 @@ class EmpresaProdutosSeeder extends Seeder
     {
         $data = Carbon::now()->toDateTimeString();
 
+        // Galeria de Artesanato
+        $empresa = 1;
         DB::table('empresa_produtos')->insert([
-
-            // Galeria de Artesanato
             [
-                'empresa_id' => 1,
-                'nome'       => 'Nome Produto VINTO',
-                'descricao'  => 'Produto VINHO de teste da Galeria de Artesanato',
+                'empresa_id' => $empresa,
+                'nome'       => 'Agricultura familiar',
+                'descricao'  => 'Doces, sobremesas, biscoitos, vinhos, cachaças, conservas, pimentas, geleias, e muito mais.',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id' => 1,
-                'nome'       => 'Nome Produto GRAPA',
-                'descricao'  => 'Produto GRAPA de teste da Galeria de Artesanato',
-                'ativo'      => false,
+                'empresa_id' => $empresa,
+                'nome'       => 'Artesanatos',
+                'descricao'  => '',
+                'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
-
-            /*
-            // MODELO
             [
-                'empresa_id' => ,
+                'empresa_id' => $empresa,
+                'nome'       => 'Produtos regionais',
+                'descricao'  => '',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        // Rassele
+        $empresa = 2;
+        DB::table('empresa_produtos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinhos',
+                'descricao'  => 'Tinto Isabel (Seco e Suave), Tinto Bordô (Seco), Branco Seco, etc.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Fermentado Alcoólico',
+                'descricao'  => 'Jabuticaba (Suave).',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Licores',
+                'descricao'  => 'Finos e Cremosos (de frutas e ingredientes locais).',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        /*
+        // MODELO
+        $empresa = ;
+        DB::table('empresa_produtos')->insert([
+            [
+                'empresa_id' => $empresa,
                 'nome'       => '',
                 'descricao'  => '',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
-            */
-
         ]);
+        */
     }
 }

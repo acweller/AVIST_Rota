@@ -60,6 +60,12 @@ class ContatoTiposSeeder extends Seeder
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
+            [
+                'id' => 8,
+                'nomeContatoTipo' => 'Site',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
         ]);
     }
 }

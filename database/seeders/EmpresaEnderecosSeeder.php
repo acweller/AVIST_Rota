@@ -17,11 +17,11 @@ class EmpresaEnderecosSeeder extends Seeder
     {
         $data = Carbon::now()->toDateTimeString();
 
+        // Galeria de Artesanato
+        $empresa = 1;
         DB::table('empresa_enderecos')->insert([
-
-            // Galeria de Artesanato
             [
-                'empresa_id'   => 1,
+                'empresa_id'   => $empresa,
                 'rua'          => 'Rua Ricardo Pasolini',
                 'numero'       => '246',
                 'complemento'  => '',
@@ -32,11 +32,30 @@ class EmpresaEnderecosSeeder extends Seeder
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
+        ]);
 
-            /*
-            // MODELO
+        // Rassele
+        $empresa = 2;
+        DB::table('empresa_enderecos')->insert([
             [
-                'empresa_id'   => ,
+                'empresa_id'   => $empresa,
+                'rua'          => 'Rua Coronel Bonfim',
+                'numero'       => '448',
+                'complemento'  => '',
+                'bairro'       => 'Centro',
+                'cidade'       => 'Santa Teresa',
+                'estado'       => 'ES',
+                'cep'          => '29650-000',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+        /*
+        // MODELO
+        $empresa = 1;
+        DB::table('empresa_enderecos')->insert([
+            [
+                'empresa_id'   => $empresa,
                 'rua'          => '',
                 'numero'       => '',
                 'complemento'  => '',
@@ -47,8 +66,7 @@ class EmpresaEnderecosSeeder extends Seeder
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
-            */
-
         ]);
+        */
     }
 }

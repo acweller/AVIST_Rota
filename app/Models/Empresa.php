@@ -42,7 +42,8 @@ class Empresa extends Model
     // Busca as Imagems
     public function empresaImagems() {
         // Uma empres tem muitas Imagems
-        return $this->hasMany(EmpresaImagem::class)->orderBy('ordem', 'asc');
+        return $this->hasMany(EmpresaImagem::class)->inRandomOrder();
+        //->orderBy('ordem', 'asc');
     }
 
     // Busca as Informações

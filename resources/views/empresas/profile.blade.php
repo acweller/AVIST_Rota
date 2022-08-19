@@ -186,14 +186,16 @@
             </div>
         </p>
 
-        <h2 id="empresa-contato">Contato<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-contato" style="padding-left: 0.375em;"></a></h2>
+        <h2 id="empresa-contato">Contato(s)<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-contato" style="padding-left: 0.375em;"></a></h2>
         @foreach ($pessoas as $pessoa)
+        <div>
             <div class="btn-group btn-group-sm">
                 <div class="btn fa-solid fa-user"></div>
                 <div class="spam"><b>{{ $pessoa->nome }}</b></div>
                 @if (!empty($pessoa->email))
                 @endif
             </div>
+        </div>
         @endforeach
         
         @foreach ($contatos as $contato)

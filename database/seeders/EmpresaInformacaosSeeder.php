@@ -183,6 +183,81 @@ class EmpresaInformacaosSeeder extends Seeder
             ],
         ]);
 
+        // Mattiello
+        $empresa = 4;
+        DB::table('empresa_informacaos')->insert([
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'No dia 24 de julho de 1888 , na Comune di Soave , província de Verona, Itália, nascia Atílio Mattiello , filho de Giovanni Mattiello e Margherita Sitta, vitivinicultores natos cuja vinha passava de gerações a gerações.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Mal sabia Atílio que o destino de sua família estava em colonizar terras capixabas. Em 6 de fevereiro de 1895 com apenas 7 anos de idade chegava a Vitória- ES, logo em seguida tomaram destino para região serrana de Santa Teresa-ES com seus pais, o irmão Luciano, a irmã Caterina e muitas outras famílias imigrantes que atravessaram o atlântico no navio Rosário. Nova terra, novo clima , nova língua , novas plantas, novas culturas… A adaptação de sua família em terras capixabas foi muito difícil e cheio de aventuras.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Ao chegarem no município encontraram a jabuticaba, uma fruta nativa da mata Atlântica existente na região, onde produziram vinhos para o consumo da família.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Passou a tradição por gerações, chegando ao seu neto Atilio Mattielo, que fez surgir toda a tradição de seus antepassados, cultivando uvas para a vinificação.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Em março de 1996, Viviane Mattiello, filha de Atilio Mattielo (neto), inaugurou a Cantina Mattiello, que alem de seus produtos próprios,  vinhos, licores, café torrado, sucos e geléias, trabalham com agro turismo, recebendo visitas às parreiras de uvas e proporcionando aos clientes a oportunidade de conhecer o processo de produção dos vinhos e degustação dos produtos ao final do tour.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 2, // Descrição da Empresa
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 3, // Missão
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 4, // Valores
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 5, // Biografia
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+        ]);
+
         /*
         // MODELO
         $empresa = ;

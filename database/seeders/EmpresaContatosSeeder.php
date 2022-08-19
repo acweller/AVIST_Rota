@@ -110,14 +110,14 @@ class EmpresaContatosSeeder extends Seeder
                 'descricao'       => '27999955926',
                 'created_at' => $data,
                 'updated_at' => $data,
-            ],/*
+            ],
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 3, // Email
-                'descricao'       => '',
+                'descricao'       => 'vinicolarassele@gmail.com',
                 'created_at' => $data,
                 'updated_at' => $data,
-            ],
+            ],/*
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 4, // Facebook
@@ -219,6 +219,82 @@ class EmpresaContatosSeeder extends Seeder
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 8, // Site
                 'descricao'       => 'https://www.instagram.com/vinicolalabiata/',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        // Mattiello
+        $empresa = 4;
+        DB::table('empresa_contatos')->insert([
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 1, // Telefone Fixo
+                'descricao'       => '27999085282',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 1, // Telefone Fixo
+                'descricao'       => '27998506158',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 2, // Whatsapp
+                'descricao'       => '27999085282',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 2, // Whatsapp
+                'descricao'       => '27998506158',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 3, // Email
+                'descricao'       => 'cantinamattiello2@hotmail.com',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 4, // Facebook
+                'descricao'       => 'CantinaMattiello',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 5, // Instagram
+                'descricao'       => 'cantinamattiello',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            /*
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 6, // Twitter
+                'descricao'       => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 7, // YouTube
+                'descricao'       => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 8, // Site
+                'descricao'       => 'https://www.cantinamattiello.com.br/',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],

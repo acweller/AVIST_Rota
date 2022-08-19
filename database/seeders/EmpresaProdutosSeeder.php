@@ -128,6 +128,67 @@ class EmpresaProdutosSeeder extends Seeder
             ],
         ]);
 
+        // Mattiello
+        $empresa = 4;
+        DB::table('empresa_produtos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Fermentado alcóolico de Jabuticaba',
+                'descricao'  => 'Branco Seco e Tinto Suave.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho Tinto',
+                'descricao'  => 'Seco (Grano D\'oro e Seleção), Semi Seco e Suave (Origem).',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho Fino (Piacere Blend)',
+                'descricao'  => 'Tinto Seco e Branco Seco.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho Rosè',
+                'descricao'  => 'Seco e Demi-Sec (Rosário).',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho Branco Niágara',
+                'descricao'  => 'Seco e Suave.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Espumante Branco (Felicità)',
+                'descricao'  => 'Brut, Demi-Sec e Nature.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Espumante Branco (Amabile)',
+                'descricao'  => 'Fermentado alcóolico de Jabuticaba e Uva frisante doce.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

@@ -66,6 +66,23 @@ class EmpresaEnderecosSeeder extends Seeder
                 'updated_at' => $data,
             ],
         ]);
+
+        // Mattiello
+        $empresa = 4;
+        DB::table('empresa_enderecos')->insert([
+            [
+                'empresa_id'   => $empresa,
+                'rua'          => 'Rua São Lourenço',
+                'numero'       => '1725',
+                'complemento'  => '',
+                'bairro'       => 'São Lourenço',
+                'cidade'       => 'Santa Teresa',
+                'estado'       => 'ES',
+                'cep'          => '29650-000',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
         /*
         // MODELO
         $empresa = ;

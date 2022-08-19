@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Empresa;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -29,47 +30,48 @@ class EmpresaImagemsSeeder extends Seeder
         // 
 
         // Galeria de Artesanato
-        $caminho = '/images/01galeriaartesanato/'; // Caminho Padrão
-        $empresa = 1;
-        $nomeEmpresa = 'Galeria de Artesanato';
+        $empresa_id = 1;
+        $empresa = Empresa::find($empresa_id);
+        $nomeEmpresa = $empresa->nomeEmpresa;
+        $caminhoImagem = $empresa->caminhoImagem;
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 1, // Mapa
-                'caminho'        => $caminho . 'mapa.png',
+                'caminho'        => $caminhoImagem . 'mapa.png',
                 'descricao'      => 'Mapa da ' . $nomeEmpresa,
-                'ordem'          => $empresa * 10000 + 1,
+                'ordem'          => $empresa_id * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 2, // Logomarca
-                'caminho'        => $caminho . 'logomarca.png',
+                'caminho'        => $caminhoImagem . 'logomarca.png',
                 'descricao'      => 'Logomarca da ' . $nomeEmpresa,
-                'ordem'          => $empresa * 10000 + 2,
+                'ordem'          => $empresa_id * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 3, // Carrossel
-                'caminho'        => $caminho . 'principal0001.jpg',
+                'caminho'        => $caminhoImagem . 'principal0001.jpg',
                 'descricao'      => 'Foto principal da ' . $nomeEmpresa,
-                'ordem'          => $empresa * 10000 + 3,
+                'ordem'          => $empresa_id * 10000 + 3,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
 
-        $ordem = $empresa * 10000 + 2; // Para iniciar no '4'
+        $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
         for ($i=2; $i <= 10; $i++) { 
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
-                    'empresa_id'     => $empresa,
+                    'empresa_id'     => $empresa_id,
                     'imagem_tipo_id' => 4, // Foto
-                    'caminho'        => $caminho . 'principal' . $foto . '.jpg',
+                    'caminho'        => $caminhoImagem . 'principal' . $foto . '.jpg',
                     'descricao'      => 'Foto da ' . $nomeEmpresa,
                     'ordem'          => $ordem + $i,
                     'created_at' => $data,
@@ -79,47 +81,48 @@ class EmpresaImagemsSeeder extends Seeder
         }
 
         // Rassele
-        $caminho = '/images/02rassele/'; // Caminho Padrão
-        $empresa = 2;
-        $nomeEmpresa = 'Vinícola Rassele';
+        $empresa_id = 2;
+        $empresa = Empresa::find($empresa_id);
+        $nomeEmpresa = $empresa->nomeEmpresa;
+        $caminhoImagem = $empresa->caminhoImagem;
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 1, // Mapa
-                'caminho'        => $caminho . 'mapa.png',
+                'caminho'        => $caminhoImagem . 'mapa.png',
                 'descricao'      => 'Mapa da ' . $nomeEmpresa,
-                'ordem'          => $empresa * 10000 + 1,
+                'ordem'          => $empresa_id * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 2, // Logomarca
-                'caminho'        => $caminho . 'logomarca.png',
+                'caminho'        => $caminhoImagem . 'logomarca.png',
                 'descricao'      => 'Logomarca da ' . $nomeEmpresa,
-                'ordem'          => $empresa * 10000 + 2,
+                'ordem'          => $empresa_id * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 3, // Carrossel
-                'caminho'        => $caminho . 'principal0001.jpg',
+                'caminho'        => $caminhoImagem . 'principal0001.jpg',
                 'descricao'      => 'Foto principal da ' . $nomeEmpresa,
-                'ordem'          => $empresa * 10000 + 3,
+                'ordem'          => $empresa_id * 10000 + 3,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
 
-        $ordem = $empresa * 10000 + 2; // Para iniciar no '4'
+        $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
         for ($i=2; $i <= 15; $i++) { 
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
-                    'empresa_id'     => $empresa,
+                    'empresa_id'     => $empresa_id,
                     'imagem_tipo_id' => 4, // Foto
-                    'caminho'        => $caminho . 'principal' . $foto . '.jpg',
+                    'caminho'        => $caminhoImagem . 'principal' . $foto . '.jpg',
                     'descricao'      => 'Foto da ' . $nomeEmpresa,
                     'ordem'          => $ordem + $i,
                     'created_at' => $data,
@@ -128,48 +131,48 @@ class EmpresaImagemsSeeder extends Seeder
             ]);
         }
 
-
         // Labiata
-        $caminho = '/images/03labiata/'; // Caminho Padrão
-        $empresa = 3;
-        $nomeEmpresa = 'Vinícola Labiata';
+        $empresa_id = 3;
+        $empresa = Empresa::find($empresa_id);
+        $nomeEmpresa = $empresa->nomeEmpresa;
+        $caminhoImagem = $empresa->caminhoImagem;
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 1, // Mapa
-                'caminho'        => $caminho . 'mapa.png',
+                'caminho'        => $caminhoImagem . 'mapa.png',
                 'descricao'      => 'Mapa da ' . $nomeEmpresa,
-                'ordem'          => $empresa * 10000 + 1,
+                'ordem'          => $empresa_id * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 2, // Logomarca
-                'caminho'        => $caminho . 'logomarca.png',
+                'caminho'        => $caminhoImagem . 'logomarca.png',
                 'descricao'      => 'Logomarca da ' . $nomeEmpresa,
-                'ordem'          => $empresa * 10000 + 2,
+                'ordem'          => $empresa_id * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 3, // Carrossel
-                'caminho'        => $caminho . 'principal0001.jpg',
+                'caminho'        => $caminhoImagem . 'principal0001.jpg',
                 'descricao'      => 'Foto principal da ' . $nomeEmpresa,
-                'ordem'          => $empresa * 10000 + 3,
+                'ordem'          => $empresa_id * 10000 + 3,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
-        $ordem = $empresa * 10000 + 2; // Para iniciar no '4'
+        $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
         for ($i=2; $i <= 20; $i++) { 
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
-                    'empresa_id'     => $empresa,
+                    'empresa_id'     => $empresa_id,
                     'imagem_tipo_id' => 4, // Foto
-                    'caminho'        => $caminho . 'principal' . $foto . '.jpg',
+                    'caminho'        => $caminhoImagem . 'principal' . $foto . '.jpg',
                     'descricao'      => 'Foto da ' . $nomeEmpresa,
                     'ordem'          => $ordem + $i,
                     'created_at' => $data,
@@ -179,200 +182,208 @@ class EmpresaImagemsSeeder extends Seeder
         }
 
         // Mattiello
-        $caminho = '/images/04mattiello/'; // Caminho Padrão
-        $empresa = 4;
-        $nomeEmpresa = 'Cantina Mattielo';
+        $empresa_id = 4;
+        $empresa = Empresa::find($empresa_id);
+        $nomeEmpresa = $empresa->nomeEmpresa;
+        $caminhoImagem = $empresa->caminhoImagem;
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 1, // Mapa
-                'caminho'        => $caminho . 'mapa.png',
-                'descricao'      => 'Mapa',
-                'ordem'          => $empresa * 10000 + 1,
+                'caminho'        => $caminhoImagem . 'mapa.png',
+                'descricao'      => 'Mapa da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 2, // Logomarca
-                'caminho'        => $caminho . 'logomarca.png',
-                'descricao'      => 'Logomarca',
-                'ordem'          => $empresa * 10000 + 2,
+                'caminho'        => $caminhoImagem . 'logomarca.png',
+                'descricao'      => 'Logomarca da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
 
         // Romanha
-        $caminho = '/images/05romanha/'; // Caminho Padrão
-        $empresa = 5;
-        $nomeEmpresa = 'Cantina Romanha';
+        $empresa_id = 5;
+        $empresa = Empresa::find($empresa_id);
+        $nomeEmpresa = $empresa->nomeEmpresa;
+        $caminhoImagem = $empresa->caminhoImagem;
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 1, // Mapa
-                'caminho'        => $caminho . 'mapa.png',
-                'descricao'      => 'Mapa',
-                'ordem'          => $empresa * 10000 + 1,
+                'caminho'        => $caminhoImagem . 'mapa.png',
+                'descricao'      => 'Mapa da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 2, // Logomarca
-                'caminho'        => $caminho . 'logomarca.png',
-                'descricao'      => 'Logomarca',
-                'ordem'          => $empresa * 10000 + 2,
+                'caminho'        => $caminhoImagem . 'logomarca.png',
+                'descricao'      => 'Logomarca da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
 
         // Casa Espumante
-        $caminho = '/images/06casaespumante/'; // Caminho Padrão
-        $empresa = 6;
-        $nomeEmpresa = 'Casa dos Espumantes';
+        $empresa_id = 6;
+        $empresa = Empresa::find($empresa_id);
+        $nomeEmpresa = $empresa->nomeEmpresa;
+        $caminhoImagem = $empresa->caminhoImagem;
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 1, // Mapa
-                'caminho'        => $caminho . 'mapa.png',
-                'descricao'      => 'Mapa',
-                'ordem'          => $empresa * 10000 + 1,
+                'caminho'        => $caminhoImagem . 'mapa.png',
+                'descricao'      => 'Mapa da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 2, // Logomarca
-                'caminho'        => $caminho . 'logomarca.png',
-                'descricao'      => 'Logomarca',
-                'ordem'          => $empresa * 10000 + 2,
+                'caminho'        => $caminhoImagem . 'logomarca.png',
+                'descricao'      => 'Logomarca da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
 
         // Tomazelli
-        $caminho = '/images/07tomazelli/'; // Caminho Padrão
-        $empresa = 7;
-        $nomeEmpresa = 'Vinícola Tomazelli';
+        $empresa_id = 7;
+        $empresa = Empresa::find($empresa_id);
+        $nomeEmpresa = $empresa->nomeEmpresa;
+        $caminhoImagem = $empresa->caminhoImagem;
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 1, // Mapa
-                'caminho'        => $caminho . 'mapa.png',
-                'descricao'      => 'Mapa',
-                'ordem'          => $empresa * 10000 + 1,
+                'caminho'        => $caminhoImagem . 'mapa.png',
+                'descricao'      => 'Mapa da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 2, // Logomarca
-                'caminho'        => $caminho . 'logomarca.png',
-                'descricao'      => 'Logomarca',
-                'ordem'          => $empresa * 10000 + 2,
+                'caminho'        => $caminhoImagem . 'logomarca.png',
+                'descricao'      => 'Logomarca da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
 
         // Braun
-        $caminho = '/images/08braun/'; // Caminho Padrão
-        $empresa = 8;
-        $nomeEmpresa = 'Cantina Braun';
+        $empresa_id = 8;
+        $empresa = Empresa::find($empresa_id);
+        $nomeEmpresa = $empresa->nomeEmpresa;
+        $caminhoImagem = $empresa->caminhoImagem;
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 1, // Mapa
-                'caminho'        => $caminho . 'mapa.png',
-                'descricao'      => 'Mapa',
-                'ordem'          => $empresa * 10000 + 1,
+                'caminho'        => $caminhoImagem . 'mapa.png',
+                'descricao'      => 'Mapa da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 2, // Logomarca
-                'caminho'        => $caminho . 'logomarca.png',
-                'descricao'      => 'Logomarca',
-                'ordem'          => $empresa * 10000 + 2,
+                'caminho'        => $caminhoImagem . 'logomarca.png',
+                'descricao'      => 'Logomarca da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
 
         // Grotteschi
-        $caminho = '/images/09grotteschi/'; // Caminho Padrão
-        $empresa = 9;
-        $nomeEmpresa = 'Cantina Grotteschi';
+        $empresa_id = 9;
+        $empresa = Empresa::find($empresa_id);
+        $nomeEmpresa = $empresa->nomeEmpresa;
+        $caminhoImagem = $empresa->caminhoImagem;
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 1, // Mapa
-                'caminho'        => $caminho . 'mapa.png',
-                'descricao'      => 'Mapa',
-                'ordem'          => $empresa * 10000 + 1,
+                'caminho'        => $caminhoImagem . 'mapa.png',
+                'descricao'      => 'Mapa da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 2, // Logomarca
-                'caminho'        => $caminho . 'logomarca.png',
-                'descricao'      => 'Logomarca',
-                'ordem'          => $empresa * 10000 + 2,
+                'caminho'        => $caminhoImagem . 'logomarca.png',
+                'descricao'      => 'Logomarca da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
 
         // Tabocas
-        $caminho = '/images/10tabocas/'; // Caminho Padrão
-        $empresa = 10;
-        $nomeEmpresa = 'Tabocas Vin De Garage';
+        $empresa_id = 10;
+        $empresa = Empresa::find($empresa_id);
+        $nomeEmpresa = $empresa->nomeEmpresa;
+        $caminhoImagem = $empresa->caminhoImagem;
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 1, // Mapa
-                'caminho'        => $caminho . 'mapa.png',
-                'descricao'      => 'Mapa',
-                'ordem'          => $empresa * 10000 + 1,
+                'caminho'        => $caminhoImagem . 'mapa.png',
+                'descricao'      => 'Mapa da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 2, // Logomarca
-                'caminho'        => $caminho . 'logomarca.png',
-                'descricao'      => 'Logomarca',
-                'ordem'          => $empresa * 10000 + 2,
+                'caminho'        => $caminhoImagem . 'logomarca.png',
+                'descricao'      => 'Logomarca da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
 
         // Ziviani
-        $caminho = '/images/11ziviani/'; // Caminho Padrão
-        $empresa = 11;
-        $nomeEmpresa = 'Vinícola Ziviani';
+        $empresa_id = 11;
+        $empresa = Empresa::find($empresa_id);
+        $nomeEmpresa = $empresa->nomeEmpresa;
+        $caminhoImagem = $empresa->caminhoImagem;
         DB::table('empresa_imagems')->insert([
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 1, // Mapa
-                'caminho'        => $caminho . 'mapa.png',
-                'descricao'      => 'Mapa',
-                'ordem'          => $empresa * 10000 + 1,
+                'caminho'        => $caminhoImagem . 'mapa.png',
+                'descricao'      => 'Mapa da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 1,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
-                'empresa_id'     => $empresa,
+                'empresa_id'     => $empresa_id,
                 'imagem_tipo_id' => 2, // Logomarca
-                'caminho'        => $caminho . 'logomarca.png',
-                'descricao'      => 'Logomarca',
-                'ordem'          => $empresa * 10000 + 2,
+                'caminho'        => $caminhoImagem . 'logomarca.png',
+                'descricao'      => 'Logomarca da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 2,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],

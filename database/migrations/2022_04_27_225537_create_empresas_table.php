@@ -20,6 +20,7 @@ class CreateEmpresasTable extends Migration
             $table->string('linkGoogleMaps');
             $table->double('latitude');  // Y - No Google mantém essa ordem
             $table->double('longitude'); // X
+            $table->string('caminhoImagem'); // Indica o caminho padrão para as imagens da Empresa
             $table->timestamps();
         });
         // Dicas de utilização de Timestamps no Laravel

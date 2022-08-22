@@ -83,7 +83,7 @@ class EmpresaServicosSeeder extends Seeder
             [
                 'empresa_id' => $empresa,
                 'nome'       => 'Visita Guiada',
-                'descricao'  => 'Sábado, Domingo e Feriados. Com agendamento prévio, é possível fazer uma visitação pela fábrica, conhecendo o processo de produção e degustação de vinhos (consulte valores e datas via WhatsApp).',
+                'descricao'  => 'Sábado, Domingo e Feriados. Com agendamento prévio, é possível fazer uma visitação pela fábrica, conhecendo o processo de produção e degustação de vinhos (consulte valores e datas via WhatsApp, consulte link abaixo).',
                 'horario'    => 'De 13:00 às 15:00 (duração aproximada de 50 minutos por grupo).',
                 'ativo'      => true,
                 'created_at' => $data,
@@ -100,7 +100,7 @@ class EmpresaServicosSeeder extends Seeder
             ],
         ]);
 
-        // rOMANHA
+        // Romanha
         $empresa = 5;
         DB::table('empresa_servicos')->insert([
             [
@@ -126,6 +126,38 @@ class EmpresaServicosSeeder extends Seeder
                 'nome'       => 'Expediente do Ristorante',
                 'descricao'  => 'Domingo',
                 'horario'    => 'De 11:30 às 15:00.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        // Espumantes
+        $empresa = 6;
+        DB::table('empresa_servicos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente',
+                'descricao'  => 'Terça à Sábado',
+                'horario'    => 'De 08h às 17h.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente',
+                'descricao'  => 'Domingos e Feriados',
+                'horario'    => 'De 09h às 16h.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Degustação Orientada',
+                'descricao'  => 'A Casa dos Espumantes é uma oportunidade para que os amantes de um bom espumante possam passar por uma experiência exclusiva de degustação dos nossos produtos, com organização e atendimento personalizados.',
+                'horario'    => 'Agende sua Experiência via WhatsApp (consulte link abaixo).',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,

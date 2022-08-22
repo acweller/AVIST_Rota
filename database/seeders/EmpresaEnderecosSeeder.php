@@ -101,7 +101,24 @@ class EmpresaEnderecosSeeder extends Seeder
             ],
         ]);
 
-        /*
+       // Espumantes
+       $empresa = 6;
+       DB::table('empresa_enderecos')->insert([
+           [
+               'empresa_id'   => $empresa,
+               'rua'          => 'Circuito Caravaggio',
+               'numero'       => 'km 04',
+               'complemento'  => '',
+               'bairro'       => '',
+               'cidade'       => 'Santa Teresa',
+               'estado'       => 'ES',
+               'cep'          => '29650-000',
+               'created_at' => $data,
+               'updated_at' => $data,
+           ],
+       ]);
+
+       /*
         // MODELO
         $empresa = ;
         DB::table('empresa_enderecos')->insert([

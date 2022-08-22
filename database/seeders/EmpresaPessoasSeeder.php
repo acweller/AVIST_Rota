@@ -86,6 +86,25 @@ class EmpresaPessoasSeeder extends Seeder
             ],
         ]);
 
+        // Espumantes
+        $empresa = 6;
+        DB::table('empresa_pessoas')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Sergio Sperandio',
+                'email'      => 'casadosespumantes@hotmail.com',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Raiani Salviato Sperandio',
+                'email'      => 'casadosespumantes@hotmail.com',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

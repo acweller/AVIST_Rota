@@ -361,6 +361,74 @@ class EmpresaContatosSeeder extends Seeder
             ],
         ]);
 
+        // Espumantes
+        $empresa = 6;
+        DB::table('empresa_contatos')->insert([
+            /*[
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 1, // Telefone Fixo
+                'descricao'       => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 2, // Whatsapp
+                'descricao'       => '27999743774',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 2, // Whatsapp
+                'descricao'       => '27998150273',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 3, // Email
+                'descricao'       => 'casadosespumantes@hotmail.com',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 4, // Facebook
+                'descricao'       => 'CasaDosEspumantes',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 5, // Instagram
+                'descricao'       => 'casadosespumantes',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 6, // Twitter
+                'descricao'       => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 7, // YouTube
+                'descricao'       => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 8, // Site
+                'descricao'       => 'http://www.casadosespumantes.com.br',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

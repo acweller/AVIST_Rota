@@ -226,6 +226,35 @@ class EmpresaProdutosSeeder extends Seeder
             ],
         ]);
 
+        // Espumantes
+        $empresa = 6;
+        DB::table('empresa_produtos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Espumantes',
+                'descricao'  => 'Brut Branco Fino, Rosé Demi-Sec, Branco Demi-Sec, Moscatal e Rosé Suave.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Espumante de Jabuticaba',
+                'descricao'  => 'Produto Exclusivo.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Grappa',
+                'descricao'  => 'Destilado de Uva.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+        
         /*
         // MODELO
         $empresa = ;

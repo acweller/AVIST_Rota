@@ -312,7 +312,31 @@ class EmpresaImagemsSeeder extends Seeder
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
+            [
+                'empresa_id'     => $empresa_id,
+                'imagem_tipo_id' => 3, // Carrossel
+                'caminho'        => $caminhoImagem . 'principal0001.jpg',
+                'descricao'      => 'Foto principal da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 3,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
         ]);
+        $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
+        for ($i=2; $i <= 23; $i++) { 
+            $foto = sprintf("%'.04d", $i);
+            DB::table('empresa_imagems')->insert([
+                [
+                    'empresa_id'     => $empresa_id,
+                    'imagem_tipo_id' => 4, // Foto
+                    'caminho'        => $caminhoImagem . 'principal' . $foto . '.jpg',
+                    'descricao'      => 'Foto da ' . $nomeEmpresa,
+                    'ordem'          => $ordem + $i,
+                    'created_at' => $data,
+                    'updated_at' => $data,
+                ],
+            ]);
+        }
 
         // Tomazelli
         $empresa_id = 7;

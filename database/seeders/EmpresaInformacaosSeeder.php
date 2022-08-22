@@ -312,6 +312,103 @@ class EmpresaInformacaosSeeder extends Seeder
             ],
         ]);
 
+        // Espumantes
+        $empresa = 6;
+        DB::table('empresa_informacaos')->insert([
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Um feliz acidente. Nenhuma frase poderia explicar tão bem o que seria o início de uma nova fase em nossa família. Um tanto decepcionados com os rumos cada vez mais incertos da agricultura tradicional, decidimos dar uma guinada em nosso foco de trabalho.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Incentivados por novos estudos e alguns profissionais do ramo, arriscamo-nos num território completamente inexplorado por nós até então: a fruticultura. Ainda um tanto receosos com os resultados que tamanha mudança poderia trazer, achamos conveniente e prudente dar início a essa mudança aos poucos. Primeiro, um modesto plantio de pêssego. Em seguida, o plantio de uva, que se tornou a grande protagonista dessa história.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Ainda inexperientes no manejo das novas culturas, levamos algum tempo até dominarmos as técnicas. Foi somente em 2004 (2 anos após os primeiros plantios) que a colheita de uva pôde ser considerada um sucesso. E que sucesso! A safra foi farta, e foi justamente devido a isso que decidimos enveredar por novos caminhos, apenas para garantirmos aproveitamento de toda a produção. Por que não utilizar parte dessa uva na produção de algo que valorizasse ainda mais nosso trabalho? Surgiu assim a idéia de fabricar um produto que estava começando a ficar famoso em nossa região: o vinho.
+                ',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Sem maiores pretensões com os resultados, demos início à nossa pequena produção. As dificuldades, obviamente, logo se avolumaram. Sem o maquinário necessário para a elaboração do produto, contamos com o apoio de alguns produtores locais que nos permitiam fazer uso de seus equipamentos.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Foi dessa forma - meio sem saber o que e como estava sendo feito - que ficou pronto o primeiro lote de vinhos da família. À primeira vista, no entanto, parecia que o objetivo não havia sido alcançado. Notamos a formação de pequenas bolhas na garrafa, o que dava ao vinho um aspecto frisante. Pensamos imediatamente que se tratava de um produto que não poderia ser comercializado. Após algumas conversas com enólogos – devendo-se destacar a pessoa de Vinícius Corbellini -, o que estava sendo discutido como erro, poderia ser, na verdade, uma das etapas de fabricação de espumantes pelo método Champenoise, o mais valorizado de todo o mundo, justamente por conferir ao vinho uma qualidade única. Com muita ajuda, resolvemos dar continuidade ao trabalho, sem ter a menor noção do que nos aguardava.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'As novas técnicas deveriam ser observadas com muito mais atenção. Era preciso entender os processos de algo completamente novo. A princípio, cada garrafa de espumante era considerada um “explosivo” em potencial, justamente pela dificuldade em estabilizar o produto. Após muito estudo e muitas tentativas, tudo deu certo. O produto estabilizou e o resultado final foi um vinho espumante com sabor e aroma de excelente qualidade.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Hoje, as técnicas de produção estão dominadas. A variedade de produtos oferecidos pela Casa dos Espumantes (atual nome da empresa) atrai visitantes de todo o estado. Um processo inteiramente artesanal, que utiliza a uva cultivada nas terras da própria família. É dessa pequena propriedade, situada na cidade de Santa Teresa, que tem origem o primeiro espumante capixaba. Uma história que a princípio não tinha caminho, quiçá destino. Uma história de muito trabalho, coragem, estudo e paciência. A história de um acidente que deu certo!',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 2, // Descrição da Empresa
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 3, // Missão
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 4, // Valores
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 5, // Biografia
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => 'O vinho espumante é o resultado da fermentação da uva sã, fresca e madura, diferenciando-se das demais bebidas por passar por um processo de dupla fermentação. Pode-se dizer, portanto, que todo espumante já foi um vinho. No entanto, não é todo vinho que tem potencial para se tornar um bom espumante.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => 'Há três métodos principais para induzir a segunda fermentação: pelo método charmat, de transferência, ou pelo método que nós da Casa dos Espumantes utilizamos: o champenoise.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

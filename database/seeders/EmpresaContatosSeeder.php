@@ -28,24 +28,24 @@ class EmpresaContatosSeeder extends Seeder
         // Galeria de Artesanato (CNPJ: 01300688000198)
         $empresa = 1;
         DB::table('empresa_contatos')->insert([
-            [
-                'empresa_id'      => $empresa,
-                'contato_tipo_id' => 1, // Telefone Fixo
-                'descricao'       => '27996135694',
-                'created_at' => $data,
-                'updated_at' => $data,
-            ],
             [ //https://www.w3schools.com/php/php_ref_string.asp - Funções de String PHP
                 'empresa_id'      => $empresa,
-                'contato_tipo_id' => 2, // Whatsapp
-                'descricao'       => '27996135694',
+                'contato_tipo_id' => 1, // Telefone Fixo
+                'descricao'       => '2732591943',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],/*
             [
                 'empresa_id'      => $empresa,
+                'contato_tipo_id' => 2, // Whatsapp
+                'descricao'       => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
                 'contato_tipo_id' => 3, // Email
-                'descricao'       => 'artesanato_ST@TESTE.br',
+                'descricao'       => '',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],*/
@@ -77,14 +77,14 @@ class EmpresaContatosSeeder extends Seeder
                 'descricao'       => 'Canal no YouTube',
                 'created_at' => $data,
                 'updated_at' => $data,
-            ],
+            ],*/
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 8, // Site
-                'descricao'       => '',
+                'descricao'       => 'https://www.instagram.com/aproaast.galeria/',
                 'created_at' => $data,
                 'updated_at' => $data,
-            ],*/
+            ],
         ]);
 
         // Rassele
@@ -295,6 +295,67 @@ class EmpresaContatosSeeder extends Seeder
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 8, // Site
                 'descricao'       => 'https://www.cantinamattiello.com.br/',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        // Romanha
+        $empresa = 5;
+        DB::table('empresa_contatos')->insert([
+            /*[
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 1, // Telefone Fixo
+                'descricao'       => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 2, // Whatsapp
+                'descricao'       => '27998774105',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 3, // Email
+                'descricao'       => 'ristoranteromanhast@yahoo.com.br',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 4, // Facebook
+                'descricao'       => 'RistoranteRomanha',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 5, // Instagram
+                'descricao'       => 'ristorante.romanha',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 6, // Twitter
+                'descricao'       => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 7, // YouTube
+                'descricao'       => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 8, // Site
+                'descricao'       => 'https://www.instagram.com/ristorante.romanha/',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],

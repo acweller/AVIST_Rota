@@ -83,6 +83,24 @@ class EmpresaEnderecosSeeder extends Seeder
                 'updated_at' => $data,
             ],
         ]);
+
+        // Romanha
+        $empresa = 5;
+        DB::table('empresa_enderecos')->insert([
+            [
+                'empresa_id'   => $empresa,
+                'rua'          => 'Fica no início do Circuito Caravaggio',
+                'numero'       => '',
+                'complemento'  => '',
+                'bairro'       => 'São Lourenço',
+                'cidade'       => 'Santa Teresa',
+                'estado'       => 'ES',
+                'cep'          => '29650-000',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

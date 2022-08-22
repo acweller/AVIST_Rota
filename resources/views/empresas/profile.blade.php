@@ -36,6 +36,8 @@
             </a>
         @endif
         @endforeach
+        
+        <br>
 
         @foreach ($informacaos as $info)
             <p>{{ addslashes($info->descricao) }}</p>

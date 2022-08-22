@@ -189,6 +189,43 @@ class EmpresaProdutosSeeder extends Seeder
             ],
         ]);
 
+        // Romanha
+        $empresa = 5;
+        DB::table('empresa_produtos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho Tinto',
+                'descricao'  => '',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho Branco',
+                'descricao'  => '',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Fermentado alcóolico de Jabuticaba',
+                'descricao'  => '',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Cerveja Artesanal',
+                'descricao'  => '',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

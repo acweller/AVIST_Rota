@@ -100,6 +100,38 @@ class EmpresaServicosSeeder extends Seeder
             ],
         ]);
 
+        // rOMANHA
+        $empresa = 5;
+        DB::table('empresa_servicos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente da loja',
+                'descricao'  => 'Diariamente',
+                'horario'    => 'De ...', // Pendente
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente do Ristorante',
+                'descricao'  => 'Sábado',
+                'horario'    => 'De 11:30 às 17:00.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente do Ristorante',
+                'descricao'  => 'Domingo',
+                'horario'    => 'De 11:30 às 15:00.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

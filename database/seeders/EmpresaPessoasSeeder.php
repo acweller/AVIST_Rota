@@ -74,6 +74,18 @@ class EmpresaPessoasSeeder extends Seeder
             ],
         ]);
 
+        // Romanha
+        $empresa = 5;
+        DB::table('empresa_pessoas')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Steven Romanha Fontana',
+                'email'      => 'steven.fontana@hotmail.com',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

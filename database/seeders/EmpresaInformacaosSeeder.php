@@ -220,14 +220,14 @@ class EmpresaInformacaosSeeder extends Seeder
                 'descricao'          => 'Em março de 1996, Viviane Mattiello, filha de Atilio Mattielo (neto), inaugurou a Cantina Mattiello, que alem de seus produtos próprios,  vinhos, licores, café torrado, sucos e geléias, trabalham com agro turismo, recebendo visitas às parreiras de uvas e proporcionando aos clientes a oportunidade de conhecer o processo de produção dos vinhos e degustação dos produtos ao final do tour.',
                 'created_at' => $data,
                 'updated_at' => $data,
-            ],
+            ],/*
             [
                 'empresa_id'         => $empresa,
                 'informacao_tipo_id' => 2, // Descrição da Empresa
                 'descricao'          => '',
                 'created_at' => $data,
                 'updated_at' => $data,
-            ],/*
+            ],/
             [
                 'empresa_id'         => $empresa,
                 'informacao_tipo_id' => 3, // Missão
@@ -256,6 +256,60 @@ class EmpresaInformacaosSeeder extends Seeder
                 'created_at' => $data,
                 'updated_at' => $data,
             ],*/
+        ]);
+
+        // Romanha
+        $empresa = 5;
+        DB::table('empresa_informacaos')->insert([
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'A história da Cantina Romanha começa quando Frederico Romanha, na década de 60, começou a fabricar os primeiros vinhos, sendo uma das vinícolas mais antigas de Santa Teresa.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 2, // Descrição da Empresa
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 3, // Missão
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 4, // Valores
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 5, // Biografia
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => 'Hoje, além dos vinhos, contamos também com cervejas artesanais da casa, com uma loja para venda de produtos regionais e o Ristorante Romanha, que serve comida regional, baseado na culinária “Italo-Brasileira”, com a receitas centenárias dos nossos antepassados trentinos, ensinadas por nossas “nonas” Italianas.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => 'O nosso segredo: O amor é o ingrediente principal de nossa receita. Seleção de ingredientes frescos e regionais. Preparo, sabor e qualidade.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
         ]);
 
         /*

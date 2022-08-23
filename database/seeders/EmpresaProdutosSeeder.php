@@ -142,7 +142,7 @@ class EmpresaProdutosSeeder extends Seeder
             [
                 'empresa_id' => $empresa,
                 'nome'       => 'Vinho Tinto',
-                'descricao'  => 'Seco (Grano D\'oro e Seleção), Semi Seco e Suave (Origem).',
+                'descricao'  => 'Seco (Grano D’oro e Seleção), Semi Seco e Suave (Origem).',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -307,6 +307,68 @@ class EmpresaProdutosSeeder extends Seeder
                 'updated_at' => $data,
             ],
         ]);
+
+        // Braun
+        $empresa = 8;
+        DB::table('empresa_produtos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho Tinto',
+                'descricao'  => 'Cora, Isabel, Grano D’oro.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho Branco',
+                'descricao'  => 'Niágara.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho Rosé.',
+                'descricao'  => '',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Fermentado alcóolico',
+                'descricao'  => 'Jabuticaba, Mexerica.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Grappa',
+                'descricao'  => 'Destilado de Uva.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Suco de Uva.',
+                'descricao'  => '',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Geléia de Uva.',
+                'descricao'  => '',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
 
         /*
         // MODELO

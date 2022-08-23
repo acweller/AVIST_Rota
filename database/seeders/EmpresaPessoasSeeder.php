@@ -124,6 +124,25 @@ class EmpresaPessoasSeeder extends Seeder
             ],
         ]);
 
+        // Braun
+        $empresa = 8;
+        DB::table('empresa_pessoas')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Élida Braun',
+                'email'      => 'elidatonn@gmail.com',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Luiz Henrique Braun',
+                'email'      => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+        
         /*
         // MODELO
         $empresa = ;

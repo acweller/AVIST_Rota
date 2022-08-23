@@ -470,6 +470,60 @@ class EmpresaInformacaosSeeder extends Seeder
             ],*/
         ]);
 
+        // Braun
+        $empresa = 8;
+        DB::table('empresa_informacaos')->insert([
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Fundada em 1992 por Élida Braun e Luiz Henrique Braun, a família produz vinhos a partir de uvas selecionadas em cultivo próprio. Localizada na região do Vale Tabocas, a cantina destaca-se por ser a única vinícola da região fundada por imigrantes Pomeranos e reconhecida pelo domínio nas técnicas de produção com uva cora. Desde sua criação, a cantina ocupa uma posição de prestígio entre os produtores.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Luiz Henrique Germano Braun e sua esposa Elida Thonn Braun, família Pomerana, deu início na produção de uvas no ano de 1990. Hoje, além de produção e distribuição de variedades da fruta, produzem e comercializam sucos e vinhos.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 2, // Descrição da Empresa
+                'descricao'          => 'Localizado a cerca de 8km do centro de Santa Teresa, o Vale do Tabocas é uma região responsável por grande parte da produção de uva e vinho do Espírito Santo. Desde quando se mudou para o local, a agricultora Élida Tonn Braun começou a fazer fermentação de jabuticaba. A produção de uvas começou depois, na década de 1990, com o plantio da espécie Niágara Rosada. Em 1992, começou a produção de vinho branco de uva e a bebida era vendida apenas para os vizinhos. Logo depois, veio a produção de uva Isabel para a elaboração do vinho tinto.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 3, // Missão
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 4, // Valores
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 5, // Biografia
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => 'Na propriedade da família Braun, a lavoura chega a mil plantas incluindo cerca de 20 variedades de uva. Entre elas, a Cora, a Isabel, a Grano D’oro, a Morro Brasil, a Vitória sem caroço e a Shyrah.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

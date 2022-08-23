@@ -196,6 +196,38 @@ class EmpresaServicosSeeder extends Seeder
             ],
         ]);
 
+        // Braun
+        $empresa = 8;
+        DB::table('empresa_servicos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente',
+                'descricao'  => 'Sexta',
+                'horario'    => 'Das 12:00 às 18:00',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente',
+                'descricao'  => 'Sábado, Domingo e Feriado',
+                'horario'    => 'Das 08:00 às 18:00',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Agendamento de excursão',
+                'descricao'  => 'Traga sua família para se divertir e conhecer nossas parreiras e a vinícola com grande variedade de produtos regionais.',
+                'horario'    => 'Sábados, Domingos e Feriados. Agende sua visita via WhatsApp (consulte link abaixo).',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

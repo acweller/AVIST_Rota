@@ -105,6 +105,25 @@ class EmpresaPessoasSeeder extends Seeder
             ],
         ]);
 
+        // Tomazelli
+        $empresa = 7;
+        DB::table('empresa_pessoas')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Carlos Tomazelli',
+                'email'      => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Maria Goretti Tomazelli',
+                'email'      => 'mariagoretti_ft@hotmail.com',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

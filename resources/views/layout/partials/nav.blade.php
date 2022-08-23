@@ -15,6 +15,8 @@
                         Vinícolas
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/empresas">Todas as Vinícolas</a></li>
+                        <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 1)}}">Galeria de Artesanato</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 2)}}">Vinícola Rassele</a></li>
@@ -45,7 +47,7 @@
                         Listagens
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/empresas">Empresas</a></li>
+                        <li><a class="dropdown-item" href="/empresas">Todas as Vinícolas</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="/empresa_tipos">Tipos de Empresa</a></li>
                         <li><a class="dropdown-item" href="/contato_tipos">Tipos de Contato</a></li>

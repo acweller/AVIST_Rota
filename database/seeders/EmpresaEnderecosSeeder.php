@@ -118,7 +118,24 @@ class EmpresaEnderecosSeeder extends Seeder
            ],
        ]);
 
-       /*
+        // Tomazelli
+        $empresa = 7;
+        DB::table('empresa_enderecos')->insert([
+            [
+                'empresa_id'   => $empresa,
+                'rua'          => 'Rodovia ES-261 (Josil Espíndola Agostini)',
+                'numero'       => '',
+                'complemento'  => 'Sítio Bella Vista',
+                'bairro'       => '',
+                'cidade'       => 'Santa Teresa',
+                'estado'       => 'ES',
+                'cep'          => '29650-000',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
+        /*
         // MODELO
         $empresa = ;
         DB::table('empresa_enderecos')->insert([

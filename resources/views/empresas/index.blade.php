@@ -1,7 +1,7 @@
 @extends('layout.mainlayout')
 
 @section('cabecalho')
-    Empresas
+    Vinícolas
 @endsection
 
 @section('conteudo')

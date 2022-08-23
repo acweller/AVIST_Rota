@@ -409,6 +409,67 @@ class EmpresaInformacaosSeeder extends Seeder
             ],
         ]);
 
+        // Tomazelli
+        $empresa = 7;
+        DB::table('empresa_informacaos')->insert([
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Em 1992 Carlos Clarindo tomazelli e Maria Goretti Fontana Tomazelli emigraram para a Itália com o seu filho em busca de melhores condições de vida. Permaneceram no país durante oito anos trabalhando em vinícolas, aprendendo assim, a arte da vitivinicultura.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'No ano 2000 o casal retornou ao Brasil para que sua filha nascesse em solo teresense. Iniciaram então, o plantio de uvas na propriedade da família da forma que haviam aprendido na Itália e a produzir o vinho da mesma maneira, nascendo assim a vinícola Tomazelli. Com  a crescente procura pelos produtos da vinícola começaram  fazer a transição do cultivo de café para uva expandindo cada vez mais a produção artesanal dos vinhos.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'No ano de 2016, ampliaram as atividades inaugurando um restaurante na propriedade, onde continuam trabalhando para oferecer o melhor para seus clientes e amigos.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 2, // Descrição da Empresa
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 3, // Missão
+                'descricao'          => 'Missão: oferecer ao cliente produtos e serviços de alta qualidade desenvolvendo oportunidade de negócios em um ambiente familiar.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 4, // Valores
+                'descricao'          => 'Valores: ética, trabalho familiar, qualidade e responsabilidade, inovação e aprendizado contínuo, respeito e reconhecimento, valorização das pessoas e do trabalho em equipe.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 5, // Biografia
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+        ]);
+
         /*
         // MODELO
         $empresa = ;

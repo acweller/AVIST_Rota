@@ -255,6 +255,59 @@ class EmpresaProdutosSeeder extends Seeder
             ],
         ]);
         
+        // Tomazelli
+        $empresa = 7;
+        DB::table('empresa_produtos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho Tinto (Uva Isabel)',
+                'descricao'  => 'Seco, Demi Seco e Suave.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinhos Rosê (Uva Niágara Rosada)',
+                'descricao'  => 'Seco e Suave.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho Branco (Uva Moscato)',
+                'descricao'  => 'Seco.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Fermentado alcóolico de Jabuticaba',
+                'descricao'  => 'Suave',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Produtos derivados de uva.',
+                'descricao'  => '',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Produtos da região.',
+                'descricao'  => '',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

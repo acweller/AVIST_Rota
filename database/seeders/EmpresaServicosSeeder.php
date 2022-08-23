@@ -24,7 +24,7 @@ class EmpresaServicosSeeder extends Seeder
                 'empresa_id' => $empresa,
                 'nome'       => 'Expediente',
                 'descricao'  => '',
-                'horario'    => 'Diariamente, de 8h às 17h.',
+                'horario'    => 'Diariamente, das 8h às 17h.',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -38,7 +38,7 @@ class EmpresaServicosSeeder extends Seeder
                 'empresa_id' => $empresa,
                 'nome'       => 'Expediente',
                 'descricao'  => '',
-                'horario'    => 'Todos os dias de 07:30 às 17:30 horas.',
+                'horario'    => 'Todos os dias das 07:30 às 17:30 horas.',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -52,7 +52,7 @@ class EmpresaServicosSeeder extends Seeder
                 'empresa_id' => $empresa,
                 'nome'       => 'Expediente',
                 'descricao'  => '',
-                'horario'    => 'De ', // Pendente
+                'horario'    => 'Das', // Pendente
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -66,7 +66,7 @@ class EmpresaServicosSeeder extends Seeder
                 'empresa_id' => $empresa,
                 'nome'       => 'Expediente',
                 'descricao'  => 'Segunda a Sexta',
-                'horario'    => 'De 09:00 às 16:00.',
+                'horario'    => 'Das 09:00 às 16:00.',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -75,7 +75,7 @@ class EmpresaServicosSeeder extends Seeder
                 'empresa_id' => $empresa,
                 'nome'       => 'Expediente',
                 'descricao'  => 'Sábado e Domingo',
-                'horario'    => 'De 08:00 às 17:00.',
+                'horario'    => 'Das 08:00 às 17:00.',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -84,7 +84,7 @@ class EmpresaServicosSeeder extends Seeder
                 'empresa_id' => $empresa,
                 'nome'       => 'Visita Guiada',
                 'descricao'  => 'Sábado, Domingo e Feriados. Com agendamento prévio, é possível fazer uma visitação pela fábrica, conhecendo o processo de produção e degustação de vinhos (consulte valores e datas via WhatsApp, consulte link abaixo).',
-                'horario'    => 'De 13:00 às 15:00 (duração aproximada de 50 minutos por grupo).',
+                'horario'    => 'Das 13:00 às 15:00 (duração aproximada de 50 minutos por grupo).',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -107,25 +107,25 @@ class EmpresaServicosSeeder extends Seeder
                 'empresa_id' => $empresa,
                 'nome'       => 'Expediente da loja',
                 'descricao'  => 'Diariamente',
-                'horario'    => 'De ...', // Pendente
+                'horario'    => 'Das ...', // Pendente
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
                 'empresa_id' => $empresa,
-                'nome'       => 'Expediente do Ristorante',
+                'nome'       => 'Expediente do Restaurante',
                 'descricao'  => 'Sábado',
-                'horario'    => 'De 11:30 às 17:00.',
+                'horario'    => 'Das 11:30 às 17:00.',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
                 'empresa_id' => $empresa,
-                'nome'       => 'Expediente do Ristorante',
+                'nome'       => 'Expediente do Restaurante',
                 'descricao'  => 'Domingo',
-                'horario'    => 'De 11:30 às 15:00.',
+                'horario'    => 'Das 11:30 às 15:00.',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -139,7 +139,7 @@ class EmpresaServicosSeeder extends Seeder
                 'empresa_id' => $empresa,
                 'nome'       => 'Expediente',
                 'descricao'  => 'Terça à Sábado',
-                'horario'    => 'De 08h às 17h.',
+                'horario'    => 'Das 08h às 17h.',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -148,7 +148,7 @@ class EmpresaServicosSeeder extends Seeder
                 'empresa_id' => $empresa,
                 'nome'       => 'Expediente',
                 'descricao'  => 'Domingos e Feriados',
-                'horario'    => 'De 09h às 16h.',
+                'horario'    => 'Das 09h às 16h.',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -164,6 +164,38 @@ class EmpresaServicosSeeder extends Seeder
             ],
         ]);
 
+        // Tomazelli
+        $empresa = 7;
+        DB::table('empresa_servicos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente da loja',
+                'descricao'  => 'Diariamente',
+                'horario'    => 'Das 08h às 17h.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente do Restaurante',
+                'descricao'  => 'Sábado',
+                'horario'    => 'Almoço: Das 11h às 15. Jantar: Das 18h às 22h.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente do Restaurante',
+                'descricao'  => 'Domingo e Feriado',
+                'horario'    => 'Almoço: Das 11h às 15. ',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;
@@ -172,7 +204,7 @@ class EmpresaServicosSeeder extends Seeder
                 'empresa_id' => $empresa,
                 'nome'       => 'Expediente',
                 'descricao'  => '',
-                'horario'    => 'De ',
+                'horario'    => 'Das ',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,

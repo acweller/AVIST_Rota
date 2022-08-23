@@ -256,6 +256,20 @@ class EmpresaServicosSeeder extends Seeder
             ],
         ]);
 
+        // Ziviani
+        $empresa = 11;
+        DB::table('empresa_servicos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente',
+                'descricao'  => 'Diariamente',
+                'horario'    => 'Das ', // Pendente
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

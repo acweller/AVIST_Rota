@@ -167,6 +167,25 @@ class EmpresaPessoasSeeder extends Seeder
             ],
         ]);
 
+        // Ziviani
+        $empresa = 11;
+        DB::table('empresa_pessoas')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Zosimo Carlini',
+                'email'      => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Wilhan Ziviani Carlini',
+                'email'      => 'wilhan_carlini@hotmail.com',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

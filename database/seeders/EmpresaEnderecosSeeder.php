@@ -126,7 +126,7 @@ class EmpresaEnderecosSeeder extends Seeder
                 'rua'          => 'Rodovia ES-261 (Josil Espíndola Agostini)',
                 'numero'       => '',
                 'complemento'  => 'Sítio Bella Vista',
-                'bairro'       => '',
+                'bairro'       => 'Alto São Lourenço',
                 'cidade'       => 'Santa Teresa',
                 'estado'       => 'ES',
                 'cep'          => '29650-000',

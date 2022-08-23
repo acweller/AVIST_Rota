@@ -51,7 +51,7 @@ class EmpresaProdutosSeeder extends Seeder
         DB::table('empresa_produtos')->insert([
             [
                 'empresa_id' => $empresa,
-                'nome'       => 'Vinhos',
+                'nome'       => 'Vinhos artesanais',
                 'descricao'  => 'Tinto Isabel (Seco e Suave), Tinto Bordô (Seco), Branco Seco, etc.',
                 'ativo'      => true,
                 'created_at' => $data,
@@ -69,6 +69,14 @@ class EmpresaProdutosSeeder extends Seeder
                 'empresa_id' => $empresa,
                 'nome'       => 'Licores',
                 'descricao'  => 'Finos e Cremosos (de frutas e ingredientes locais).',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Produtos regionais',
+                'descricao'  => 'Doces, compotas, salames, queijos, massas, destilados, etc.',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -411,6 +419,90 @@ class EmpresaProdutosSeeder extends Seeder
             ],
         ]);
 
+        // Ziviani
+        $empresa = 11;
+        DB::table('empresa_produtos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho de mesa tinto Isabel / Violeta',
+                'descricao'  => 'Suave, Meio Seco e Seco.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho de mesa tinto Isabel',
+                'descricao'  => 'Suave.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho de mesa tinto Bordô',
+                'descricao'  => 'Suave e Seco.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho de mesa tinto Bordô Reserva',
+                'descricao'  => 'Seco',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho de mesa branco Moscatel',
+                'descricao'  => 'Seco.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho de mesa rosé Niágara',
+                'descricao'  => 'Suave e Seco.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Fermentado de Jabuticaba',
+                'descricao'  => 'Suave e Meio Seco',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Suco',
+                'descricao'  => 'Uva Integral.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Licores',
+                'descricao'  => 'Jabuticaba, Café, Milho Verde, Chocolate, Chocolate com Menta, Jenipapo, Araçaúna e de Semente de Ameixa.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Pó de café arábica',
+                'descricao'  => '250g e 500g.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
         /*
         // MODELO
         $empresa = ;

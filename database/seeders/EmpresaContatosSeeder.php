@@ -722,6 +722,66 @@ class EmpresaContatosSeeder extends Seeder
             ],
         ]);
 
+        // Ziviani
+        $empresa = 11;
+        DB::table('empresa_contatos')->insert([
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 1, // Telefone Fixo
+                'descricao'       => '27999740850',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 2, // Whatsapp
+                'descricao'       => '27999632055',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 3, // Email
+                'descricao'       => 'wilhan_carlini@hotmail.com',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 4, // Facebook
+                'descricao'       => 'vinicola.ziviani',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 5, // Instagram
+                'descricao'       => 'vinicolaziviani',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 6, // Twitter
+                'descricao'       => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 7, // YouTube
+                'descricao'       => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 8, // Site
+                'descricao'       => 'https://www.instagram.com/vinicolaziviani',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
         /*
         // MODELO
         $empresa = ;

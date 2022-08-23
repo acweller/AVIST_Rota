@@ -653,6 +653,67 @@ class EmpresaInformacaosSeeder extends Seeder
             ],
         ]);
 
+        // Ziviani
+        $empresa = 11;
+        DB::table('empresa_informacaos')->insert([
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'A partir de 1875, chegaram no Brasil os italianos. E, com o passar do tempo, a família Ziviani começou uma nova morada no Vale do Tabocas, dando início a cultivação e produção de alguns pés de uva.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Dessa forma, como tinha pouco cultivo de uva, e os pés de jabuticabas eram plantas nativas da região, foi assim que meu pai, Victor Ziviani, começou a produzir o fermentado de jabuticaba, somente para o consumo próprio e familiar.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => 'Com isso, sempre tive o sonho de constuir uma Vinícola. E assim, depois de muitos anos chegou uma maior plantação de uva na região do Vale do Tabocas. Diante disso, juntamente com meu marido, Zosimo, e minha família começamos a comercialização de demos início a nossa Vinícola em 2008, com o grande apoio do SEBRAI.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 2, // Descrição da Empresa
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 3, // Missão
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 4, // Valores
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 5, // Biografia
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+        ]);
+
         /*
         // MODELO
         $empresa = ;

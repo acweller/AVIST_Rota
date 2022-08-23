@@ -169,6 +169,23 @@ class EmpresaEnderecosSeeder extends Seeder
             ],
         ]);
 
+        // Tabocas
+        $empresa = 10;
+        DB::table('empresa_enderecos')->insert([
+            [
+                'empresa_id'   => $empresa,
+                'rua'          => 'Vale do Tabocas',
+                'numero'       => '',
+                'complemento'  => 'Alto Caldeirão',
+                'bairro'       => '',
+                'cidade'       => 'Santa Teresa',
+                'estado'       => 'ES',
+                'cep'          => '29650-000',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

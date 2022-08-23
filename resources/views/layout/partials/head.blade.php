@@ -20,7 +20,7 @@
         height: 50vw;
     }
 
-    .fa-facebook {
+    .fa-facebook, .fa-facebook-f {
         background: #3B5998;
         color: white;
     }
@@ -34,6 +34,10 @@
     }
     .fa-instagram {
         background: #125688;
+        color: white;
+    }   
+    .fa-telegram {
+        background: #0088cc;
         color: white;
     }   
 </style>

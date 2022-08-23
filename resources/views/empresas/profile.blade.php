@@ -2,7 +2,7 @@
 
 @section('estilo')
     <style>
-        .fa-facebook, .fa-twitter, .fa-instagram, .fa-youtube {
+        .fa-facebook, .fa-facebook-f, .fa-twitter, .fa-instagram, .fa-youtube, .fa-telegram {
             padding: 8px;
             font-size: 22px;
             width: 40px;
@@ -85,7 +85,7 @@
                             <div class="col">
                                 <!-- Facebook -->
                                 <a href="https://www.facebook.com/{{ addslashes($contato->descricao) }}"
-                                    class="fa-brands fa-facebook" 
+                                    class="fa-brands fa-facebook-f" 
                                     target="_blank"
                                     data-bs-title="Facebook da {{ $empresa->nomeEmpresa }}" data-bs-toggle="tooltip">
                                 </a>
@@ -118,6 +118,16 @@
                                     class="fa-brands fa-youtube"
                                     target="_blank"
                                     data-bs-title="YouTube da {{ $empresa->nomeEmpresa }}" data-bs-toggle="tooltip">
+                                </a>
+                            </div>
+                            @break
+                        @case(9)
+                            <div class="col">
+                                <!-- Telegram -->
+                                <a href="https://t.me/{{ addslashes($contato->descricao) }}"
+                                    class="fa-brands fa-telegram"
+                                    target="_blank"
+                                    data-bs-title="Telegram da {{ $empresa->nomeEmpresa }}" data-bs-toggle="tooltip">
                                 </a>
                             </div>
                             @break

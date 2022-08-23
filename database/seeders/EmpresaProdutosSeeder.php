@@ -390,6 +390,27 @@ class EmpresaProdutosSeeder extends Seeder
             ],
         ]);
 
+        // Tabocas
+        $empresa = 10;
+        DB::table('empresa_produtos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho Tinto Fino',
+                'descricao'  => 'Cabernet Sauvignon.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho Orange Fino',
+                'descricao'  => 'Alvarinho.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

@@ -592,6 +592,67 @@ class EmpresaInformacaosSeeder extends Seeder
             ],
         ]);
 
+        // Tabocas
+        $empresa = 10;
+        DB::table('empresa_informacaos')->insert([
+            /*[
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 2, // Descrição da Empresa
+                'descricao'          => 'A Vinícola Tabocas se destaca pela produção de vinhos de qualidade fina com a uva Cabernet Sauvignon, situado no Vale Tabocas em Santa Teresa-ES reconhecida em vários veículos de comunicação pela qualidade na produção.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 2, // Descrição da Empresa
+                'descricao'          => 'Típico de regiões frias, o vinho produzido no Vale do Tabocas é o melhor tinto fino seco do país e foi o campeão da Wines of Brazil Awards 2020.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 2, // Descrição da Empresa
+                'descricao'          => 'Trabalhamos com quatro variedades de uva: a cabernet sauvignon, a chardonnay, a malbec e a Alvarinho.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 3, // Missão
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 4, // Valores
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 5, // Biografia
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => 'Tabocas Madeira, cabernet sauvignon safra 2017 em madeira amazônica medalha de ouro 2020.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

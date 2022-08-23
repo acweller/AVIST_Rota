@@ -155,6 +155,18 @@ class EmpresaPessoasSeeder extends Seeder
             ],
         ]);
 
+        // Tabocas
+        $empresa = 10;
+        DB::table('empresa_pessoas')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinícius Corbellini',
+                'email'      => 'vcorbellini@gmail.com',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

@@ -66,6 +66,12 @@ class ContatoTiposSeeder extends Seeder
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
+            [
+                'id' => 9,
+                'nomeContatoTipo' => 'Telegram',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
         ]);
     }
 }

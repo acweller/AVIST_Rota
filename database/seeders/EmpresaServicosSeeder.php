@@ -242,6 +242,20 @@ class EmpresaServicosSeeder extends Seeder
             ],
         ]);
 
+        // Tabocas
+        $empresa = 10;
+        DB::table('empresa_servicos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente',
+                'descricao'  => 'De Segunda-Feira a Sexta-Feira',
+                'horario'    => 'Das 13:00 às 17:00.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

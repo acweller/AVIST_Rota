@@ -369,6 +369,26 @@ class EmpresaProdutosSeeder extends Seeder
             ],
         ]);
 
+        // Grotteschi
+        $empresa = 9;
+        DB::table('empresa_produtos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinho Tinto Fino (Terre Gialle)',
+                'descricao'  => '65% Syrah e 35% Cabernet Sauvignon.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Vinhos.',
+                'descricao'  => '',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
 
         /*
         // MODELO

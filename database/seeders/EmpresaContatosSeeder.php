@@ -558,6 +558,74 @@ class EmpresaContatosSeeder extends Seeder
             ],
         ]);
 
+        // Grotteschi
+        $empresa = 9;
+        DB::table('empresa_contatos')->insert([
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 1, // Telefone Fixo
+                'descricao'       => '2731190364',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 2, // Whatsapp
+                'descricao'       => '27996441934',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 2, // Whatsapp
+                'descricao'       => '27999272190',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 3, // Email
+                'descricao'       => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 4, // Facebook
+                'descricao'       => 'grotteschicantina',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 5, // Instagram
+                'descricao'       => 'cantinagrotteschi',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 6, // Twitter
+                'descricao'       => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 7, // YouTube
+                'descricao'       => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 8, // Site
+                'descricao'       => 'https://cantina-grotteschi.negocio.site/?utm_source=gmb&utm_medium=referral',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

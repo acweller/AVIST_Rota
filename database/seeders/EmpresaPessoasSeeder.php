@@ -143,6 +143,18 @@ class EmpresaPessoasSeeder extends Seeder
             ],
         ]);
         
+        // Grotteschi
+        $empresa = 9;
+        DB::table('empresa_pessoas')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Levi Mauro Loretti',
+                'email'      => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

@@ -524,6 +524,74 @@ class EmpresaInformacaosSeeder extends Seeder
             ],
         ]);
 
+        // Grotteschi
+        $empresa = 9;
+        DB::table('empresa_informacaos')->insert([
+            /*[
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 1, // Histórico
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 2, // Descrição da Empresa
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 3, // Missão
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 4, // Valores
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 5, // Biografia
+                'descricao'          => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],*/
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => 'Após 7 anos de trabalho e investimento chegarmos ao Terre Gialle, o segundo vinho tinto fino de uvas europeias do Estado do Espírito Santo, um assemblage de 65% Syrah e 35% Cabernet Sauvignon.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => 'Ele é um vinho de cor bastante intensa, é rico no nariz, apresentando notas de frutas negras, toque de pimentão e ervas, acidez, taninos aveludados, corpo médio, persistência média, com leve amargor no final. Na boca tem taninos macios, acidez média e boa persistência Grotteschi homenagem à GIOVANNI GROTTESCHI.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => 'O nome Terre Gialle significa “terras amarelas”, em homenagem à cor da terra do Vale do Tabocas, onde as uvas finas são cultivadas manualmente, dando origem a vinhos que se diferenciam pela riqueza do solo e qualidade das uvas.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'         => $empresa,
+                'informacao_tipo_id' => 6, // Outros
+                'descricao'          => 'Venham nos visitar e apreciar um dos melhores vinhos do estado do Espírito Santo.',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

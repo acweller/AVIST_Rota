@@ -228,6 +228,20 @@ class EmpresaServicosSeeder extends Seeder
             ],
         ]);
 
+        // Grotteschi
+        $empresa = 9;
+        DB::table('empresa_servicos')->insert([
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Expediente',
+                'descricao'  => 'Todos os dias',
+                'horario'    => 'Das 09:00 às 17:00.',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
         /*
         // MODELO
         $empresa = ;

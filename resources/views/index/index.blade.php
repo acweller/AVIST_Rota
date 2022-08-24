@@ -58,7 +58,7 @@
         Acesse as informações de contato, produtos e serviços de cada uma das vinícolas através do menu de opções
       </p>
       <p>
-        Na página de cada <a href="http://localhost:8080/empresas">vinícola</a> está disponível um <i>link</i> para calcular a rota até a empresa.
+        Na página de cada <a href="/empresas">vinícola</a> está disponível um <i>link</i> para calcular a rota até a empresa.
       </p>
       <h2>
         História da AVIST

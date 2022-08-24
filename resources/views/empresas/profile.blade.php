@@ -43,24 +43,32 @@
             <p>{{ addslashes($info->descricao) }}</p>
         @endforeach
         
-        <h2 id="empresa-endereco">Endereço e Rota<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-endereco" style="padding-left: 0.375em;"></a></h2>
+        <h2 id="empresa-endereco">
+            Endereço e Rota
+                <a href="{{ $empresa->linkGoogleMaps }}" class="btn btn-outline-primary btn-sm mr-0" data-toggle="tooltip" data-placement="bottom" title="Rota via Google Maps" target="_blank">
+                    <i class="fa-solid fa-map-location"></i> Maps
+                </a>
+                <a href="https://waze.com/ul?ll={{$empresa->latitude}},{{$empresa->longitude}}&z=10&navigate=yes" class="btn btn-outline-primary btn-sm ml-0"  data-toggle="tooltip" data-placement="bottom" title="Rota via Waze" target="_blank">
+                    <i class="fa-brands fa-waze"></i> Waze
+                </a>
+            <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-endereco" style="padding-left: 0.375em;"></a>
+        </h2>
         @foreach ($enderecos as $end)
-        <p>
-            {{ addslashes($end->rua) }}, 
-            @if (!empty($end->numero))
-                {{ addslashes($end->numero) }}, 
-            @endif
-            @if (!empty($end->complemento))
-                {{ addslashes($end->complemento) }}, 
-            @endif
-            @if (!empty($end->bairro))
-                {{ addslashes($end->bairro) }}, 
-            @endif
-            {{ addslashes($end->cidade) }}, 
-            {{ addslashes($end->estado) }}. 
-            {{ addslashes($end->cep) }}
-            <a href="{{ $empresa->linkGoogleMaps }}" target="_blank">(Ver no mapa)</a>
-        </p>
+            <span class="d-flex">
+                {{ addslashes($end->rua) }}, 
+                @if (!empty($end->numero))
+                    {{ addslashes($end->numero) }}, 
+                @endif
+                @if (!empty($end->complemento))
+                    {{ addslashes($end->complemento) }}, 
+                @endif
+                @if (!empty($end->bairro))
+                    {{ addslashes($end->bairro) }}, 
+                @endif
+                {{ addslashes($end->cidade) }}, 
+                {{ addslashes($end->estado) }}. 
+                {{ addslashes($end->cep) }}.
+            </span>
         @endforeach
 
         <p>

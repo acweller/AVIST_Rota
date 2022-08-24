@@ -21,6 +21,7 @@ class InformacaoTiposSeeder extends Seeder
             ['nomeInformacaoTipo' => 'Valores'],
             ['nomeInformacaoTipo' => 'Biografia'],
             ['nomeInformacaoTipo' => 'Outros'],
+            ['nomeInformacaoTipo' => 'Ações'],
         ]);
     }
 }

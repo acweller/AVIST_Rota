@@ -40,7 +40,7 @@ Route::get('/informacao_tipos', [InformacaoTiposController::class, 'index'])
 Route::controller(EmpresasController::class)->group(function(){
     Route::get('/empresas', 'index')->name('rota_index_empresas');
     Route::get('/empresas/{empresaId}', 'profile')->name('rota_profile_empresa');
-
+    Route::get('/associacao', 'about')->name('rota_about_empresa');
 });
 
 // Rota para CRUD de Informações da Empresa
@@ -93,3 +93,6 @@ Route::get('/series/{serieId}/temporadas', [TemporadasController::class, 'index'
 
 // (Flex) Layout Alinhamento e Tamanho no Bootstrap
 // https://getbootstrap.com/docs/5.1/utilities/flex/
+
+// Logomarca do Governo Federal MAPA
+// https://www.gov.br/agricultura/pt-br/assuntos/florestal/central-de-conteudos-1/logomarcas

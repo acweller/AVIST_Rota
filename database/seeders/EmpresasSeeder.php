@@ -147,6 +147,17 @@ class EmpresasSeeder extends Seeder
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
+            [
+                'id' => 12,
+                'empresa_tipo_id'   => 1, // Associação
+                'nomeEmpresa'       => 'AVIST (Associação dos Vitivinicultores de Santa Teresa)',
+                'linkGoogleMaps'    => '',
+                'latitude'          => 0,
+                'longitude'         => 0,
+                'caminhoImagem'     => '/images/',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
         ]);
     }
 }

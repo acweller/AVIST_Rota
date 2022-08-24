@@ -41,8 +41,6 @@
       </button>
     </div>
 
-    
-    <!-- incluir aqui o include das informacaos_empresa AVIST - PENDENTE -->
     <div class="container-fluid" id="sobre_avist">
       <br>
       <h2>
@@ -52,50 +50,87 @@
         O vinho é uma das grandes paixões dos capixabas. E Santa Teresa é o maior produtor de uva e de vinhos do Espírito Santo.
       </p>
       <p>
-        Este site tem como objetivo divulgar as vinícolas associadas à AVIST, que são referência na área de vitivinicultura.
+        Em 16 de Abril de 2002 foi fundada a AVIST, que é a Associação dos Vitivinicultores de Santa Teresa, para fortalecer a produção de vinhos no município, com ações que visam o melhoramento dos produtos, a troca de experiências entre seus associados e a divulgação dessa atividade econômica, que é um dos principais atrativos para turistas desta cidade.</p>
       </p>
       <p>
-        Acesse as informações de contato, produtos e serviços de cada uma das vinícolas através do menu de opções
+        Este site tem como objetivo divulgar as <a href="{{ route('rota_index_empresas') }}">vinícolas associadas à AVIST</a>, que são referência na área de vitivinicultura.
+        Aqui você pode acessar as informações de cada uma delas, como telefones de contato, redes sociais, produtos e serviços e a localização de cada uma delas.
       </p>
-      <p>
-        Na página de cada <a href="/empresas">vinícola</a> está disponível um <i>link</i> para calcular a rota até a empresa.
-      </p>
-      <h2>
-        História da AVIST
-      </h2>
-        <p>
-        A história do vinho em Santa Teresa começa com a chegada dos imigrantes italianos na região onde encontraram a jabuticaba, fruta nativa da mata atlântica, e que a usaram para a produção de um vinho para o consumo das próprias famílias.
-        </p>
-        <p>
-          Muitas dessas famílias continuaram essa tradição até os dias de hoje. Assim, o fermentado de jabuticaba é reconhecido como um dos nossos produtos mais atrativos.
-        </p>
-        <p>
-          Depois, veio a uva e hoje temos 9 vinícolas registradas no MAPA em busca constante por melhorias nos nossos vinhos.
-        </p>
-        <p>
-          Em 16 de Abril de 2002 foi fundada a AVIST, que é a Associação dos Vitivinicultores de Santa Teresa, para ajudar a desenvolver e fortalecer a vitivinicultura no município.
-        </p>
-        <h2>
-          Ações da AVIST
-        </h2>
-        <p>
-          Em nossas reuniões traçamos algumas ações que julgamos serem prioritárias para alavancar os nossos trabalhos. A primeira é a formalização das vinícolas junto ao MAPA.
-        </p>
-        <p>
-          Para dar sequência aos trabalhos estamos com dois trabalhos de parceria com o IFES Santa Teresa para formatar de forma digital a rota das vinícolas (este site) e também para contrução de um viveiro de mudas de uvas, jabuticaba, citrus, pantas ornamentais e para reflorestamento que será instalado no campus do IFES em barracão.
-        </p>
-        <p>
-          Essas são as ações de base para começar a profissionalizar nossa vitivinicultura e melhorar cada vez mais o turismo em Santa Teresa e as vinícolas tem uma contribuição muito importante nesse desenvolvimento e só vai acontecer se estivermos preparados para superar os desafios que naturalmente vamos encontrar.
-        </p>
-        <p>
-          Gostariamos de destacar a importância de todos os parceiros aqui presentes para realização deste evento e das nossas metas de trabalho.
-        </p>
-        <p>
-          Também parabenizamos as vinícolas que com muito esforço e investimento estão trabalhando para construir esse caminho de sucesso para nosso município.
-        </p>
-        <p>
-          Agradeçemos a todos os parceiros pela ajuda na contrução dessa história e com certeza juntos podemos chegar mais longe!!!
-        </p>
     </div>
+
+    <div class="container-fluid">
+        <div class="row d-flex align-items-center">
+          <div class="col-xl-7 col-lg-7 col-md-7" style="border:0px solid #ddd">
+            <p>
+              <h3>Sobre a AVIST</h3>
+              <p>
+                A Associação dos Vitivinicultores de Santa Teresa tem a missão de ajudar a desenvolver e fortalecer a vitivinicultura no município.
+              </p>
+              <a href="{{route('rota_about_empresa')}}" class="btn btn-outline-primary btn-sm ml-0"  data-toggle="tooltip" data-placement="bottom" title="Sobre a AVIST">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Saiba mais
+              </a>
+            </p>
+          </div>
+          <div class="col-xl-5 col-lg-5 col-md-5" style="border:0px solid #ddd">
+            <a href="{{route('rota_about_empresa')}}"  data-toggle="tooltip" data-placement="bottom" title="Sobre a AVIST">
+              <img src="images/avist logo.png" alt="Conheça mais sobre a AVIST" class="img-fluid rounded">
+            </a>
+          </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row d-flex align-items-center">
+        <div class="col-xl-5 col-lg-5 col-md-5" style="border:0px solid #ddd">
+          <p>
+            <a href="{{route('rota_index_empresas')}}"  data-toggle="tooltip" data-placement="bottom" title="Vinícolas">
+              <img src="images/RotaDoVinho.jpg" alt="Vinícolas" class="img-fluid rounded">
+            </a>
+          </p>
+        </div>
+        <div class="col-xl-7 col-lg-7 col-md-7" style="border:0px solid #ddd">
+          <h3>Conheça as Vinícolas</h3>
+          <p>
+            Conheça cada uma das vinícolas e empresas associadas à AVIST. A relação está em ordem alfabética.
+          </p>
+          <p>
+            <a href="{{route('rota_index_empresas')}}" class="btn btn-outline-primary btn-sm ml-0"  data-toggle="tooltip" data-placement="bottom" title="Vinícolas">
+              <i class="fa-solid fa-wine-glass"></i> Saiba mais
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="parcerias">
+      <div class="row d-flex align-items-center">
+        <div class="col-xl-8 col-lg-8 col-md-8" style="border:0px solid #ddd">
+          <p></p>
+          <h2>
+            Parcerias
+          </h2>
+          <p>
+            A AVIST, em parceria com 
+            o <a href="https://santateresa.ifes.edu.br/" target="_blank">Ifes</a> (Instituto Federal do Espírito Santo - Campus Santa Teresa)
+            e o <a href="https://www.gov.br/agricultura/pt-br" target="_blank">MAPA</a> (Ministério da Agricultura, Pecuária e Abastecimento),
+            vem buscando formas de divulgar o trabalho realizado por seus associados.
+          </p>
+          <p>
+            Uma das formas identificadas foi a elaboração de um site da Internet
+            (A Rota das Vinícolas de Santa Teresa)
+            para centralizar as informações de cada uma das vinícolas da AVIST
+            e para facilitar a localização dos empreendimentos por parte dos turistas.
+          </p>
+          <p>
+            Agradeçemos a todos os parceiros pela ajuda na contrução dessa história e com certeza juntos podemos chegar mais longe!!!
+          </p>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4" style="border:0px solid #ddd">
+          <a href="https://santateresa.ifes.edu.br/"  data-toggle="tooltip" data-placement="bottom" title="Conheça o Ifes Santa Teresa" target="_blank">
+            <img src="images/ifes_st_leds_logo.png" alt="Conheça o Ifes Santa Teresa" class="img-fluid rounded">
+          </a>
+        </div>
+      </div>
+  </div>
 
 @endsection

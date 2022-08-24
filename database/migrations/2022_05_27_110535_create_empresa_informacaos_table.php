@@ -18,6 +18,7 @@ class CreateEmpresaInformacaosTable extends Migration
             $table->foreignId('empresa_id')->constrained(); // Poderia informar o nome da tabela se estiver fora do padrão
             $table->foreignId('informacao_tipo_id')->constrained();
             $table->text('descricao');
+            $table->boolean('titulo');  // A coluna indica se o texto é um título
             $table->timestamps();
         });
     }

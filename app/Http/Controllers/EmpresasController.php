@@ -29,6 +29,16 @@ class EmpresasController extends Controller
         return view ('empresas.index', compact('empresas', 'mensagem'));
     }
 
+    public function about (Request $request) {
+        // Obtém a lista de itens da Tabela
+        $empresa = Empresa::query()->where('empresa_tipo_id', '1')->first();
+
+        // Obtém a mensagem retornada via Session de Request
+        $mensagem = $request->session()->get('mensagem');
+        
+        return $this->profile($empresa->id);
+    }
+
     public function profile (int $empresaId) {
         // Obtém a empresa pelo ID
         $empresa = Empresa::find($empresaId);
@@ -37,7 +47,6 @@ class EmpresasController extends Controller
         $empresaTipo = $empresa->empresaTipo;
 
         // Busca os Contatos
-        ////$contatos = $empresa->empresaContatos()->get();
         $contatos = $empresa->empresaContatos;
         // Busca os Endereços
         $enderecos = $empresa->empresaEnderecos;

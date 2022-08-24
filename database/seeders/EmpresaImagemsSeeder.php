@@ -588,5 +588,40 @@ class EmpresaImagemsSeeder extends Seeder
             ]);
         }
 
+        // AVIST
+        $empresa_id = 12;
+        $empresa = Empresa::find($empresa_id);
+        $nomeEmpresa = $empresa->nomeEmpresa;
+        $caminhoImagem = $empresa->caminhoImagem;
+        DB::table('empresa_imagems')->insert([
+            [
+                'empresa_id'     => $empresa_id,
+                'imagem_tipo_id' => 2, // Logomarca
+                'caminho'        => $caminhoImagem . 'avist logo.png',
+                'descricao'      => 'Logomarca da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 1,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'     => $empresa_id,
+                'imagem_tipo_id' => 4, // Foto
+                'caminho'        => $caminhoImagem . 'RotaDoVinho.jpg',
+                'descricao'      => 'Mapa dos associados da ' . $nomeEmpresa,
+                'ordem'          => $empresa_id * 10000 + 2,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'     => $empresa_id,
+                'imagem_tipo_id' => 1, // Mapa
+                'caminho'        => $caminhoImagem . 'RotaDoVinho.png',
+                'descricao'      => 'Mapa da Rota do Vinho.',
+                'ordem'          => $empresa_id * 10000 + 3,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+        ]);
+
     }
 }

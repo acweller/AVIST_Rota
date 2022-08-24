@@ -27,63 +27,88 @@
 
     <div class="bd-content ps-lg-4">
 
+        <!-- Mostra a primeira Logomarca da Empresa -->
         @foreach ($imagems as $imagem)
-        @if ($imagem->imagem_tipo_id == 2)
-            <a href="{{ $empresa->linkGoogleMaps }}" data-toggle="tooltip" data-placement="bottom" title="Clique para abrir o Google Maps" target="_blank">
-                <div class="text-center">
-                    <img src="{{ addslashes($imagem->caminho) }}" class="img-fluid rounded" alt="{{ addslashes($imagem->descricao) }}">
-                </div>
-            </a>
-        @endif
+            @if ($imagem->imagem_tipo_id == 2)
+                @if ($empresa->empresa_tipo_id != 1) <!-- Se não for a associação -->
+                    <a href="{{ $empresa->linkGoogleMaps }}" data-toggle="tooltip" data-placement="bottom" title="Clique para abrir o Google Maps" target="_blank">
+                @else
+                    <a href="{{route('rota_index_empresas')}}"  data-toggle="tooltip" data-placement="bottom" title="Vinícolas">
+                @endif
+                        <div class="text-center">
+                            <img src="{{ addslashes($imagem->caminho) }}" class="img-fluid rounded" alt="{{ addslashes($imagem->descricao) }}">
+                        </div>
+                    </a>
+                @break
+            @endif
         @endforeach
-        
         <br>
 
+        <!-- Texto informativo da empresa -->
         @foreach ($informacaos as $info)
-            <p>{{ addslashes($info->descricao) }}</p>
+            <p>
+                @if (! $info->titulo)
+                    {{ addslashes($info->descricao) }}
+                @else
+                    <h4 id="empresa-informacao">{{ addslashes($info->descricao) }}<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-informacao" style="padding-left: 0.375em;"></a></h4>
+                @endif
+            </p>
         @endforeach
         
-        <h2 id="empresa-endereco">
-            Endereço e Rota
-                <a href="{{ $empresa->linkGoogleMaps }}" class="btn btn-outline-primary btn-sm mr-0" data-toggle="tooltip" data-placement="bottom" title="Rota via Google Maps" target="_blank">
-                    <i class="fa-solid fa-map-location"></i> Maps
-                </a>
-                <a href="https://waze.com/ul?ll={{$empresa->latitude}},{{$empresa->longitude}}&z=10&navigate=yes" class="btn btn-outline-primary btn-sm ml-0"  data-toggle="tooltip" data-placement="bottom" title="Rota via Waze" target="_blank">
-                    <i class="fa-brands fa-waze"></i> Waze
-                </a>
-            <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-endereco" style="padding-left: 0.375em;"></a>
-        </h2>
-        @foreach ($enderecos as $end)
-            <span class="d-flex">
-                {{ addslashes($end->rua) }}, 
-                @if (!empty($end->numero))
-                    {{ addslashes($end->numero) }}, 
-                @endif
-                @if (!empty($end->complemento))
-                    {{ addslashes($end->complemento) }}, 
-                @endif
-                @if (!empty($end->bairro))
-                    {{ addslashes($end->bairro) }}, 
-                @endif
-                {{ addslashes($end->cidade) }}, 
-                {{ addslashes($end->estado) }}. 
-                {{ addslashes($end->cep) }}.
-            </span>
-        @endforeach
+        @if ((!empty($enderecos)) && ($enderecos->count() > 0))
+            <!-- Endereços da Empresa -->
+            <h2 id="empresa-endereco">
+                Endereço e Rota
+                    <a href="{{ $empresa->linkGoogleMaps }}" class="btn btn-outline-primary btn-sm mr-0" data-toggle="tooltip" data-placement="bottom" title="Rota via Google Maps" target="_blank">
+                        <i class="fa-solid fa-map-location"></i> Maps
+                    </a>
+                    <a href="https://waze.com/ul?ll={{$empresa->latitude}},{{$empresa->longitude}}&z=10&navigate=yes" class="btn btn-outline-primary btn-sm ml-0"  data-toggle="tooltip" data-placement="bottom" title="Rota via Waze" target="_blank">
+                        <i class="fa-brands fa-waze"></i> Waze
+                    </a>
+                <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-endereco" style="padding-left: 0.375em;"></a>
+            </h2>
+            @foreach ($enderecos as $end)
+                <span class="d-flex">
+                    {{ addslashes($end->rua) }}, 
+                    @if (!empty($end->numero))
+                        {{ addslashes($end->numero) }}, 
+                    @endif
+                    @if (!empty($end->complemento))
+                        {{ addslashes($end->complemento) }}, 
+                    @endif
+                    @if (!empty($end->bairro))
+                        {{ addslashes($end->bairro) }}, 
+                    @endif
+                    {{ addslashes($end->cidade) }}, 
+                    {{ addslashes($end->estado) }}. 
+                    {{ addslashes($end->cep) }}.
+                </span>
+            @endforeach
+        @endif
 
-        <p>
+        <p> <!-- Mostra um Mapa da Empresa -->
             @foreach ($imagems as $imagem)
-            @if ($imagem->imagem_tipo_id == 1)
-                <a href="{{ $empresa->linkGoogleMaps }}" data-toggle="tooltip" data-placement="bottom" title="Clique para abrir no Google Maps" target="_blank">
-                    <div class="text-center">
-                        <img src="{{ addslashes($imagem->caminho) }}" class="img-fluid rounded" alt="{{ addslashes($imagem->descricao) }}">
-                    </div>
-                </a>
-            @endif
+                @if ($imagem->imagem_tipo_id == 1) <!-- Se não for um mapa -->
+                    @if ($empresa->empresa_tipo_id != 1) <!-- Se não for a associação -->
+                        <a href="{{ $empresa->linkGoogleMaps }}" data-toggle="tooltip" data-placement="bottom" title="Clique para abrir no Google Maps" target="_blank">
+                            <div class="text-center">
+                                <img src="{{ addslashes($imagem->caminho) }}" class="img-fluid rounded" alt="{{ addslashes($imagem->descricao) }}">
+                            </div>
+                        </a>
+                    @else
+                        <h2 id="empresa-vinicolas">Conheça as Vinícolas<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-vinicolas" style="padding-left: 0.375em;"></a></h2>
+                        <a href="{{route('rota_index_empresas')}}"  data-toggle="tooltip" data-placement="bottom" title="Vinícolas">
+                            <div class="text-center">
+                                <img src="{{ addslashes($imagem->caminho) }}" class="img-fluid rounded" alt="Vinícolas">
+                            </div>
+                        </a>
+                    @endif
+                    @break
+                @endif
             @endforeach
         </p>
-
-        <p>
+        
+        <p><!-- Redes Sociais da Empresa -->
             <h2 id="empresa-redes">Redes Sociais<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-rede" style="padding-left: 0.375em;"></a></h2>
             <div class="container text-center">
                 <div class="row">
@@ -145,38 +170,46 @@
             </div>
         </p>
         
-        <h2 id="empresa-produto">Produtos<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-produto" style="padding-left: 0.375em;"></a></h2>
-        <ol class="list-unstyled list-group-numbered">
-            @foreach ($produtos as $produto)
-            @if ($produto->ativo == 1)
-                <li class="list-group-item">
-                    @if(strlen($produto->descricao) > 0)
-                        <b>{{ $produto->nome }}</b>: {{ addslashes($produto->descricao) }}
-                    @else
-                        <b>{{ $produto->nome }}</b>
-                    @endif
-                </li>
-            @endif
-            @endforeach
-        </ol>
+        @if ((!empty($produtos)) && ($produtos->count() > 0))
+        <!-- Produtos da Empresa -->
+            <h2 id="empresa-produto">Produtos<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-produto" style="padding-left: 0.375em;"></a></h2>
+            <ol class="list-unstyled list-group-numbered">
+                @foreach ($produtos as $produto)
+                @if ($produto->ativo == 1)
+                    <li class="list-group-item">
+                        @if(strlen($produto->descricao) > 0)
+                            <b>{{ $produto->nome }}</b>: {{ addslashes($produto->descricao) }}
+                        @else
+                            <b>{{ $produto->nome }}</b>
+                        @endif
+                    </li>
+                @endif
+                @endforeach
+            </ol>
+        @endif
         
-        <h2 id="empresa-servico">Serviços<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-servico" style="padding-left: 0.375em;"></a></h2>
-        <ol class="list-unstyled list-group-numbered">
-            @foreach ($servicos as $servico)
-            @if ($servico->ativo == 1)
-                <li class="list-group-item">
-                    @if(strlen($servico->descricao) > 0)
-                        <b>{{ $servico->nome }}</b>: {{ addslashes($servico->descricao) }}
-                    @else
-                        <b>{{ $servico->nome }}</b>
-                    @endif
-                    <br>Horário: {{ addslashes($servico->horario) }}
-                </li>
-            @endif
-            @endforeach
-        </ol>
+        @if ((!empty($servicos)) && ($servicos->count() > 0))
+        <!-- Serviços da Empresa -->
+            <h2 id="empresa-servico">Serviços<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-servico" style="padding-left: 0.375em;"></a></h2>
+            <ol class="list-unstyled list-group-numbered">
+                @foreach ($servicos as $servico)
+                @if ($servico->ativo == 1)
+                    <li class="list-group-item">
+                        @if(strlen($servico->descricao) > 0)
+                            <b>{{ $servico->nome }}</b>: {{ addslashes($servico->descricao) }}
+                        @else
+                            <b>{{ $servico->nome }}</b>
+                        @endif
+                        <br>Horário: {{ addslashes($servico->horario) }}
+                    </li>
+                @endif
+                @endforeach
+            </ol>
+        @endif
         
         <p>
+        @if ($empresa->empresa_tipo_id != 1)
+        <!-- Carrossel de imagens das vinícolas e da galeria -->
             <h2 id="empresa-imagem">Galeria de imagens<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-imagem" style="padding-left: 0.375em;"></a></h2>
             <div id="carouselEmpresaImagem" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -204,9 +237,11 @@
                   <span class="visually-hidden">Próximo</span>
                 </button>
             </div>
+        @endif
         </p>
 
         <h2 id="empresa-contato">Contato(s)<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-contato" style="padding-left: 0.375em;"></a></h2>
+        <!-- Pessoas da Empresa -->
         @foreach ($pessoas as $pessoa)
         <div>
             <div class="btn-group btn-group-sm">
@@ -218,6 +253,7 @@
         </div>
         @endforeach
         
+        <!-- Formas de contatos da Empresa -->
         @foreach ($contatos as $contato)
             <div>
             @switch($contato->contato_tipo_id)

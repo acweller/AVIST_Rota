@@ -42,7 +42,7 @@
                         <li><a class="dropdown-item" href="https://www.gov.br/agricultura/pt-br/" target="_blank">Ministério da Agricultura, Pecuária e Abastecimento</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
+                <!--li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Listagens
                     </a>
@@ -54,9 +54,9 @@
                         <li><a class="dropdown-item" href="/imagem_tipos">Tipos de Imagem</a></li>
                         <li><a class="dropdown-item" href="/informacao_tipos">Tipos de Informação</a></li>
                     </ul>
-                </li>
+                </li-->
                 <li class="nav-item">
-                <a class="nav-link" href="/#sobre_avist">Sobre</a>
+                <a class="nav-link" href="{{route('rota_about_empresa')}}">Sobre a AVIST</a>
                 </li>
             </ul>
             <!--form class="d-inline-flex">

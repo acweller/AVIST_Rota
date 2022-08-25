@@ -99,6 +99,7 @@ RELEASE_NOTES.txt
 error_log
 .htpasswds
 /.htaccess
+/.htaccess.*
 php.ini.sample
 .modgit/
 _vti_bin/
@@ -128,6 +129,7 @@ Homestead.json
 /vendor
 .env
 /public/.htaccess
+/public/.htaccess.*
 /storage
 storage/*.key
 

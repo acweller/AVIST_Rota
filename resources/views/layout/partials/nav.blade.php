@@ -36,10 +36,11 @@
                         Parceiros
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="https://santateresa.ifes.edu.br/" target="_blank">Ifes - Campus Santa Teresa</a></li>
-                        <li><a class="dropdown-item" href="https://incaper.es.gov.br/" target="_blank">Incaper</a></li>
-                        <li><a class="dropdown-item" href="https://www.embrapa.br/" target="_blank">Embrapa</a></li>
-                        <li><a class="dropdown-item" href="https://www.gov.br/agricultura/pt-br/" target="_blank">Ministério da Agricultura, Pecuária e Abastecimento</a></li>
+                        <li><a class="dropdown-item" href="https://santateresa.ifes.edu.br/" target="_blank">IFES - Campus Santa Teresa</a></li>
+                        <li><a class="dropdown-item" href="https://www.embrapa.br/" target="_blank">Embrapa - Empresa Brasileira de Pesquisa Agropecuária</a></li>
+                        <li><a class="dropdown-item" href="https://incaper.es.gov.br/" target="_blank">Incaper - Instituto Capixaba de Pesquisa, Assistência Técnica e Extensão Rural </a></li>
+                        <li><a class="dropdown-item" href="https://www.gov.br/agricultura/pt-br/" target="_blank">MAPA - Ministério da Agricultura, Pecuária e Abastecimento</a></li>
+                        <li><a class="dropdown-item" href="https://www.santateresa.es.gov.br/" target="_blank">PMST - Prefeitura Municipal de Santa Teresa</a></li>
                     </ul>
                 </li>
                 <!--li class="nav-item dropdown">

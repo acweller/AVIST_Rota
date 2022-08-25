@@ -355,7 +355,7 @@ class EmpresaContatosSeeder extends Seeder
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 8, // Site
-                'descricao'       => 'https://www.instagram.com/ristorante.romanha/',
+                'descricao'       => 'https://www.instagram.com/ristorante.romanha',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -783,45 +783,44 @@ class EmpresaContatosSeeder extends Seeder
             ],
         ]);
 
-        // AVIST (Atualmente é a Mattiello)
+        // AVIST (Atualmente é a Romanha)
         $empresa = 12;
         DB::table('empresa_contatos')->insert([
-            [
+            /*[
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 1, // Telefone Fixo
-                'descricao'       => '27999085282',
+                'descricao'       => '',
                 'created_at' => $data,
                 'updated_at' => $data,
-            ],
+            ],*/
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 2, // Whatsapp
-                'descricao'       => '27999085282',
+                'descricao'       => '27998774105',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 3, // Email
-                'descricao'       => 'cantinamattiello2@hotmail.com',
+                'descricao'       => 'ristoranteromanhast@yahoo.com.br',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 4, // Facebook
-                'descricao'       => 'CantinaMattiello',
+                'descricao'       => 'RistoranteRomanha',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 5, // Instagram
-                'descricao'       => 'cantinamattiello',
+                'descricao'       => 'ristorante.romanha',
                 'created_at' => $data,
                 'updated_at' => $data,
-            ],
-            /*
+            ],/*
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 6, // Twitter
@@ -839,7 +838,7 @@ class EmpresaContatosSeeder extends Seeder
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 8, // Site
-                'descricao'       => 'https://www.cantinamattiello.com.br/',
+                'descricao'       => 'https://www.instagram.com/ristorante.romanha',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],

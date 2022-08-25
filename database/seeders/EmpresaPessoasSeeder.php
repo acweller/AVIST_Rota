@@ -142,7 +142,7 @@ class EmpresaPessoasSeeder extends Seeder
                 'updated_at' => $data,
             ],
         ]);
-        
+
         // Grotteschi
         $empresa = 9;
         DB::table('empresa_pessoas')->insert([
@@ -186,13 +186,13 @@ class EmpresaPessoasSeeder extends Seeder
             ],
         ]);
 
-        // AVIST - Mattiello
+        // AVIST - Romanha
         $empresa = 12;
         DB::table('empresa_pessoas')->insert([
             [
                 'empresa_id' => $empresa,
-                'nome'       => 'Eliton Stanger',
-                'email'      => 'cantinamattiello2@hotmail.com',
+                'nome'       => 'Steven Romanha Fontana (Presidente)',
+                'email'      => 'steven.fontana@hotmail.com',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -211,6 +211,5 @@ class EmpresaPessoasSeeder extends Seeder
             ],
         ]);
         */
-
     }
 }

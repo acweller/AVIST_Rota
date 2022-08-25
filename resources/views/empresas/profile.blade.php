@@ -178,7 +178,11 @@
                 @if ($produto->ativo == 1)
                     <li class="list-group-item">
                         @if(strlen($produto->descricao) > 0)
-                            <b>{{ $produto->nome }}</b>: {{ addslashes($produto->descricao) }}
+                            @if(strlen($produto->hiperlink) > 0)
+                                <b>{{ $produto->nome }}</b>: <a href="{{ $produto->hiperlink }}" target="_blank">{{ addslashes($produto->descricao) }}</a>
+                            @else
+                                <b>{{ $produto->nome }}</b>: {{ addslashes($produto->descricao) }}
+                            @endif
                         @else
                             <b>{{ $produto->nome }}</b>
                         @endif
@@ -196,7 +200,11 @@
                 @if ($servico->ativo == 1)
                     <li class="list-group-item">
                         @if(strlen($servico->descricao) > 0)
-                            <b>{{ $servico->nome }}</b>: {{ addslashes($servico->descricao) }}
+                            @if(strlen($servico->hiperlink) > 0)
+                                <b>{{ $servico->nome }}</b>: <a href="{{ $servico->hiperlink }}" target="_blank">{{ addslashes($servico->descricao) }}</a>
+                            @else
+                                <b>{{ $servico->nome }}</b>: {{ addslashes($servico->descricao) }}
+                            @endif
                         @else
                             <b>{{ $servico->nome }}</b>
                         @endif
@@ -260,30 +268,29 @@
                 @case(1)
                     <div class="btn-group btn-group-sm">
                         <!--TEL FIXO-->
-                        <a href="tel:0{{ addslashes($contato->descricao) }}" class="btn fa-solid fa-phone" target="_blank"></a>
-                        <a href="tel:0{{ addslashes($contato->descricao) }}" class="link-dark" target="_blank">({{ substr($contato->descricao,0,2) }}) {{ substr($contato->descricao,2, strlen($contato->descricao)-6) }}-{{ substr($contato->descricao, strlen($contato->descricao)-4) }}</a>
+                        <a href="tel:0{{ addslashes($contato->descricao) }}" class="btn fa-solid fa-phone" target="_blank" style="color:#4285F4;"></a>
+                        <a href="tel:0{{ addslashes($contato->descricao) }}" class="link-primary" target="_blank">({{ substr($contato->descricao,0,2) }}) {{ substr($contato->descricao,2, strlen($contato->descricao)-6) }}-{{ substr($contato->descricao, strlen($contato->descricao)-4) }}</a>
                     </div>
                     @break
                 @case(2)
                     <div class="btn-group btn-group-sm">
                         <!--WHATSAPP-->
-                        <a href="https://api.whatsapp.com/send?phone=55{{ addslashes($contato->descricao) }}" class="btn fa-brands fa-whatsapp" target="_blank"></a>
-                        <a href="https://api.whatsapp.com/send?phone=55{{ addslashes($contato->descricao) }}" class="link-dark" target="_blank">({{ substr($contato->descricao,0,2) }}) {{ substr($contato->descricao,2, strlen($contato->descricao)-6) }}-{{ substr($contato->descricao, strlen($contato->descricao)-4) }}</a>
+                        <a href="https://api.whatsapp.com/send?phone=55{{ addslashes($contato->descricao) }}" class="btn fa-brands fa-whatsapp" target="_blank" style="color:#128c7e; font-weight:bold;"></a>
+                        <a href="https://api.whatsapp.com/send?phone=55{{ addslashes($contato->descricao) }}" class="link-primary" target="_blank">({{ substr($contato->descricao,0,2) }}) {{ substr($contato->descricao,2, strlen($contato->descricao)-6) }}-{{ substr($contato->descricao, strlen($contato->descricao)-4) }}</a>
                     </div>
                     @break
                 @case(3)
-                    <div class="btn-group btn-group-sm"
-                        style="--bs-btn-padding-y: .9rem; --bs-btn-padding-x: .9rem; --bs-btn-font-size: .75rem;">
+                    <div class="btn-group btn-group-sm">
                         <!--EMAIL-->
-                        <a href="mailto:{{ addslashes($contato->descricao) }}" class="btn fa-solid fa-envelope" target="_blank"></a>
-                        <a href="mailto:{{ addslashes($contato->descricao) }}" class="link-dark" target="_blank">{{ addslashes($contato->descricao) }}</a>
+                        <a href="mailto:{{ addslashes($contato->descricao) }}" class="btn fa-solid fa-envelope" target="_blank" style="color:#4285F4;"></a>
+                        <a href="mailto:{{ addslashes($contato->descricao) }}" class="link-primary" target="_blank">{{ addslashes($contato->descricao) }}</a>
                     </div>
                     @break
                 @case(8)
                     <div class="btn-group btn-group-sm">
                         <!--SITE-->
-                        <a href="{{ addslashes($contato->descricao) }}" class="btn fa-solid fa-earth-americas" target="_blank"></a>
-                        <a href="{{ addslashes($contato->descricao) }}" class="link-dark" target="_blank">{{ $contato->descricao }}</a>
+                        <a href="{{ addslashes($contato->descricao) }}" class="btn fa-solid fa-earth-americas" target="_blank" style="color:#4285F4;"></a>
+                        <a href="{{ addslashes($contato->descricao) }}" class="link-primary" target="_blank">{{ $contato->descricao }}</a>
                     </div>
                     @break
             @endswitch

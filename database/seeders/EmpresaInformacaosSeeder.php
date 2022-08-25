@@ -42,7 +42,7 @@ class EmpresaInformacaosSeeder extends Seeder
             [
                 'empresa_id'         => $empresa, // https://www.santateresa.es.gov.br/turismo/view/7/servico/view/27
                 'informacao_tipo_id' => 2, // Descrição da Empresa
-                'descricao'          => 'Localizada no centro de Santa Teresa, recebeu este nome em homenagem à escritora teresense. É composto por três pavimentos ondem encontram-se: no primeiro pavimento a Galeria do Artesanato e da Agroindústria, administrada pela Associação de Produtores de Artesanato e da Agroindústria de Santa Teresa – APROAAST; no segundo pavimento o Museu da Cultura e Imigração Italiana em Santa Teresa; e no terceiro pavimento o Centro de Convivência do Idoso.',
+                'descricao'          => 'Localizada no centro de Santa Teresa, recebeu o nome de Galeria Cultural Virgínia Gasparini Tamanini, em homenagem à escritora teresense. É composto por três pavimentos, onde encontram-se: no primeiro pavimento a Galeria do Artesanato e da Agroindústria, administrada pela APROAAST (Associação de Produtores de Artesanato e da Agroindústria de Santa Teresa); no segundo pavimento o Museu da Cultura e Imigração Italiana em Santa Teresa; e no terceiro pavimento o Centro de Convivência do Idoso.',
                 'titulo' => false,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -74,7 +74,7 @@ class EmpresaInformacaosSeeder extends Seeder
             [
                 'empresa_id'         => $empresa,
                 'informacao_tipo_id' => 6, // Outros - https://www.instagram.com/aproaast.galeria/
-                'descricao'          => 'A Galeria de Artesanato é a sede da Associação de Produtores de Agroindústria e Artesanatos de Santa Teresa (APROAAST), que foi fundada em 1990. A APROAAST comercializa produtos de agricultura familiar e artesanatos em geral provenientes de famílias teresenses.',
+                'descricao'          => 'A APROAAST foi fundada em 1990 e tem sua sede na Galeria de Artesanato. Aqui nós comercializamos produtos de agricultura familiar e artesanatos em geral provenientes de famílias teresenses.',
                 'titulo' => false,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -91,7 +91,7 @@ class EmpresaInformacaosSeeder extends Seeder
                 'titulo' => false,
                 'created_at' => $data,
                 'updated_at' => $data,
-            ],
+            ],/*
             [
                 'empresa_id'         => $empresa,
                 'informacao_tipo_id' => 2, // Descrição da Empresa
@@ -115,7 +115,7 @@ class EmpresaInformacaosSeeder extends Seeder
                 'titulo' => false,
                 'created_at' => $data,
                 'updated_at' => $data,
-            ],
+            ],*/
             [
                 'empresa_id'         => $empresa,
                 'informacao_tipo_id' => 5, // Biografia

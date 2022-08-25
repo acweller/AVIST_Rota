@@ -18,8 +18,8 @@
         <span>© 2022 AVIST</span>
     </div>
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a href="https://api.whatsapp.com/send?phone=5527999085282" target="_blank"><svg class="bi" width="24" height="24"><use xlink:href="#whatsapp"></use></svg></a></li>
-        <li class="ms-3"><a href="https://instagram.com/cantinamattiello?igshid=YmMyMTA2M2Y=" target="_blank"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-        <li class="ms-3"><a href="https://www.facebook.com/CantinaMattiello" target="_blank"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+        <li class="ms-3"><a href="https://api.whatsapp.com/send?phone=5527998774105" target="_blank"><svg class="bi" width="24" height="24"><use xlink:href="#whatsapp"></use></svg></a></li>
+        <li class="ms-3"><a href="https://www.instagram.com/ristorante.romanha" target="_blank"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+        <li class="ms-3"><a href="https://www.facebook.com/RistoranteRomanha" target="_blank"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
     </ul>
 </footer>

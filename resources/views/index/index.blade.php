@@ -91,7 +91,7 @@
         <div class="col-xl-7 col-lg-7 col-md-7" style="border:0px solid #ddd">
           <h3>Conheça as Vinícolas</h3>
           <p>
-            Conheça cada uma das vinícolas e empresas associadas à AVIST. A relação está em ordem alfabética.
+            Conheça cada uma das vinícolas e empresas associadas à AVIST. Clique na imagem ou no botão abaixo para conferir a relação de nossas vinícolas organizada em ordem alfabética.
           </p>
           <p>
             <a href="{{route('rota_index_empresas')}}" class="btn btn-outline-primary btn-sm ml-0"  data-toggle="tooltip" data-placement="bottom" title="Vinícolas">
@@ -111,8 +111,9 @@
           </h2>
           <p>
             A AVIST, em parceria com 
-            o <a href="https://santateresa.ifes.edu.br/" target="_blank">Ifes</a> (Instituto Federal do Espírito Santo - Campus Santa Teresa)
-            e o <a href="https://www.gov.br/agricultura/pt-br" target="_blank">MAPA</a> (Ministério da Agricultura, Pecuária e Abastecimento),
+            o <a href="https://santateresa.ifes.edu.br/" target="_blank">Ifes</a> (Instituto Federal do Espírito Santo - Campus Santa Teresa),
+            o <a href="https://www.gov.br/agricultura/pt-br" target="_blank">MAPA</a> (Ministério da Agricultura, Pecuária e Abastecimento)
+            e a <a href="https://www.santateresa.es.gov.br/" target="_blank">PMST</a> (Prefeitura Municipal de Santa Teresa),
             vem buscando formas de divulgar o trabalho realizado por seus associados.
           </p>
           <p>
@@ -120,6 +121,9 @@
             (A Rota das Vinícolas de Santa Teresa)
             para centralizar as informações de cada uma das vinícolas da AVIST
             e para facilitar a localização dos empreendimentos por parte dos turistas.
+            O desenvolvimento do site foi feito pelo grupo
+            LEDS (Laboratório de Extensão em Desenvolvimento de Soluções),
+            formado por alunos e professores do Ifes Campus Santa Teresa.
           </p>
           <p>
             Agradeçemos a todos os parceiros pela ajuda na contrução dessa história e com certeza juntos podemos chegar mais longe!!!

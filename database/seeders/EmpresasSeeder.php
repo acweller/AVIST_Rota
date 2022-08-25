@@ -21,8 +21,8 @@ class EmpresasSeeder extends Seeder
             [
                 'id' => 1,
                 'empresa_tipo_id'   => 3, // Galeria de Artesanato
-                'nomeEmpresa'       => 'Galeria Cultural Virgínia Gasparini Tamanini',// (Galeria de Artesanato)',
-                'linkGoogleMaps'    => 'https://goo.gl/maps/E36qQN6ikvpDJWug6',
+                'nomeEmpresa'       => 'Galeria de Artesanato',                 // (Galeria Cultural Virgínia Gasparini Tamanini)
+                'linkGoogleMaps'    => 'https://goo.gl/maps/AFd4DJJuCZDLCH1t5', // https://goo.gl/maps/E36qQN6ikvpDJWug6 e https://goo.gl/maps/JA7FAjdMiR5dLUaY9
                 'latitude'          => -19.9300019,
                 'longitude'         => -40.5990548,
                 'caminhoImagem'     => '/images/01galeriaartesanato/',

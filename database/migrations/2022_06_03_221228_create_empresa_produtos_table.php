@@ -18,6 +18,7 @@ class CreateEmpresaProdutosTable extends Migration
             $table->foreignId('empresa_id')->constrained(); // Poderia informar o nome da tabela se estiver fora do padrão
             $table->string('nome'); // Nome do produto
             $table->text('descricao'); // Descrição do produto
+            $table->string('hiperlink'); // Hiperlink para alguma descrição do produto
             $table->boolean('ativo'); // A coluna Ativo indica se o produto deve ou não aparecer nas listagens.
             $table->timestamps();
         });

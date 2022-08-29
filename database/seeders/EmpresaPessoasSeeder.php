@@ -17,19 +17,17 @@ class EmpresaPessoasSeeder extends Seeder
     {
         $data = Carbon::now()->toDateTimeString();
 
-        /*
         // Galeria de Artesanato
         $empresa = 1;
         DB::table('empresa_pessoas')->insert([
             [
                 'empresa_id' => $empresa,
-                'nome'       => 'Nome Pessoa xxx',
-                'email'      => 'emailPessoa1@TESTE.br',
+                'nome'       => 'Eliana Breotto (Presidente)',
+                'email'      => '',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
         ]);
-        */
 
         // Rassele
         $empresa = 2;

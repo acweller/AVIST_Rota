@@ -31,17 +31,17 @@ class EmpresaContatosSeeder extends Seeder
             [ //https://www.w3schools.com/php/php_ref_string.asp - Funções de String PHP
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 1, // Telefone Fixo
-                'descricao'       => '2732591943',
-                'created_at' => $data,
-                'updated_at' => $data,
-            ],/*
-            [
-                'empresa_id'      => $empresa,
-                'contato_tipo_id' => 2, // Whatsapp
-                'descricao'       => '',
+                'descricao'       => '27992528208',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 2, // Whatsapp
+                'descricao'       => '27992528208',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],/*
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 3, // Email

@@ -129,9 +129,9 @@ class EmpresasSeeder extends Seeder
                 'id' => 10,
                 'empresa_tipo_id'   => 2, // Vinícola/Cantina
                 'nomeEmpresa'       => 'Tabocas Vin De Garage',
-                'linkGoogleMaps'    => 'https://goo.gl/maps/gH1HEL2nQARE5sf18',
-                'latitude'          => -19.912115,
-                'longitude'         => -40.694446,
+                'linkGoogleMaps'    => 'https://goo.gl/maps/pt7SBQQW8ZkS1n8r7',
+                'latitude'          => -19.9209622,
+                'longitude'         => -40.6950227,
                 'caminhoImagem'     => '/images/10tabocas/',
                 'created_at' => $data,
                 'updated_at' => $data,

@@ -278,9 +278,9 @@ class EmpresaServicosSeeder extends Seeder
             [
                 'empresa_id' => $empresa,
                 'nome'       => 'Expediente',
-                'descricao'  => 'De Segunda-Feira a Sexta-Feira',
+                'descricao'  => 'Somente com agendamento prévio.',
                 'hiperlink'  => '',
-                'horario'    => 'Das 13:00 às 17:00.',
+                'horario'    => 'Conferir via WhatsApp (Veja números de contato abaixo).',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,
@@ -295,7 +295,7 @@ class EmpresaServicosSeeder extends Seeder
                 'nome'       => 'Expediente',
                 'descricao'  => 'Diariamente',
                 'hiperlink'  => '',
-                'horario'    => 'Das ', // Pendente
+                'horario'    => 'Das 08:00 às 16:30.',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,

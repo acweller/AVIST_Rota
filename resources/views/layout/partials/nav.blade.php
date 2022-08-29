@@ -25,8 +25,8 @@
                         <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 5)}}">Cantina Romanha</a></li>
                         <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 6)}}">Casa dos Espumantes</a></li>
                         <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 7)}}">Vinícola Tomazelli</a></li>
-                        <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 8)}}">Cantina Braun</a></li>
                         <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 9)}}">Cantina Grotteschi</a></li>
+                        <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 8)}}">Cantina Braun</a></li>
                         <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 10)}}">Tabocas Vin de Garage</a></li>
                         <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 11)}}">Vinícola Ziviani</a></li>
                     </ul>

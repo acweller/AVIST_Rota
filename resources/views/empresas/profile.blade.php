@@ -11,6 +11,15 @@
             margin: 5px 2px;
             border-radius: 50%;
         }
+        .fa-360-degrees, .fa-street-view {
+            padding: 8px;
+            font-size: 22px;
+            width: 40px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
     </style>
 @endsection
 
@@ -164,12 +173,22 @@
                                 </a>
                             </div>
                             @break
+                        @case(10)
+                            <div class="col">
+                                <!-- Tour Virtual Google -->
+                                <a href="{{ addslashes($contato->descricao) }}"
+                                    class="fa-solid fa-street-view"
+                                    target="_blank"
+                                    data-bs-title="Tour Virtual da {{ $empresa->nomeEmpresa }}" data-bs-toggle="tooltip">
+                                </a>
+                            </div>
+                            @break
                         @endswitch
                     @endforeach
                 </div>
             </div>
         </p>
-        
+
         @if ((!empty($produtos)) && ($produtos->count() > 0))
         <!-- Produtos da Empresa -->
             <h2 id="empresa-produto">Produtos<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-produto" style="padding-left: 0.375em;"></a></h2>

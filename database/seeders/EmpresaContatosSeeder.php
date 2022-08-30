@@ -298,6 +298,13 @@ class EmpresaContatosSeeder extends Seeder
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 10, // Tour Virtual
+                'descricao'       => 'https://tinyurl.com/y2j7vxtd',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
         ]);
 
         // Romanha

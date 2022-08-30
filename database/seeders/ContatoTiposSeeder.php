@@ -72,6 +72,12 @@ class ContatoTiposSeeder extends Seeder
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
+            [
+                'id' => 10,
+                'nomeContatoTipo' => 'Tour Virtual',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
         ]);
     }
 }

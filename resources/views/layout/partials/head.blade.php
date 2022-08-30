@@ -39,7 +39,11 @@
     .fa-telegram {
         background: #0088cc;
         color: white;
-    }   
+    }
+    .fa-360-degrees, .fa-street-view {
+        background: #092265;
+        color: white;
+    }
 </style>
 
 @yield('estilo')

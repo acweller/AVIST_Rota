@@ -111,9 +111,15 @@
           </h2>
           <p>
             A AVIST, em parceria com 
-            o <a href="https://santateresa.ifes.edu.br/" target="_blank">Ifes</a> (Instituto Federal do Espírito Santo - Campus Santa Teresa),
-            o <a href="https://www.gov.br/agricultura/pt-br" target="_blank">MAPA</a> (Ministério da Agricultura, Pecuária e Abastecimento)
-            e a <a href="https://www.santateresa.es.gov.br/" target="_blank">PMST</a> (Prefeitura Municipal de Santa Teresa),
+            o <a href="https://www.gov.br/agricultura/pt-br" target="_blank">MAPA</a> (Ministério da Agricultura, Pecuária e Abastecimento),
+            o <a href="https://santateresa.ifes.edu.br/" target="_blank">IFES</a> (Instituto Federal do Espírito Santo - Campus Santa Teresa),
+            o <a href="https://sebrae.com.br/sites/PortalSebrae/ufs/es?codUf=8" target="_blank">Sebrae</a> (Serviço Brasileiro de Apoio às Micro e Pequenas Empresas),
+            a <a href="https://www.embrapa.br/" target="_blank">Embrapa</a> (Empresa Brasileira de Pesquisa Agropecuária),
+            o <a href="https://cnabrasil.org.br/senar/institucional-senar" target="_blank">Senar</a> (Serviço Nacional de Aprendizagem Rural),
+            a <a href="https://seag.es.gov.br/" target="_blank">Seag</a> (Secretaria de Estado da Agricultura, Abastecimento, Aquicultura e Pesca),
+            o <a href="https://incaper.es.gov.br/" target="_blank">Incaper</a> (Instituto Capixaba de Pesquisa, Assistência Técnica e Extensão Rural),
+            a <a href="https://www.santateresa.es.gov.br/" target="_blank">PMST</a> (Prefeitura Municipal de Santa Teresa)
+            e a <a href="https://www.facebook.com/Apruvit" target="_blank">APRUVIT</a> (Associação dos Produtores de Uva e Vinho Teresense)
             vem buscando formas de divulgar o trabalho realizado por seus associados.
           </p>
           <p>
@@ -123,7 +129,7 @@
             e para facilitar a localização dos empreendimentos por parte dos turistas.
             O desenvolvimento do site foi feito pelo grupo
             LEDS (Laboratório de Extensão em Desenvolvimento de Soluções),
-            formado por alunos e professores do Ifes Campus Santa Teresa.
+            formado por alunos e professores do IFES Campus Santa Teresa.
           </p>
           <p>
             Agradeçemos a todos os parceiros pela ajuda na contrução dessa história e com certeza juntos podemos chegar mais longe!!!
@@ -131,7 +137,7 @@
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4" style="border:0px solid #ddd">
           <a href="https://santateresa.ifes.edu.br/"  data-toggle="tooltip" data-placement="bottom" title="Conheça o Ifes Santa Teresa" target="_blank">
-            <img src="images/ifes_st_leds_logo.png" alt="Conheça o Ifes Santa Teresa" class="img-fluid rounded">
+            <img src="images/ifes_st_leds_logo.png" alt="Conheça o IFES Santa Teresa" class="img-fluid rounded">
           </a>
         </div>
       </div>

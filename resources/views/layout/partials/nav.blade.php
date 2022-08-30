@@ -36,11 +36,15 @@
                         Parceiros
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="https://santateresa.ifes.edu.br/" target="_blank">IFES - Campus Santa Teresa</a></li>
-                        <li><a class="dropdown-item" href="https://www.embrapa.br/" target="_blank">Embrapa - Empresa Brasileira de Pesquisa Agropecuária</a></li>
-                        <li><a class="dropdown-item" href="https://incaper.es.gov.br/" target="_blank">Incaper - Instituto Capixaba de Pesquisa, Assistência Técnica e Extensão Rural </a></li>
-                        <li><a class="dropdown-item" href="https://www.gov.br/agricultura/pt-br/" target="_blank">MAPA - Ministério da Agricultura, Pecuária e Abastecimento</a></li>
-                        <li><a class="dropdown-item" href="https://www.santateresa.es.gov.br/" target="_blank">PMST - Prefeitura Municipal de Santa Teresa</a></li>
+                        <li><a class="dropdown-item" href="https://www.gov.br/agricultura/pt-br" target="_blank">MAPA (Ministério da Agricultura, Pecuária e Abastecimento)</a></li>
+                        <li><a class="dropdown-item" href="https://santateresa.ifes.edu.br/" target="_blank">IFES (Instituto Federal do Espírito Santo - Campus Santa Teresa)</a></li>
+                        <li><a class="dropdown-item" href="https://sebrae.com.br/sites/PortalSebrae/ufs/es?codUf=8" target="_blank">Sebrae (Serviço Brasileiro de Apoio às Micro e Pequenas Empresas)</a></li>
+                        <li><a class="dropdown-item" href="https://www.embrapa.br/" target="_blank">Embrapa (Empresa Brasileira de Pesquisa Agropecuária)</a></li>
+                        <li><a class="dropdown-item" href="https://cnabrasil.org.br/senar/institucional-senar" target="_blank">Senar (Serviço Nacional de Aprendizagem Rural)</a></li>
+                        <li><a class="dropdown-item" href="https://seag.es.gov.br/" target="_blank">Seag (Secretaria de Estado da Agricultura, Abastecimento, Aquicultura e Pesca)</a></li>
+                        <li><a class="dropdown-item" href="https://incaper.es.gov.br/" target="_blank">Incaper (Instituto Capixaba de Pesquisa, Assistência Técnica e Extensão Rural)</a></li>
+                        <li><a class="dropdown-item" href="https://www.santateresa.es.gov.br/" target="_blank">PMST (Prefeitura Municipal de Santa Teresa)</a></li>
+                        <li><a class="dropdown-item" href="https://www.facebook.com/Apruvit" target="_blank">APRUVIT (Associação dos Produtores de Uva e Vinho Teresense)</a></li>
                     </ul>
                 </li>
                 <!--li class="nav-item dropdown">

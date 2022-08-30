@@ -15,7 +15,7 @@
 
 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-3 border-top text-muted">
     <div class="col-md-4 d-flex align-items-center">
-        <span>© 2022 AVIST</span>
+        <span class="fw-bold">Copyright © 2022 AVIST</span>
     </div>
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
         <li class="ms-3"><a href="https://api.whatsapp.com/send?phone=5527998774105" target="_blank"><svg class="bi" width="24" height="24"><use xlink:href="#whatsapp"></use></svg></a></li>

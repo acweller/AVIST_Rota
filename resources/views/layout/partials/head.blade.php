@@ -62,7 +62,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.0/dist/cosmo/bootstrap.min.css" integrity="sha256-1QMn0orFWnN6ZvqKlZCpabeY9PAvvIFcVndIneDMNeU=" crossorigin="anonymous">
 
 <!-- Font Awsome -->
-<script src="https://kit.fontawesome.com/7d27d0ac60.js" crossorigin="anonymous"></script>
+<!--script src="https://kit.fontawesome.com/7d27d0ac60.js" crossorigin="anonymous"></script-->
+
+<!-- Local Font Awesome -->
+<link href="/images/fontawesome-free-6.1.2-web/css/all.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="/css/album.css" rel="stylesheet">

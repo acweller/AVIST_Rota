@@ -272,6 +272,15 @@ class EmpresaProdutosSeeder extends Seeder
         DB::table('empresa_produtos')->insert([
             [
                 'empresa_id' => $empresa,
+                'nome'       => 'Consulte nosso Catálogo de Espumantes',
+                'descricao'  => 'Clique aqui para ter acesso ao nosso catálogo de espumantes.',
+                'hiperlink'  => 'https://www.flipsnack.com/rkagencia/catalogo-casa-dos-espumantes.html',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
                 'nome'       => 'Espumantes',
                 'descricao'  => 'Brut Branco Fino, Rosé Demi-Sec, Branco Demi-Sec, Moscatal e Rosé Suave.',
                 'hiperlink'  => '',

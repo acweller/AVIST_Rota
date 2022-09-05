@@ -29,6 +29,8 @@
                         <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 8)}}">Cantina Braun</a></li>
                         <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 10)}}">Tabocas Vin de Garage</a></li>
                         <li><a class="dropdown-item" href="{{route('rota_profile_empresa', 11)}}">Vinícola Ziviani</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/">Página inicial</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

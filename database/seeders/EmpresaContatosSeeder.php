@@ -599,7 +599,14 @@ class EmpresaContatosSeeder extends Seeder
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 1, // Telefone Fixo
-                'descricao'       => '2731190364',
+                'descricao'       => '27996441934',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 1, // Telefone Fixo
+                'descricao'       => '27992328411',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -613,7 +620,7 @@ class EmpresaContatosSeeder extends Seeder
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 2, // Whatsapp
-                'descricao'       => '27999272190',
+                'descricao'       => '27992328411',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],/*

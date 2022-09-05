@@ -233,39 +233,6 @@
                 @endforeach
             </ol>
         @endif
-        
-        <p>
-        @if ($empresa->empresa_tipo_id != 1)
-        <!-- Carrossel de imagens das vinícolas e da galeria -->
-            <h2 id="empresa-imagem">Galeria de imagens<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-imagem" style="padding-left: 0.375em;"></a></h2>
-            <div id="carouselEmpresaImagem" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    @foreach ($imagems as $imagem)
-                    <button type="button" data-bs-target="#carouselEmpresaImagem" data-bs-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }}" aria-current="{{ $loop->first ? 'true' : '' }}"  aria-label="{{ addslashes($imagem->descricao) }}"></button>
-                    @endforeach
-                </div>
-                <div class="carousel-inner">
-                    @foreach ($imagems as $imagem)
-                    <div class="carousel-item {{ $loop->first ? 'active' : '' }} bg-image"
-                        style="background-image: url('{{ $imagem->caminho }}');">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5></h5>
-                            <!--p>{{ addslashes($imagem->descricao) }}</p-->
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselEmpresaImagem" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselEmpresaImagem" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Próximo</span>
-                </button>
-            </div>
-        @endif
-        </p>
 
         <h2 id="empresa-contato">Contato(s)<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-contato" style="padding-left: 0.375em;"></a></h2>
         <!-- Pessoas da Empresa -->
@@ -314,6 +281,39 @@
                     @break
             @endswitch
             </div>
-        @endforeach        
+        @endforeach
+        
+        <p>
+        @if ($empresa->empresa_tipo_id != 1)
+        <!-- Carrossel de imagens das vinícolas e da galeria -->
+            <h2 id="empresa-imagem">Galeria de imagens<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#empresa-imagem" style="padding-left: 0.375em;"></a></h2>
+            <div id="carouselEmpresaImagem" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    @foreach ($imagems as $imagem)
+                    <button type="button" data-bs-target="#carouselEmpresaImagem" data-bs-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }}" aria-current="{{ $loop->first ? 'true' : '' }}"  aria-label="{{ addslashes($imagem->descricao) }}"></button>
+                    @endforeach
+                </div>
+                <div class="carousel-inner">
+                    @foreach ($imagems as $imagem)
+                    <div class="carousel-item {{ $loop->first ? 'active' : '' }} bg-image"
+                        style="background-image: url('{{ $imagem->caminho }}');">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5></h5>
+                            <!--p>{{ addslashes($imagem->descricao) }}</p-->
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselEmpresaImagem" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselEmpresaImagem" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        @endif
+        </p>
     </div>
 @endsection

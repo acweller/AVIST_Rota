@@ -264,9 +264,9 @@ class EmpresaServicosSeeder extends Seeder
             [
                 'empresa_id' => $empresa,
                 'nome'       => 'Expediente',
-                'descricao'  => 'Todos os dias',
+                'descricao'  => 'Somente com agendamento prévio.',
                 'hiperlink'  => '',
-                'horario'    => 'Das 09:00 às 17:00.',
+                'horario'    => 'Conferir via WhatsApp (Veja números de contato abaixo).',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,

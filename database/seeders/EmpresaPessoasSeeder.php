@@ -151,6 +151,13 @@ class EmpresaPessoasSeeder extends Seeder
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Fábio Grotteschi',
+                'email'      => '',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
         ]);
 
         // Tabocas

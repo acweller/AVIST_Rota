@@ -477,7 +477,7 @@ class EmpresaProdutosSeeder extends Seeder
             [
                 'empresa_id' => $empresa,
                 'nome'       => 'Vinho Tinto Fino (Terre Gialle)',
-                'descricao'  => '65% Syrah e 35% Cabernet Sauvignon.',
+                'descricao'  => 'Syrah e Cabernet Sauvignon.',
                 'hiperlink'  => '',
                 'ativo'      => true,
                 'created_at' => $data,
@@ -485,8 +485,17 @@ class EmpresaProdutosSeeder extends Seeder
             ],
             [
                 'empresa_id' => $empresa,
-                'nome'       => 'Vinhos.',
+                'nome'       => 'Vinhos Finos.',
                 'descricao'  => '',
+                'hiperlink'  => '',
+                'ativo'      => true,
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id' => $empresa,
+                'nome'       => 'Suco de Uva',
+                'descricao'  => 'Natural Integral.',
                 'hiperlink'  => '',
                 'ativo'      => true,
                 'created_at' => $data,

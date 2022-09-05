@@ -174,6 +174,13 @@ class EmpresaContatosSeeder extends Seeder
             ],
             [
                 'empresa_id'      => $empresa,
+                'contato_tipo_id' => 1, // Telefone Fixo
+                'descricao'       => '27999919045',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
                 'contato_tipo_id' => 2, // Whatsapp
                 'descricao'       => '27999744710',
                 'created_at' => $data,
@@ -334,7 +341,7 @@ class EmpresaContatosSeeder extends Seeder
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 3, // Email
-                'descricao'       => 'ristoranteromanhast@yahoo.com.br',
+                'descricao'       => 'steven.fontana@hotmail.com', //ristoranteromanhast@yahoo.com.br',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -517,7 +524,21 @@ class EmpresaContatosSeeder extends Seeder
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 1, // Telefone Fixo
+                'descricao'       => '27999852400',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 1, // Telefone Fixo
                 'descricao'       => '27998094127',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 2, // Whatsapp
+                'descricao'       => '27999852400',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],
@@ -817,7 +838,7 @@ class EmpresaContatosSeeder extends Seeder
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 3, // Email
-                'descricao'       => 'ristoranteromanhast@yahoo.com.br',
+                'descricao'       => 'steven.fontana@hotmail.com',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],

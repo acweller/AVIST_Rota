@@ -53,9 +53,10 @@ class EmpresaServicosSeeder extends Seeder
             [
                 'empresa_id' => $empresa,
                 'nome'       => 'Expediente',
-                'descricao'  => '',
+                'descricao'  => 'De Terça-feira a Domingo',
                 'hiperlink'  => '',
-                'horario'    => 'Das', // Pendente
+                'horario'    => 'Das 8h às 17h (Favor chamar pela campainha ao lado).
+                ', // Pendente
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,

@@ -40,7 +40,7 @@ class EmpresaServicosSeeder extends Seeder
                 'nome'       => 'Expediente',
                 'descricao'  => '',
                 'hiperlink'  => '',
-                'horario'    => 'Todos os dias das 07:30 às 17:30 horas.',
+                'horario'    => 'Diariamente, das 8h às 17h.',
                 'ativo'      => true,
                 'created_at' => $data,
                 'updated_at' => $data,

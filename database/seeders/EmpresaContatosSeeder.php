@@ -93,7 +93,14 @@ class EmpresaContatosSeeder extends Seeder
             [
                 'empresa_id'      => $empresa,
                 'contato_tipo_id' => 1, // Telefone Fixo
-                'descricao'       => '2732591486',
+                'descricao'       => '27997041800',
+                'created_at' => $data,
+                'updated_at' => $data,
+            ],
+            [
+                'empresa_id'      => $empresa,
+                'contato_tipo_id' => 1, // Telefone Fixo
+                'descricao'       => '27999955926',
                 'created_at' => $data,
                 'updated_at' => $data,
             ],

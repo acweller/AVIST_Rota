@@ -1,10 +1,26 @@
 @extends('layout.mainlayout')
 
 @section('estilo')
+    <style>
+        .fa-facebook, .fa-facebook-f, .fa-twitter, .fa-instagram, .fa-youtube, .fa-telegram,
+        .fa-whatsapp {
+            padding: 8px;
+            font-size: 22px;
+            width: 40px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+        .fa-whatsapp {
+          background: #128c7e;
+          color: white;
+        }
+    </style>
 @endsection
 
 @section('cabecalho')
-    Rota das Vinícolas
+  Vinhos de Santa Teresa
 @endsection
 
 @section('conteudo')
@@ -43,44 +59,38 @@
 
     <div class="container-fluid" id="sobre_avist">
       <br>
-      <h2>
-        A Rota do Vinho de Santa Teresa
-      </h2>
+      <!--h2>
+        Sobre a Rota
+      </h2-->
       <p>
-        O vinho é uma das grandes paixões dos capixabas. E Santa Teresa é o maior produtor de uva e de vinhos do Espírito Santo.
+        O vinho é uma das grandes paixões dos capixabas. E o município de Santa Teresa é o maior produtor de uva e de vinhos do Estado do Espírito Santo.
       </p>
       <p>
         Em 16 de Abril de 2002 foi fundada a AVIST, que é a Associação dos Vitivinicultores de Santa Teresa, para fortalecer a produção de vinhos no município, com ações que visam o melhoramento dos produtos, a troca de experiências entre seus associados e a divulgação dessa atividade econômica, que é um dos principais atrativos para turistas desta cidade.</p>
       </p>
       <p>
-        Este site tem como objetivo divulgar as <a href="{{ route('rota_index_empresas') }}">vinícolas associadas à AVIST</a>, que são referência na área de vitivinicultura.
+        Este site tem como objetivo divulgar as <a href="{{ route('rota_index_empresas') }}" class="link-dark">vinícolas associadas à AVIST</a>, que são referência na área de vitivinicultura.
         Aqui você pode acessar as informações de cada uma delas, como telefones de contato, redes sociais, produtos e serviços e a localização de cada uma delas.
       </p>
     </div>
 
     <div class="container-fluid">
-        <div class="row d-flex align-items-center">
-          <div class="col-xl-7 col-lg-7 col-md-7" style="border:0px solid #ddd">
-            <p>
-              <h3>Sobre a AVIST</h3>
-              <p>
-                A Associação dos Vitivinicultores de Santa Teresa tem a missão de ajudar a desenvolver e fortalecer a vitivinicultura no município.
-              </p>
-              <a href="{{route('rota_about_empresa')}}" class="btn btn-outline-primary btn-sm ml-0"  data-toggle="tooltip" data-placement="bottom" title="Sobre a AVIST">
-                <i class="fa-solid fa-magnifying-glass-plus"></i> Saiba mais
-              </a>
-            </p>
-          </div>
-          <div class="col-xl-5 col-lg-5 col-md-5" style="border:0px solid #ddd">
-            <a href="{{route('rota_about_empresa')}}"  data-toggle="tooltip" data-placement="bottom" title="Sobre a AVIST">
-              <img src="images/avist logo.png" alt="Conheça mais sobre a AVIST" class="img-fluid rounded">
-            </a>
-          </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
       <div class="row d-flex align-items-center">
+        <div class="col-xl-7 col-lg-7 col-md-7" style="border:0px solid #ddd">
+          <h2>
+            <a href="{{route('rota_index_empresas')}}">
+              Conheça a Rota das Vinícolas
+            </a>
+          </h2>
+          <p>
+            Conheça cada uma das vinícolas e empresas associadas à AVIST. Clique na imagem ou no botão abaixo para conferir a relação de nossas vinícolas organizada em ordem alfabética.
+          </p>
+          <p>
+            <a href="{{route('rota_index_empresas')}}" class="btn btn-outline-primary btn-sm ml-0"  data-toggle="tooltip" data-placement="bottom" title="Vinícolas">
+              <i class="fa-solid fa-wine-glass"></i> Conheça as nossas Vinícolas
+            </a>
+          </p>
+        </div>
         <div class="col-xl-5 col-lg-5 col-md-5" style="border:0px solid #ddd">
           <p>
             <a href="{{route('rota_index_empresas')}}"  data-toggle="tooltip" data-placement="bottom" title="Vinícolas">
@@ -88,16 +98,59 @@
             </a>
           </p>
         </div>
-        <div class="col-xl-7 col-lg-7 col-md-7" style="border:0px solid #ddd">
-          <h3>Conheça as Vinícolas</h3>
+      </div>
+    </div>
+    
+    <br>
+
+    <div class="container-fluid">
+      <div class="row d-flex">
+        <div class="col-xl-3 col-lg-3 col-md-3" style="border:0px solid #ddd">
+          <!-- QR-Code do Site -->
+          <a href="/images/qrcode.png" target="_blank">
+            <img src="/images/qrcode.png" alt="QR-Code de divulgação do site" class="img-fluid rounded">
+          </a>
+        </div>
+
+        <div class="col-xl-9 col-lg-9 col-md-9" style="border:0px solid #ddd">
+          <h2>Divulgue em suas redes sociais</h2>
+          <div class="container">
+            <!-- Compartilhar no WhatsApp -->
+            <a href="https://api.whatsapp.com/send?text=Conheça a Rota das Vinícolas de Santa Teresa. Acesse o nosso site: https://www.vinhosdesantateresa.com.br"
+              class="btn" target="_blank" data-bs-toggle="tooltip"
+              data-bs-title="Compartilhar no WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i> 
+            </a>
+            <!-- Compartilhar no Facebook -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.vinhosdesantateresa.com.br"
+              class="btn" target="_blank" data-bs-toggle="tooltip"
+              data-bs-title="Compartilhar no Facebook">
+              <i class="fa-brands fa-facebook-f"></i> 
+            </a>
+            <!-- Compartilhar no Twitter -->
+            <a href="https://twitter.com/intent/tweet?url=https://www.vinhosdesantateresa.com.br&text=Conhe%C3%A7a%20a%20Rota%20das%20Vin%C3%ADcolas%20de%20Santa%20Teresa.%20Acesse%20o%20nosso%20site."
+              class="btn" target="_blank" data-bs-toggle="tooltip"
+              data-bs-title="Compartilhar no Twitter">
+              <i class="fa-brands fa-twitter"></i> 
+            </a>
+            <!-- Compartilhar no Telegram -->
+            <a href="https://telegram.me/share/url?url=https://www.vinhosdesantateresa.com.br&text=Conheça a Rota das Vinícolas de Santa Teresa. Acesse o nosso site."
+              class="btn" target="_blank" data-bs-toggle="tooltip"
+              data-bs-title="Compartilhar no Telegram">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+          </div>
+
+          <h2>Sobre a AVIST</h2>
           <p>
-            Conheça cada uma das vinícolas e empresas associadas à AVIST. Clique na imagem ou no botão abaixo para conferir a relação de nossas vinícolas organizada em ordem alfabética.
+            A Associação dos Vitivinicultores de Santa Teresa tem a missão de ajudar a desenvolver e fortalecer a vitivinicultura no município.
           </p>
           <p>
-            <a href="{{route('rota_index_empresas')}}" class="btn btn-outline-primary btn-sm ml-0"  data-toggle="tooltip" data-placement="bottom" title="Vinícolas">
-              <i class="fa-solid fa-wine-glass"></i> Saiba mais
+            <a href="{{route('rota_about_empresa')}}" class="btn btn-outline-primary btn-sm ml-0"  data-toggle="tooltip" data-placement="bottom" title="Conheça mais sobre a AVIST">
+            <i class="fa-solid fa-magnifying-glass-plus"></i> Conheça mais sobre a AVIST
             </a>
           </p>
+
         </div>
       </div>
     </div>
@@ -111,15 +164,15 @@
           </h2>
           <p>
             A AVIST, em parceria com 
-            o <a href="https://www.gov.br/agricultura/pt-br" target="_blank">MAPA</a> (Ministério da Agricultura, Pecuária e Abastecimento),
-            o <a href="https://santateresa.ifes.edu.br/" target="_blank">IFES</a> (Instituto Federal do Espírito Santo - Campus Santa Teresa),
-            o <a href="https://sebrae.com.br/sites/PortalSebrae/ufs/es?codUf=8" target="_blank">Sebrae</a> (Serviço Brasileiro de Apoio às Micro e Pequenas Empresas),
-            a <a href="https://www.embrapa.br/" target="_blank">Embrapa</a> (Empresa Brasileira de Pesquisa Agropecuária),
-            o <a href="https://cnabrasil.org.br/senar/institucional-senar" target="_blank">Senar</a> (Serviço Nacional de Aprendizagem Rural),
-            a <a href="https://seag.es.gov.br/" target="_blank">Seag</a> (Secretaria de Estado da Agricultura, Abastecimento, Aquicultura e Pesca),
-            o <a href="https://incaper.es.gov.br/" target="_blank">Incaper</a> (Instituto Capixaba de Pesquisa, Assistência Técnica e Extensão Rural),
-            a <a href="https://www.santateresa.es.gov.br/" target="_blank">PMST</a> (Prefeitura Municipal de Santa Teresa)
-            e a <a href="https://www.facebook.com/Apruvit" target="_blank">APRUVIT</a> (Associação dos Produtores de Uva e Vinho Teresense)
+            o <a href="https://www.gov.br/agricultura/pt-br" class="link-dark" target="_blank">MAPA</a> (Ministério da Agricultura, Pecuária e Abastecimento),
+            o <a href="https://santateresa.ifes.edu.br/" class="link-dark" target="_blank">IFES</a> (Instituto Federal do Espírito Santo - Campus Santa Teresa),
+            o <a href="https://sebrae.com.br/sites/PortalSebrae/ufs/es?codUf=8" class="link-dark" target="_blank">Sebrae</a> (Serviço Brasileiro de Apoio às Micro e Pequenas Empresas),
+            a <a href="https://www.embrapa.br/" class="link-dark" target="_blank">Embrapa</a> (Empresa Brasileira de Pesquisa Agropecuária),
+            o <a href="https://cnabrasil.org.br/senar/institucional-senar" class="link-dark" target="_blank">Senar</a> (Serviço Nacional de Aprendizagem Rural),
+            a <a href="https://seag.es.gov.br/" class="link-dark" target="_blank">Seag</a> (Secretaria de Estado da Agricultura, Abastecimento, Aquicultura e Pesca),
+            o <a href="https://incaper.es.gov.br/" class="link-dark" target="_blank">Incaper</a> (Instituto Capixaba de Pesquisa, Assistência Técnica e Extensão Rural),
+            a <a href="https://www.santateresa.es.gov.br/" class="link-dark" target="_blank">PMST</a> (Prefeitura Municipal de Santa Teresa)
+            e a <a href="https://www.facebook.com/Apruvit" class="link-dark" target="_blank">APRUVIT</a> (Associação dos Produtores de Uva e Vinho Teresense)
             vem buscando formas de divulgar o trabalho realizado por seus associados.
           </p>
           <p>

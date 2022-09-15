@@ -35,7 +35,7 @@
     .fa-instagram {
         background: #125688;
         color: white;
-    }   
+    }
     .fa-telegram {
         background: #0088cc;
         color: white;
@@ -50,7 +50,7 @@
 
 
 <meta charset="UTF-8">
-<title>Rota das Vinícolas de Santa Teresa - Avist</title>
+<title>Rota dos Vinhos de Santa Teresa</title>
 
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta name="description" content="">

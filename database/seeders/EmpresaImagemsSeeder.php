@@ -64,7 +64,7 @@ class EmpresaImagemsSeeder extends Seeder
             ],
         ]);
         $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
-        for ($i=2; $i <= 16; $i++) { 
+        for ($i = 2; $i <= 16; $i++) {
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
@@ -114,7 +114,7 @@ class EmpresaImagemsSeeder extends Seeder
             ],
         ]);
         $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
-        for ($i=2; $i <= 35; $i++) { 
+        for ($i = 2; $i <= 35; $i++) {
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
@@ -164,7 +164,7 @@ class EmpresaImagemsSeeder extends Seeder
             ],
         ]);
         $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
-        for ($i=2; $i <= 21; $i++) { 
+        for ($i = 2; $i <= 21; $i++) {
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
@@ -223,7 +223,7 @@ class EmpresaImagemsSeeder extends Seeder
             ],
         ]);
         $ordem = $empresa_id * 10000 + 3; // Para iniciar no '5'
-        for ($i=2; $i <= 28; $i++) { 
+        for ($i = 2; $i <= 28; $i++) {
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
@@ -273,7 +273,7 @@ class EmpresaImagemsSeeder extends Seeder
             ],
         ]);
         $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
-        for ($i=2; $i <= 26; $i++) { 
+        for ($i = 2; $i <= 26; $i++) {
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
@@ -323,7 +323,7 @@ class EmpresaImagemsSeeder extends Seeder
             ],
         ]);
         $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
-        for ($i=2; $i <= 23; $i++) { 
+        for ($i = 2; $i <= 23; $i++) {
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
@@ -373,7 +373,7 @@ class EmpresaImagemsSeeder extends Seeder
             ],
         ]);
         $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
-        for ($i=2; $i <= 37; $i++) { 
+        for ($i = 2; $i <= 37; $i++) {
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
@@ -423,7 +423,7 @@ class EmpresaImagemsSeeder extends Seeder
             ],
         ]);
         $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
-        for ($i=2; $i <= 32; $i++) { 
+        for ($i = 2; $i <= 32; $i++) {
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
@@ -473,7 +473,7 @@ class EmpresaImagemsSeeder extends Seeder
             ],
         ]);
         $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
-        for ($i=2; $i <= 27; $i++) { 
+        for ($i = 2; $i <= 27; $i++) {
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
@@ -523,7 +523,7 @@ class EmpresaImagemsSeeder extends Seeder
             ],
         ]);
         $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
-        for ($i=2; $i <= 18; $i++) { 
+        for ($i = 2; $i <= 18; $i++) {
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
@@ -573,7 +573,7 @@ class EmpresaImagemsSeeder extends Seeder
             ],
         ]);
         $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
-        for ($i=2; $i <= 30; $i++) { 
+        for ($i = 2; $i <= 30; $i++) {
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [
@@ -622,6 +622,5 @@ class EmpresaImagemsSeeder extends Seeder
                 'updated_at' => $data,
             ],
         ]);
-
     }
 }

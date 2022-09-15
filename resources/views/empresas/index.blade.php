@@ -21,10 +21,17 @@
             </p>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6" style="border:0px solid #ddd">
-                <ul class="list-group">
+                <ul class="list-group list-group-light">
+                    <li class="list-group-item list-group-item-dark border-0 d-flex justify-content-between align-items-center">
+                        Vinícola/Associado
+                        <span class="d-flex">
+                            Rota para a Vinícola
+                        </span>
+                    </li>
+
                     @foreach ($empresas as $empresa)
                         @if (($empresa->empresa_tipo_id == 2) || ($empresa->empresa_tipo_id == 3))
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <li class="list-group-item border-0 d-flex justify-content-between align-items-center">
                                 <a href="{{route('rota_profile_empresa', $empresa->id)}}">
                                     {{ $empresa->nomeEmpresa }}
                                 </a>

@@ -423,7 +423,7 @@ class EmpresaImagemsSeeder extends Seeder
             ],
         ]);
         $ordem = $empresa_id * 10000 + 2; // Para iniciar no '4'
-        for ($i = 2; $i <= 32; $i++) {
+        for ($i = 2; $i <= 51; $i++) {
             $foto = sprintf("%'.04d", $i);
             DB::table('empresa_imagems')->insert([
                 [

@@ -96,3 +96,6 @@ Route::get('/series/{serieId}/temporadas', [TemporadasController::class, 'index'
 
 // Logomarca do Governo Federal MAPA
 // https://www.gov.br/agricultura/pt-br/assuntos/florestal/central-de-conteudos-1/logomarcas
+
+// Atualizando para o Laravel 9.0 (com PHP 8.1)
+// https://laravel.com/docs/9.x/upgrade

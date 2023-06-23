@@ -41,6 +41,7 @@
                         <li><a class="dropdown-item" href="https://www.gov.br/agricultura/pt-br" target="_blank">MAPA (Ministério da Agricultura, Pecuária e Abastecimento)</a></li>
                         <li><a class="dropdown-item" href="https://santateresa.ifes.edu.br/" target="_blank">IFES (Instituto Federal do Espírito Santo - Campus Santa Teresa)</a></li>
                         <li><a class="dropdown-item" href="https://sebrae.com.br/sites/PortalSebrae/ufs/es?codUf=8" target="_blank">Sebrae (Serviço Brasileiro de Apoio às Micro e Pequenas Empresas)</a></li>
+                        <li><a class="dropdown-item" href="https://www.epagri.sc.gov.br/" target="_blank">Epagri SC (Empresa de Pesquisa Agropecuária e Extensão Rural de Santa Catarina)</a></li>
                         <li><a class="dropdown-item" href="https://www.embrapa.br/" target="_blank">Embrapa (Empresa Brasileira de Pesquisa Agropecuária)</a></li>
                         <li><a class="dropdown-item" href="https://cnabrasil.org.br/senar/institucional-senar" target="_blank">Senar (Serviço Nacional de Aprendizagem Rural)</a></li>
                         <li><a class="dropdown-item" href="https://seag.es.gov.br/" target="_blank">Seag (Secretaria de Estado da Agricultura, Abastecimento, Aquicultura e Pesca)</a></li>

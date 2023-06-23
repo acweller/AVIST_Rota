@@ -167,6 +167,7 @@
             o <a href="https://www.gov.br/agricultura/pt-br" class="link-dark" target="_blank">MAPA</a> (Ministério da Agricultura, Pecuária e Abastecimento),
             o <a href="https://santateresa.ifes.edu.br/" class="link-dark" target="_blank">IFES</a> (Instituto Federal do Espírito Santo - Campus Santa Teresa),
             o <a href="https://sebrae.com.br/sites/PortalSebrae/ufs/es?codUf=8" class="link-dark" target="_blank">Sebrae</a> (Serviço Brasileiro de Apoio às Micro e Pequenas Empresas),
+            a <a href="https://www.epagri.sc.gov.br/" class="link-dark" target="_blank">Epagri SC</a> (Empresa de Pesquisa Agropecuária e Extensão Rural de Santa Catarina),
             a <a href="https://www.embrapa.br/" class="link-dark" target="_blank">Embrapa</a> (Empresa Brasileira de Pesquisa Agropecuária),
             o <a href="https://cnabrasil.org.br/senar/institucional-senar" class="link-dark" target="_blank">Senar</a> (Serviço Nacional de Aprendizagem Rural),
             a <a href="https://seag.es.gov.br/" class="link-dark" target="_blank">Seag</a> (Secretaria de Estado da Agricultura, Abastecimento, Aquicultura e Pesca),

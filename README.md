@@ -1,67 +1,123 @@
 # AVIST_Rota
 Rota das Vinícolas de Santa Teresa - AVIST (Laravel)
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Preparação do ambiente de desenvolvimento (início codificação)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Deve-se seguir os seguintes passos para iniciar o desenvolvimento.
 
-## About Laravel
+* Baixar projeto do GitHub
+* Instalar e iniciar o Docker
+* Acessar a pasta com o projeto Laravel/Sail
+* Executar os seguintes comandos:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+    ```bash
+        # Fazer uma Build sem utilizar o cache
+        ./vendor/bin/sail build --no-cache
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+        # Para iniciar o container após a realização do Build
+        ./vendor/bin/sail up -d --build
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+        # Fazer a Migration do BD (criação das tabelas e registros)
+        ./vendor/bin/sail artisan migrate:fresh --seed
 
-## Learning Laravel
+        # Para encerrar a execução do sistema
+        ./vendor/bin/sail down
+    ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* Para acessar o site: [http://localhost:8080](http://localhost:8080)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# Pastas do projeto
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+# Implantação em produção
 
-### Premium Partners
+Primeiro, ir ao painel de controle do site de hospedagem e cadastrar senha para o FTP e/ou do SSH.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Criar o arquivo compactado (Maq Local)
+    cd ~/github
+    tar --exclude='.git' -cvzf AVIST_Rota.tar.gz AVIST_Rota
 
-## Contributing
+* Enviar via FileZilla
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Acessar via SSH e descompactar
+    ssh usuario@dominio.site.hospedagem
+    mkdir ~/apps
+    mv -v AVIST_Rota.tar.gz ~/apps
+    cd ~/apps
+    ls
 
-## Code of Conduct
+## Descompactar dentro da pasta "apps" (Criar se não existir)
+    DOMINIO_SITE="xxxxx.com.br"
+    tar -xvzf AVIST_Rota.tar.gz
+    mv -v AVIST_Rota $DOMINIO_SITE
+    rm -vi AVIST_Rota.tar.gz
+    cd ..
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Conferir versão atual do PHP
+    php -v
 
-## Security Vulnerabilities
+## Criar um link simbólico da pasta WWW para o PUBLIC
+    mv www www_old -vi
+    ln -s ~/apps/$DOMINIO_SITE/public ~/www
+    cd ~/apps/$DOMINIO_SITE/
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Instalando o Composer na pasta do site (onde está composer.json): 
+Conferir e atualizar passos de: https://getcomposer.org/download/
 
-## License
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+    php composer-setup.php
+    php -r "unlink('composer-setup.php');"
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Gerar uma senha aleatória para o BD e anotar no .env.production (maq. local)
+    cat /dev/urandom | tr -dc A-Za-z0-9 | head -c 20 ; echo ' '
+
+## Criar o BD (via Painel de Controle) e anotar o nome do BD e do User no .env
+BDname / UserName
+
+## Em .env (de produção) "DB_HOST" colocar o link para o BD
+mysql.$DOMINIO_SITE
+
+## Mudar o APP_ENV para "production"
+APP_ENV=production
+
+## Ajustar o "APP_URL" para o site:
+https://$DOMINIO_SITE
+
+## Em produção, substituir ".env" por ".env.production":
+    mv .env.production .env -vi
+    rm .env.example -vi
+
+## Instalando as dependências do projeto com o COMPOSER
+    php composer.phar -V
+    php composer.phar install --no-dev
+    php composer.phar update --no-dev
+
+## Gerar uma Chave criptografica para o site em produção (na pasta do site)
+
+    php artisan -V
+    php artisan key:generate
+
+* Ver: https://youtu.be/VDD7igukEdI
+* Abrir o ".env" e copiar o código para ".env.production" (Máq Local).  Copiar e gravar essa chave "base64:" no APP_KEY de .env (de produção)
+
+## Secure .env (Para proteger .ENV, modificar o .HTACCESS)
+
+    <Files .env>
+        Order deny,allow
+        Deny from all
+    </Files>
+
+* Incluir no arquivos "Public/.htaccess" essa proteção:
+* Ver: https://youtu.be/vUXKe-vhUik
+
+## Em produção, substituir o ".htaccess" por ".htaccess.production"
+    cd public
+    mv .htaccess.prod .htaccess -vi
+
+## Substituir (em produção) o robots.txt
+    mv robots.txt.prod robots.txt -vi
+
+## Migrar o banco de dados em produção (na pasta inicial do site )
+    cd ..
+    php artisan migrate:fresh --seed
